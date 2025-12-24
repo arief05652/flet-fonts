@@ -1,0 +1,10 @@
+# Environments
+.venv/
+build/
+.env
+
+# Uv
+uv.lock
+
+# Eeg
+src/flet_fonts.egg-info
