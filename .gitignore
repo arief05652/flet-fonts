@@ -8,3 +8,6 @@ uv.lock
 
 # Eeg
 src/flet_fonts.egg-info
+
+# Build distribution
+dist/
