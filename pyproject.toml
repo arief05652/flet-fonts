@@ -1,6 +1,6 @@
 [project]
 name = "flet-fonts"
-version = "0.1.0"
+version = "0.1.1"
 description = "flet-fonts uses the Google Fonts library in the background"
 readme = "README.md"
 requires-python = ">=3.12"
