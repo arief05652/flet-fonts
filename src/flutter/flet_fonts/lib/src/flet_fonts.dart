@@ -1,92 +1,116 @@
 import 'package:flet/flet.dart';
 import 'package:flutter/material.dart';
 
-import 'get_font.dart';
+import 'utils/text_span.dart';
+import 'utils/google_fonts.dart';
 
 class FletFontsControl extends StatelessWidget {
-  final Control? parent;
   final Control control;
 
-  const FletFontsControl({
-    super.key,
-    required this.parent,
-    required this.control,
-  });
+  const FletFontsControl({super.key, required this.control});
 
   @override
   Widget build(BuildContext context) {
-    // ambil argumen
-    final text = control.attrString("value", "")!;
-    final String? fontFamily = control.attrString('font_family');
-    final fontSize = control.attrDouble('font_size');
-    final selectableText = control.attrBool("selectable", false);
-    final bgColor = control.attrColor('bgcolor', context);
-    final color = control.attrColor('color', context);
-    final italic = control.attrBool('italic', false);
-    final String? font_weight = control.attrString('font_weight')!;
-    final int? max_line = control.attrInt('max_line');
-    final String? overflow = control.attrString('overflow');
-    final String? text_align = control.attrString("text_align");
-    final String? semantic_label = control.attrString("semantic_label");
-    final bool? wrap = control.attrBool("wrap", true);
+    control.notifyParent = true;
 
-    // text widget
-    Widget textWidget;
+    // theme context
+    final theme = Theme.of(context);
 
-    // kondisi untuk italic style
-    final getItalic = (italic == false) ? FontStyle.normal : FontStyle.italic;
+    // attr from py
+    var value = control.getString("value", "");
+    var spans = control.children("spans");
+    var google_fonts = control.getString("google_fonts");
+    var text_align = control.getTextAlign("text_align");
+    var style = control.getTextStyle("style", theme);
+    var max_lines = control.getInt("max_lines");
+    var selectable = control.getBool("selectable", false)!;
+    var no_wrap = control.getBool("no_wrap", false)!;
+    var semantics_label = control.getString("semantics_label");
+    var show_selection_cursor =
+        control.getBool("show_selection_cursor", false)!;
+    var enable_interactive_selection =
+        control.getBool("enable_interactive_selection", true)!;
+    var selection_cursor_width =
+        control.getDouble("selection_cursor_width", 2.0)!;
+    var selection_cursor_height = control.getDouble("selection_cursor_height");
+    var selection_cursor_color =
+        control.getColor("selection_cursor_color", context);
 
-    // passing text overflow
-    final Map<String, TextOverflow>? getOverFlow = {
-      "fade": TextOverflow.fade,
-      "elipsis": TextOverflow.ellipsis,
-      "clip": TextOverflow.clip,
-      "visible": TextOverflow.visible,
-    };
+    Widget widget = SizedBox.shrink();
 
-    // passing text text align
-    final Map<String, TextAlign>? getTextAlign = {
-      "start": TextAlign.start,
-      "center": TextAlign.center,
-      "end": TextAlign.end,
-      "justify": TextAlign.justify,
-      "left": TextAlign.left,
-      "right": TextAlign.right,
-    };
-
-    // kondisi untuk selectable text
-    if (selectableText == true) {
-      textWidget = SelectableText(
-        text,
-        maxLines: max_line,
-        textAlign: (text_align != null) ? getTextAlign![text_align] : null,
-        semanticsLabel: semantic_label,
-        style: get_google_font(
-            fontFamily: fontFamily,
-            fontSize: fontSize,
-            bgColor: bgColor,
-            color: color,
-            italic: getItalic,
-            font_weight: font_weight),
-      );
+    // jika selectable
+    if (selectable) {
+      // cek spans jika ada
+      if (spans.isNotEmpty) {
+        widget = SelectableText.rich(
+          TextSpan(
+              text: value,
+              style: (google_fonts != null)
+                  ? googleFonts(google_fonts, style: style)
+                  : style,
+              semanticsLabel: semantics_label,
+              children: parseSpans(spans, context)),
+          maxLines: max_lines,
+          textAlign: text_align,
+          showCursor: show_selection_cursor,
+          enableInteractiveSelection: enable_interactive_selection,
+          cursorWidth: selection_cursor_width,
+          cursorHeight: selection_cursor_height,
+          cursorColor: selection_cursor_color,
+        );
+        // ga ada spans tapi selectable
+      } else {
+        widget = SelectableText(
+          value!,
+          style: (google_fonts != null)
+              ? googleFonts(google_fonts, style: style)
+              : style,
+          maxLines: max_lines,
+          textAlign: text_align,
+          showCursor: show_selection_cursor,
+          enableInteractiveSelection: enable_interactive_selection,
+          cursorWidth: selection_cursor_width,
+          cursorHeight: selection_cursor_height,
+          cursorColor: selection_cursor_color,
+        );
+      }
+      // tidak selectable tapi spans
     } else {
-      textWidget = Text(
-        text,
-        maxLines: max_line,
-        softWrap: wrap,
-        textAlign: (text_align != null) ? getTextAlign![text_align] : null,
-        overflow: (overflow != null) ? getOverFlow![overflow] : null,
-        semanticsLabel: semantic_label,
-        style: get_google_font(
-            fontFamily: fontFamily,
-            fontSize: fontSize,
-            bgColor: bgColor,
-            color: color,
-            italic: getItalic,
-            font_weight: font_weight),
-      );
+      if (spans.isNotEmpty) {
+        widget = Text.rich(
+          TextSpan(
+              text: value,
+              style: (google_fonts != null)
+                  ? googleFonts(google_fonts, style: style)
+                  : style,
+              semanticsLabel: semantics_label,
+              children: parseSpans(spans, context)),
+          style: (google_fonts != null)
+              ? googleFonts(google_fonts, style: style)
+              : style,
+          maxLines: max_lines,
+          textAlign: text_align,
+          semanticsLabel: semantics_label,
+          softWrap: !no_wrap,
+        );
+        // tidak selectable dan tidak spans
+      } else {
+        widget = Text(
+          value!,
+          style: (google_fonts != null)
+              ? googleFonts(google_fonts, style: style)
+              : style,
+          maxLines: max_lines,
+          textAlign: text_align,
+          semanticsLabel: semantics_label,
+          softWrap: !no_wrap,
+        );
+      }
     }
 
-    return constrainedControl(context, textWidget, parent, control);
+    return LayoutControl(
+      control: control,
+      child: widget,
+    );
   }
 }

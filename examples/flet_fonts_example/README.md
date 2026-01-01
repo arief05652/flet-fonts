@@ -1,9 +1,15 @@
 # Flet app
 
-A simple Flet app.
+you need to sync and build before run
 
-To run the app:
-
+```bash
+uv sync
 ```
-flet run [app_directory]
+
+```bash
+uv run flet build [linux|windows] -v
+```
+
+```bash
+uv run flet run
 ```

@@ -3,43 +3,45 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dw/flet-fonts)
 ![PyPI - Version](https://img.shields.io/pypi/v/flet-fonts)
 
-#### [en_translate](README_en.MD)
+#### [id_translate](README.md)
 
 ## Introduction
 
-**Flet Fonts** adalah library yang menyediakan **Google Fonts untuk aplikasi Flet**.  
-Project ini merupakan **porting dari Google Fonts (Flutter)** agar bisa digunakan secara langsung dan mudah di Flet tanpa konfigurasi font manual.
+**Flet Fonts** is a library that provides **Google Fonts for Flet applications**.
 
-Tujuan utama library ini adalah:
-- Menggunakan Google Fonts di Flet **tanpa ribet**
-- API yang **simple & Pythonic**
-- Konsisten dengan behavior font di Flutter
+This project is a **port of Google Fonts (Flutter)**, designed to be used directly and easily within Flet without the need for manual font configuration.
 
-Dengan **Flet Fonts**, kamu bisa langsung memakai ratusan font dari Google Fonts hanya dengan menentukan `google_fonts`.
+The main goals of this library are:
+
+* To use Google Fonts in Flet **without the hassle**
+* To provide a **simple & Pythonic** API
+* To maintain consistency with font behavior in Flutter
+
+With **Flet Fonts**, you can instantly access hundreds of Google Fonts simply by specifying the `google_fonts` property.
 
 ---
 
 ## Features
 
-- 🚀 Porting langsung dari **Google Fonts (Flutter)**
-- 🎨 Mendukung **ratusan font Google Fonts**
-- ⚡ Mudah digunakan, tanpa setup font manual
-- 🖥️ Support multi-platform:
-  - Android
-  - Linux
-  - Windows (belum di test)
-  - macOS (belum di test)
-  - Web (belum di test)
+* 🚀 Direct port from **Google Fonts (Flutter)**
+* 🎨 Supports **hundreds of Google Fonts**
+* ⚡ Easy to use, no manual setup required
+* 🖥️ Multi-platform support:
+* Android
+* Linux
+* Windows (untested)
+* macOS (untested)
+* Web (untested)
 
 ---
 
 ## Requirements
 
-- **Python** `3.12` 
-- **Flet** `0.80.0`
+* **Python** `3.12`
+* **Flet** `0.80.0`
 
 > [!WARNING]
-> ⚠️ Library ini **tidak kompatibel** dengan Python versi di bawah `3.12` atau Flet versi selain `0.80.0`.
+> ⚠️ This library is **not compatible** with Python versions below `3.12` or Flet versions other than `0.80.0`.
 
 ---
 
@@ -57,10 +59,12 @@ pip install flet-fonts
 uv add flet-fonts
 ```
 
+---
+
 ## How to Use
 
 > [!NOTE]
-> sebelum dijalankan pastikan kamu build terlebih dahulu, kenapa? karna flet harus mendaftarkan terlebih dahulu ke depedensi flutter nya
+> Make sure to **build your project first** before running it. Why? Because Flet needs to register the fonts into the Flutter dependencies beforehand.
 
 ```python
 import flet as ft
@@ -79,7 +83,7 @@ def main(page: ft.Page):
             height=150,
             width=300,
             content=ff.FletFonts(
-                value="dari flet-fonts",
+                value="from flet-fonts",
                 spans=[
                     ff.TextSpan(
                         value="inside flet-fonts",
@@ -101,5 +105,7 @@ def main(page: ft.Page):
             ),
         ),
     )
-ft.run(main)
+    
+ft.app(main)
+
 ```

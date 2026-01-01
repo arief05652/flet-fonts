@@ -1,28 +1,41 @@
 import flet as ft
-
-from flet_fonts import FletFonts
+import flet_fonts as ff
 
 
 def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.window.always_on_top
     page.theme_mode = ft.ThemeMode.DARK
 
     page.add(
         ft.Container(
+            padding=10,
+            bgcolor=ft.Colors.WHITE_30,
             height=150,
             width=300,
-            padding=10,
-            bgcolor=ft.Colors.WHITE24,
-            border_radius=15,
-            content=FletFonts(
-                "Hello, World uqwjndkjansdkjanskjdnasjkdnkasmkasdaskdaksdmalsd kasmdasklmdaksmdaskldmalsdmaslkdmalskdm",
-                font_family="ADLaM Display"
+            content=ff.FletFonts(
+                value="dari flet-fonts",
+                spans=[
+                    ff.TextSpan(
+                        value="inside flet-fonts",
+                        google_fonts="Aboreto",
+                        style=ft.TextStyle(size=15, overflow=ft.TextOverflow.ELLIPSIS),
+                        spans=[
+                            ff.TextSpan(
+                                value="nested span",
+                                google_fonts="Agdasima",
+                                style=ft.TextStyle(
+                                    size=15, overflow=ft.TextOverflow.ELLIPSIS
+                                ),
+                            )
+                        ],
+                    )
+                ],
+                max_lines=1,
+                style=ft.TextStyle(size=15),
             ),
         ),
-        ft.Text(),
     )
 
 
-ft.app(main)
+ft.run(main)

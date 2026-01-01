@@ -1,0 +1,431 @@
+## [0.1.2] - 2026-01-01
+
+### 🔠 List of supported fonts
+
+* ADLaM Display
+* Aboreto
+* Abyssinica SIL
+* Afacad
+* Agbalumo
+* Agdasima
+* Akatab
+* Akaya Kanadaka
+* Akshar
+* Albert Sans
+* Alexandria
+* Alkalami
+* Alkatra
+* Alumni Sans Collegiate One
+* Alumni Sans Inline One
+* Alumni Sans Pinstripe
+* Amiri Quran
+* Anek Bangla
+* Anek Devanagari
+* Anek Gujarati
+* Anek Gurmukhi
+* Anek Kannada
+* Anek Latin
+* Anek Malayalam
+* Anek Odia
+* Anek Tamil
+* Anek Telugu
+* Angkor
+* Annapurna SIL
+* Anta
+* Anton SC
+* Antonio
+* Anybody
+* Aoboshi One
+* AR One Sans
+* Aref Ruqaa Ink
+* Arima
+* Arsenal SC
+* Asap Condensed
+* BIZ UDGothic
+* BIZ UDMincho
+* BIZ UDPGothic
+* BIZ UDPMincho
+* Babylonica
+* Bacasime Antique
+* Bagel Fat One
+* Ballet
+* Baskervville SC
+* Battambang
+* Bayon
+* Beau Rivage
+* Beiruti
+* Belanosima
+* Benne
+* BhuTuka Expanded One
+* Blaka
+* Blaka Hollow
+* Blaka Ink
+* Bodoni Moda
+* Bodoni Moda SC
+* Bokor
+* Bona Nova SC
+* Borel
+* Braah One
+* Bricolage Grotesque
+* Bruno Ace
+* Bruno Ace SC
+* Bungee Spice
+* Cactus Classical Serif
+* Cairo Play
+* Caprasimo
+* Carlito
+* Castoro Titling
+* Charis SIL
+* Chenla
+* Cherry Bomb One
+* Chivo Mono
+* Chocolate Classical Sans
+* Chokokutai
+* Climate Crisis
+* Comme
+* Content
+* Dai Banna SIL
+* Danfo
+* Dangrek
+* Darumadrop One
+* Delicious Handrawn
+* Diphylleia
+* DynaPuff
+* Edu AU VIC WA NT Hand
+* Edu NSW ACT Foundation
+* Edu QLD Beginner
+* Edu SA Beginner
+* Edu TAS Beginner
+* Edu VIC WA NT Beginner
+* Familjen Grotesk
+* Fasthand
+* Figtree
+* Finlandica
+* Foldit
+* Fragment Mono
+* Freehand
+* Freeman
+* Fustat
+* Ga Maamli
+* Gabarito
+* Gajraj One
+* Gantari
+* Gasoek One
+* Gentium Book Plus
+* Gentium Plus
+* Geologica
+* Gloock
+* Golos Text
+* Grandiflora One
+* Grape Nuts
+* Gulzar
+* Handjet
+* Hanken Grotesk
+* Hanuman
+* Hedvig Letters Sans
+* Hedvig Letters Serif
+* Honk
+* Hubballi
+* IBM Plex Sans JP
+* Imbue
+* Imperial Script
+* Inclusive Sans
+* Ingrid Darling
+* Inspiration
+* Instrument Sans
+* Instrument Serif
+* Inter Tight
+* Island Moments
+* Jacquard 12
+* Jacquard 12 Charted
+* Jacquard 24
+* Jacquard 24 Charted
+* Jacquarda Bastarda 9
+* Jacquarda Bastarda 9 Charted
+* Jaini
+* Jaini Purva
+* Jaro
+* Jersey 10
+* Jersey 10 Charted
+* Jersey 15
+* Jersey 15 Charted
+* Jersey 20
+* Jersey 20 Charted
+* Jersey 25
+* Jersey 25 Charted
+* Joan
+* Kablammo
+* Kalnia
+* Kalnia Glaze
+* Kantumruy Pro
+* Karantina
+* Kay Pho Du
+* Kdam Thmor Pro
+* Khmer
+* Kiwi Maru
+* Kode Mono
+* Kolker Brush
+* Konkhmer Sleokchher
+* Koulen
+* Labrada
+* Lavishly Yours
+* League Gothic
+* League Spartan
+* Libre Barcode EAN13 Text
+* Libre Bodoni
+* Licorice
+* Linefont
+* Lisu Bosa
+* Love Light
+* Lugrasimo
+* Lumanosimo
+* Lunasima
+* Luxurious Roman
+* LXGW WenKai Mono TC
+* LXGW WenKai TC
+* Madimi One
+* Maname
+* Marhey
+* Martian Mono
+* Mea Culpa
+* Metal
+* Micro 5
+* Micro 5 Charted
+* Mingzat
+* Moirai One
+* Monomaniac One
+* Moo Lah Lah
+* Moon Dance
+* Mooli
+* Moul
+* Moulpali
+* Ms Madi
+* My Soul
+* Mynerve
+* Nabla
+* Namdhinggo
+* Narnoor
+* Neonderthaw
+* Newsreader
+* Nokora
+* Noto Color Emoji
+* Noto Emoji
+* Noto Sans Chorasmian
+* Noto Sans Cypro Minoan
+* Noto Sans Ethiopic
+* Noto Sans HK
+* Noto Sans JP
+* Noto Sans KR
+* Noto Sans Kawi
+* Noto Sans Lao Looped
+* Noto Sans Mende Kikakui
+* Noto Sans Nag Mundari
+* Noto Sans Nandinagari
+* Noto Sans NKo Unjoined
+* Noto Sans SC
+* Noto Sans SignWriting
+* Noto Sans Syriac Eastern
+* Noto Sans Tangsa
+* Noto Sans TC
+* Noto Sans Vithkuqi
+* Noto Serif HK
+* Noto Serif JP
+* Noto Serif KR
+* Noto Serif Khojki
+* Noto Serif Makasar
+* Noto Serif NP Hmong
+* Noto Serif Old Uyghur
+* Noto Serif Oriya
+* Noto Serif Ottoman Siyaq
+* Noto Serif SC
+* Noto Serif TC
+* Noto Serif Toto
+* Noto Serif Vithkuqi
+* Noto Znamenny Musical Notation
+* Nuosu SIL
+* Ojuju
+* Ole
+* Onest
+* Oooh Baby
+* Orbit
+* Orelega One
+* Padyakke Expanded One
+* Pathway Extreme
+* Phudu
+* Pixelify Sans
+* Platypi
+* Playfair
+* Playpen Sans
+* Playwrite AR
+* Playwrite AT
+* Playwrite AU NSW
+* Playwrite AU QLD
+* Playwrite AU SA
+* Playwrite AU TAS
+* Playwrite AU VIC
+* Playwrite BE VLG
+* Playwrite BE WAL
+* Playwrite BR
+* Playwrite CA
+* Playwrite CL
+* Playwrite CO
+* Playwrite CU
+* Playwrite CZ
+* Playwrite DE Grund
+* Playwrite DE LA
+* Playwrite DE SAS
+* Playwrite DE VA
+* Playwrite DK Loopet
+* Playwrite DK Uloopet
+* Playwrite ES
+* Playwrite ES Deco
+* Playwrite FR Moderne
+* Playwrite FR Trad
+* Playwrite GB J
+* Playwrite GB S
+* Playwrite HR
+* Playwrite HR Lijeva
+* Playwrite HU
+* Playwrite ID
+* Playwrite IE
+* Playwrite IN
+* Playwrite IS
+* Playwrite IT Moderna
+* Playwrite IT Trad
+* Playwrite MX
+* Playwrite NG Modern
+* Playwrite NL
+* Playwrite NO
+* Playwrite NZ
+* Playwrite PE
+* Playwrite PL
+* Playwrite PT
+* Playwrite RO
+* Playwrite SK
+* Playwrite TZ
+* Playwrite US Modern
+* Playwrite US Trad
+* Playwrite VN
+* Playwrite ZA
+* Plus Jakarta Sans
+* Poetsen One
+* Poltawski Nowy
+* Preahvihear
+* Protest Guerrilla
+* Protest Revolution
+* Protest Riot
+* Protest Strike
+* Qwitcher Grypen
+* Radio Canada
+* Radio Canada Big
+* Reddit Mono
+* Reddit Sans
+* Reddit Sans Condensed
+* Reem Kufi Fun
+* Reem Kufi Ink
+* REM
+* Rethink Sans
+* Roboto Flex
+* Roboto Serif
+* Rubik 80s Fade
+* Rubik Broken Fax
+* Rubik Bubbles
+* Rubik Burned
+* Rubik Dirt
+* Rubik Distressed
+* Rubik Doodle Shadow
+* Rubik Doodle Triangles
+* Rubik Gemstones
+* Rubik Glitch
+* Rubik Glitch Pop
+* Rubik Iso
+* Rubik Lines
+* Rubik Maps
+* Rubik Marker Hatch
+* Rubik Maze
+* Rubik Microbe
+* Rubik Moonrocks
+* Rubik Pixels
+* Rubik Puddles
+* Rubik Scribble
+* Rubik Spray Paint
+* Rubik Storm
+* Rubik Vinyl
+* Rubik Wet Paint
+* Ruwudu
+* Schibsted Grotesk
+* Sedan
+* Sedan SC
+* Send Flowers
+* Shantell Sans
+* Siemreap
+* Sigmar
+* Silkscreen
+* Sixtyfour
+* Slackside One
+* Smooch Sans
+* Sofia Sans
+* Sofia Sans Condensed
+* Sofia Sans Extra Condensed
+* Sofia Sans Semi Condensed
+* Solitreo
+* Sometype Mono
+* Sono
+* Source Serif 4
+* Splash
+* Spline Sans
+* Spline Sans Mono
+* Square Peg
+* Suwannaphum
+* Tac One
+* Tai Heritage Pro
+* Tapestry
+* Taprom
+* Teachers
+* Tektur
+* Texturina
+* The Nautigal
+* Tilt Neon
+* Tilt Prism
+* Tilt Warp
+* Tiny5
+* Tiro Bangla
+* Tiro Devanagari Hindi
+* Tiro Devanagari Marathi
+* Tiro Devanagari Sanskrit
+* Tiro Gurmukhi
+* Tiro Kannada
+* Tiro Tamil
+* Tiro Telugu
+* Truculenta
+* Tsukimi Rounded
+* Twinkle Star
+* Ubuntu Sans
+* Ubuntu Sans Mono
+* Unbounded
+* Updock
+* Vazirmatn
+* Victor Mono
+* Vina Sans
+* Vujahday Script
+* Water Brush
+* Waterfall
+* Wavefont
+* Whisper
+* Wittgenstein
+* Wix Madefor Display
+* Wix Madefor Text
+* Workbench
+* Yarndings 12
+* Yarndings 12 Charted
+* Yarndings 20
+* Yarndings 20 Charted
+* Young Serif
+* Ysabeau
+* Ysabeau Infant
+* Ysabeau Office
+* Ysabeau SC
+* Zain
+* Zen Dots
+
+---

@@ -1,6 +1,6 @@
 [project]
 name = "flet-fonts"
-version = "0.1.1"
+version = "0.1.3"
 description = "flet-fonts uses the Google Fonts library in the background"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -8,7 +8,7 @@ authors = [
     { name = "Arief Minardi", email = "ariefminardi005@gmail.com" }
 ]
 dependencies = [
-    "flet>=0.28.3",
+    "flet>=0.80.0",
 ]
 
 [project.urls]
@@ -20,11 +20,11 @@ Issues = "https://github.com/arief05652/flet-fonts/issues"
 
 [tool.uv]
 dev-dependencies = [
-    "flet[all]==0.28.3",
+    "flet[all]==0.80.0",
 ]
 
 [tool.poetry.group.dev.dependencies]
-flet = {extras = ["all"], version = "0.28.3"}
+flet = {extras = ["all"], version = "0.80.0"}
 
 [tool.setuptools]
 license-files = []
