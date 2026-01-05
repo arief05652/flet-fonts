@@ -19,7 +19,7 @@ class FletFontsControl extends StatelessWidget {
     // attr from py
     var value = control.getString("value", "");
     var spans = control.children("spans");
-    var google_fonts = control.getString("google_fonts")!;
+    var google_fonts = control.getString("google_fonts", "ADLaM Display")!;
     var text_align = control.getTextAlign("text_align");
     var style = control.getTextStyle("style", theme);
     var max_lines = control.getInt("max_lines");

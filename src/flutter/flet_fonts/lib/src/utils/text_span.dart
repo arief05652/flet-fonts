@@ -12,7 +12,7 @@ List<TextSpan> parseSpans(List<Control> spans, BuildContext context) {
 TextSpan parseText(Control span, BuildContext context) {
   final theme = Theme.of(context);
   var text = span.getString("value");
-  var google_fonts = span.getString("google_fonts")!;
+  var google_fonts = span.getString("google_fonts", "ADLaM Display")!;
   var style = span.getTextStyle("style", theme);
 
   /** handle error jika font tidak ada
