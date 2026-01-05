@@ -1,6 +1,6 @@
-from flet_fonts.flet_fonts import FletFonts, TextSpan
+from flet_fonts.flet_fonts import Text, TextSpan
 
 __all__ = [
-    "FletFonts",
+    "Text",
     "TextSpan",
 ]

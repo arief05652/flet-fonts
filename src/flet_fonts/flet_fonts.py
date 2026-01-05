@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 import flet as ft
 
@@ -7,7 +7,7 @@ from .text_span import TextSpan
 
 
 @ft.control("FletFonts")
-class FletFonts(ft.LayoutControl):
+class Text(ft.LayoutControl):
     """
     class FletFonts uses Google Fonts to set the font family,
     easy to use without downloading files and setting them manually.
@@ -34,10 +34,15 @@ class FletFonts(ft.LayoutControl):
             )
         ft.run(main)
         ```
+
+    Note:
+        In version 0.1.4, after you use the `ff.TextSpan()` class,
+        you must enter a font theme. It cannot be empty,
+        and the default is `ADLaM Display`.
     """
 
     value: str = ""
-    google_fonts: Optional[FontFamily] = None
+    google_fonts: Union[FontFamily, str] = "ADLaM Display"
     spans: Optional[list[TextSpan]] = None
     text_align: ft.TextAlign = ft.TextAlign.START
     style: Optional[ft.TextStyle] = None
@@ -50,3 +55,5 @@ class FletFonts(ft.LayoutControl):
     selection_cursor_width: int = 2
     selection_cursor_height: Optional[int] = None
     selection_cursor_color: Optional[ft.ColorValue] = None
+    # error
+    error_content: Optional[ft.Control] = None
