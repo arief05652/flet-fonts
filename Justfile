@@ -1,13 +1,17 @@
 default:
-    just --list
+    @just --list
 
-sync-lib:
-    uv sync
+# build app {apk, linux, web}
+build platform:
+    @cd examples/flet_fonts_example && \
+    uv run flet build {{ platform }}
 
-sync-flutter:
-    cd src/flutter/flet_fonts/
-    flutter pub get
+# run result build app {apk, web} default is linux
+run platform="":
+    @cd examples/flet_fonts_example && \
+    uv run flet run {{ platform }} -d -r
 
-sync-example:
-    cd examples/flet_fonts_example/
-    uv sync
+# serve web after build app to web
+serve:
+    @cd examples/flet_fonts_example && \
+    uv run flet serve
