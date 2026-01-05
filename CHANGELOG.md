@@ -1,6 +1,21 @@
+## [0.1.4] - 2026-01-05
+
+### Breaking Changes
+* change the main class from `FletFonts()` to `Text()`
+
+### Added
+* Handle errors if the `google_fonts` property is not found.
+
+### Changed
+* rename from `FletFonts()` to `Text()`
+* after you use the `ff.TextSpan()` or `ff.Text()` class,
+  you must enter a font theme. It cannot be empty,
+  and the default is `ADLaM Display`.
+
+
 ## [0.1.2] - 2026-01-01
 
-### 🔠 List of supported fonts
+### List of supported fonts
 
 * ADLaM Display
 * Aboreto
