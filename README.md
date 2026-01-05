@@ -78,7 +78,7 @@ def main(page: ft.Page):
             bgcolor=ft.Colors.WHITE_30,
             height=150,
             width=300,
-            content=ff.FletFonts(
+            content=ff.Text(
                 value="dari flet-fonts",
                 spans=[
                     ff.TextSpan(
