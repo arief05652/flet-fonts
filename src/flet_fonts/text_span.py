@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 import flet as ft
 
@@ -36,10 +36,15 @@ class TextSpan(ft.LayoutControl):
             )
         ft.run(main)
         ```
+
+    Note:
+        In version 0.1.4, after you use the `ff.TextSpan()` class,
+        you must enter a font theme. It cannot be empty,
+        and the default is `ADLaM Display`.
     """
 
     value: str = ""
+    google_fonts: Union[FontFamily, str] = "ADLaM Display"
     spans: Optional[list["TextSpan"]] = None
-    google_fonts: Optional[FontFamily] = None
     style: Optional[ft.TextStyle] = None
     semantic_label: Optional[str] = None
