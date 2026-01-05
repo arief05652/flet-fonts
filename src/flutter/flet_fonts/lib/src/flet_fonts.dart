@@ -19,7 +19,7 @@ class FletFontsControl extends StatelessWidget {
     // attr from py
     var value = control.getString("value", "");
     var spans = control.children("spans");
-    var google_fonts = control.getString("google_fonts");
+    var google_fonts = control.getString("google_fonts")!;
     var text_align = control.getTextAlign("text_align");
     var style = control.getTextStyle("style", theme);
     var max_lines = control.getInt("max_lines");
@@ -35,19 +35,26 @@ class FletFontsControl extends StatelessWidget {
     var selection_cursor_height = control.getDouble("selection_cursor_height");
     var selection_cursor_color =
         control.getColor("selection_cursor_color", context);
+    // error
+    var error_content = control.buildWidget("error_content");
 
-    Widget widget = SizedBox.shrink();
+    Widget text = SizedBox.shrink();
+
+    // handle error jika font tidak ada
+    var fonts = googleFonts(google_fonts, style: style);
+    if (fonts == null) {
+      return error_content ??
+          ErrorControl("The ${google_fonts} font cannot be found.");
+    }
 
     // jika selectable
     if (selectable) {
       // cek spans jika ada
       if (spans.isNotEmpty) {
-        widget = SelectableText.rich(
+        text = SelectableText.rich(
           TextSpan(
               text: value,
-              style: (google_fonts != null)
-                  ? googleFonts(google_fonts, style: style)
-                  : style,
+              style: fonts,
               semanticsLabel: semantics_label,
               children: parseSpans(spans, context)),
           maxLines: max_lines,
@@ -60,11 +67,9 @@ class FletFontsControl extends StatelessWidget {
         );
         // ga ada spans tapi selectable
       } else {
-        widget = SelectableText(
+        text = SelectableText(
           value!,
-          style: (google_fonts != null)
-              ? googleFonts(google_fonts, style: style)
-              : style,
+          style: fonts,
           maxLines: max_lines,
           textAlign: text_align,
           showCursor: show_selection_cursor,
@@ -77,17 +82,13 @@ class FletFontsControl extends StatelessWidget {
       // tidak selectable tapi spans
     } else {
       if (spans.isNotEmpty) {
-        widget = Text.rich(
+        text = Text.rich(
           TextSpan(
               text: value,
-              style: (google_fonts != null)
-                  ? googleFonts(google_fonts, style: style)
-                  : style,
+              style: fonts,
               semanticsLabel: semantics_label,
               children: parseSpans(spans, context)),
-          style: (google_fonts != null)
-              ? googleFonts(google_fonts, style: style)
-              : style,
+          style: fonts,
           maxLines: max_lines,
           textAlign: text_align,
           semanticsLabel: semantics_label,
@@ -95,11 +96,9 @@ class FletFontsControl extends StatelessWidget {
         );
         // tidak selectable dan tidak spans
       } else {
-        widget = Text(
+        text = Text(
           value!,
-          style: (google_fonts != null)
-              ? googleFonts(google_fonts, style: style)
-              : style,
+          style: fonts,
           maxLines: max_lines,
           textAlign: text_align,
           semanticsLabel: semantics_label,
@@ -110,7 +109,7 @@ class FletFontsControl extends StatelessWidget {
 
     return LayoutControl(
       control: control,
-      child: widget,
+      child: text,
     );
   }
 }

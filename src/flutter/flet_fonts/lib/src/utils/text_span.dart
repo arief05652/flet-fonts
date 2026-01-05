@@ -11,14 +11,26 @@ List<TextSpan> parseSpans(List<Control> spans, BuildContext context) {
 // parsing per each span
 TextSpan parseText(Control span, BuildContext context) {
   final theme = Theme.of(context);
-  var google_fonts = span.getString("google_fonts");
+  var text = span.getString("value");
+  var google_fonts = span.getString("google_fonts")!;
   var style = span.getTextStyle("style", theme);
 
+  /** handle error jika font tidak ada
+  gapakai return dari `ErrorControl` karna harus mengembalikan `TextSpan`
+  */
+  var fonts = googleFonts(google_fonts, style: style);
+  if (fonts == null) {
+    return TextSpan(
+        text: "\nThe ${google_fonts} font cannot be found.",
+        style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            backgroundColor: Colors.red));
+  }
+
   return TextSpan(
-      text: span.getString("value"),
+      text: text,
       children: parseSpans(span.children("spans"), context),
-      style: (google_fonts != null)
-          ? googleFonts(google_fonts, style: style)
-          : style,
+      style: googleFonts(google_fonts, style: style),
       semanticsLabel: span.getString("semantic_label"));
 }
