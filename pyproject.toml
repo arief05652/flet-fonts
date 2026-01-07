@@ -27,7 +27,7 @@ dev-dependencies = [
 flet = {extras = ["all"], version = "0.80.0"}
 
 [tool.setuptools]
-license-files = []
+license-files = ["LICENSE"]
 
 [build-system]
 requires = ["setuptools"]
