@@ -22,10 +22,7 @@ TextSpan parseText(Control span, BuildContext context) {
   if (fonts == null) {
     return TextSpan(
         text: "\nThe ${google_fonts} font cannot be found.",
-        style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            backgroundColor: Colors.red));
+        style: TextStyle(color: Colors.white, backgroundColor: Colors.red));
   }
 
   return TextSpan(

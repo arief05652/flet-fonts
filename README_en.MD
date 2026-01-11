@@ -23,15 +23,15 @@ With **Flet Fonts**, you can instantly access hundreds of Google Fonts simply by
 
 ## Features
 
-* 🚀 Direct port from **Google Fonts (Flutter)**
-* 🎨 Supports **hundreds of Google Fonts**
-* ⚡ Easy to use, no manual setup required
-* 🖥️ Multi-platform support:
-* Android
-* Linux
-* Windows (untested)
-* macOS (untested)
-* Web (untested)
+- 🚀 Direct port from **Google Fonts (Flutter)**
+- 🎨 Supports **hundreds of Google Fonts**
+- ⚡ Easy to use, no manual setup required
+- 🖥️ Multi-platform support:
+  - Android 🟢
+  - Linux 🟢
+  - Windows (untested)
+  - macOS (untested)
+  - Web 🟢
 
 ---
 
@@ -46,12 +46,6 @@ With **Flet Fonts**, you can instantly access hundreds of Google Fonts simply by
 ---
 
 ## Installation
-
-### Using PIP
-
-```bash
-pip install flet-fonts
-```
 
 ### Using UV
 

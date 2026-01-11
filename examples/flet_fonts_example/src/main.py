@@ -1,5 +1,4 @@
 import flet as ft
-
 import flet_fonts as ff
 
 
@@ -17,7 +16,7 @@ def main(page: ft.Page):
             alignment=ft.Alignment.CENTER,
             content=ff.Text(
                 value="Hello world",
-                google_fonts="Yuji Boku",
+                google_fonts="Zen Dots",
             ),
         ),
     )
