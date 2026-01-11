@@ -26,7 +26,7 @@ class Text(ft.LayoutControl):
                     bgcolor=ft.Colors.WHITE_30,
                     height=150,
                     width=300,
-                    content=ff.FletFonts(
+                    content=ff.Text(
                         value="dari flet-fonts",
                         google_fonts="Aboreto"
                     ),
@@ -36,13 +36,18 @@ class Text(ft.LayoutControl):
         ```
 
     Note:
-        In version 0.1.4, after you use the `ff.TextSpan()` class,
+        after you use the `ff.Text()` class,
         you must enter a font theme. It cannot be empty,
         and the default is `ADLaM Display`.
     """
 
     value: str = ""
     google_fonts: Union[FontFamily, str] = "ADLaM Display"
+    """
+    If you cannot find the font you want to use,
+    you can copy and paste the font name you took from `https://fonts.google.com/`.
+    """
+
     spans: Optional[list[TextSpan]] = None
     text_align: ft.TextAlign = ft.TextAlign.START
     style: Optional[ft.TextStyle] = None
