@@ -12,7 +12,7 @@ dependencies:
   flet: 0.80.0
   flutter:
     sdk: flutter
-  google_fonts: ^6.3.3
+  google_fonts: ^7.0.0
 
 dev_dependencies:
   flutter_test:
