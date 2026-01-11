@@ -25,11 +25,11 @@ Dengan **Flet Fonts**, kamu bisa langsung memakai ratusan font dari Google Fonts
 - 🎨 Mendukung **ratusan font Google Fonts**
 - ⚡ Mudah digunakan, tanpa setup font manual
 - 🖥️ Support multi-platform:
-  - Android
-  - Linux
+  - Android 🟢
+  - Linux 🟢
   - Windows (belum di test)
   - macOS (belum di test)
-  - Web (belum di test)
+  - Web 🟢
 
 ---
 
@@ -44,12 +44,6 @@ Dengan **Flet Fonts**, kamu bisa langsung memakai ratusan font dari Google Fonts
 ---
 
 ## Installation
-
-### Using PIP
-
-```bash
-pip install flet-fonts
-```
 
 ### Using UV
 
