@@ -6,6 +6,7 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.theme_mode = ft.ThemeMode.DARK
+    page.window.always_on_top = True
 
     page.add(
         ft.Container(
@@ -16,7 +17,8 @@ def main(page: ft.Page):
             alignment=ft.Alignment.CENTER,
             content=ff.Text(
                 value="Hello world",
-                google_fonts="Zen Dots",
+                google_fonts="Gravitas One",
+                selectable=True,
             ),
         ),
     )
