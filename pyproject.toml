@@ -15,8 +15,8 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/arief05652/flet-fonts"
-Issues = "https://github.com/arief05652/flet-fonts/issues"
+Repository = "https://github.com/Noxnusa/flet-fonts"
+Issues = "https://github.com/Noxnusa/flet-fonts/issues"
 
 [tool.setuptools.package-data]
 "flutter.flet_fonts" = ["**/*"]
