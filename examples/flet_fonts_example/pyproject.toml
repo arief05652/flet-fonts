@@ -9,7 +9,7 @@ authors = [
 ]
 dependencies = [
   "flet-fonts",
-  "flet>=0.80.0",
+  "flet[all]==0.80.0",
 ]
 
 [tool.flet]
@@ -33,8 +33,8 @@ path = "src"
 [tool.flet.dev_packages]
 flet-fonts = "../.." # relative path
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "flet[all]==0.80.0",
 ]
 
