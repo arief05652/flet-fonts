@@ -2,7 +2,8 @@ default:
     @just --list
 
 # build app {apk, linux, web}
-build platform:
+build platform="linux":
+    sync
     @cd examples/flet_fonts_example && \
     uv run flet build {{ platform }}
 
@@ -15,3 +16,8 @@ run platform="":
 serve:
     @cd examples/flet_fonts_example && \
     uv run flet serve
+
+sync:
+    uv add flet-cli==0.80.0 && \
+    uv add flet-desktop==0.80.0 && \
+    uv add flet-web==0.80.0

@@ -11,7 +11,7 @@ List<TextSpan> parseSpans(List<Control> spans, BuildContext context) {
 // parsing per each span
 TextSpan parseText(Control span, BuildContext context) {
   final theme = Theme.of(context);
-  var text = span.getString("value");
+  var text = span.getString("text");
   var google_fonts = span.getString("google_fonts", "ADLaM Display")!;
   var style = span.getTextStyle("style", theme);
 
@@ -26,8 +26,10 @@ TextSpan parseText(Control span, BuildContext context) {
   }
 
   return TextSpan(
-      text: text,
-      children: parseSpans(span.children("spans"), context),
-      style: googleFonts(google_fonts, style: style),
-      semanticsLabel: span.getString("semantic_label"));
+    text: text,
+    children: parseSpans(span.children("spans"), context),
+    style: googleFonts(google_fonts, style: style),
+    semanticsLabel: span.getString("semantic_label"),
+    spellOut: span.getBool("spell_out"),
+  );
 }

@@ -3,8 +3,6 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dw/flet-fonts)
 ![PyPI - Version](https://img.shields.io/pypi/v/flet-fonts)
 
-#### [id_translate](README.md)
-
 ## Introduction
 
 **Flet Fonts** is a library that provides **Google Fonts for Flet applications**.
@@ -29,19 +27,19 @@ With **Flet Fonts**, you can instantly access hundreds of Google Fonts simply by
 - 🖥️ Multi-platform support:
   - Android 🟢
   - Linux 🟢
-  - Windows (untested)
-  - macOS (untested)
-  - Web 🟢
+  - Windows 🟢
+  - macOS 🟢
+  - Web 🔴
 
 ---
 
 ## Requirements
 
 * **Python** `3.12`
-* **Flet** `0.80.0`
+* **Flet** `0.8x.x`
 
 > [!WARNING]
-> ⚠️ This library is **not compatible** with Python versions below `3.12` or Flet versions other than `0.80.0`.
+> ⚠️ This library is **not compatible** with Python versions below `3.12`.
 
 ---
 
@@ -101,5 +99,4 @@ def main(page: ft.Page):
     )
     
 ft.app(main)
-
 ```
