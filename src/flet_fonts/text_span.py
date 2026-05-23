@@ -7,88 +7,78 @@ from .font_data import FontFamily
 
 @ft.control("TextSpan")
 class TextSpan(ft.Control):
-    """
-    This class is used to create spans.
+    """A styled fragment of text within a parent `ff.Text` widget.
+
+    Use spans to apply different fonts, styles, or semantic properties to
+    portions of a single text line.
 
     Example:
         ```python
-        import flet as ft
         import flet_fonts as ff
 
-        def main(page: ft.Page):
-            page.theme_mode = ft.ThemeMode.DARK
-
-            page.add(
-                ft.Container(
-                    padding=10,
-                    bgcolor=ft.Colors.WHITE_30,
-                    height=150,
-                    width=300,
-                    content=ff.FletFonts(
-                        value="dari flet-fonts",
-                        spans=[
-                            ff.TextSpan(
-                                value="ini text span",
-                            )
-                        ],
-                    ),
+        ff.Text(
+            value="Hello ",
+            spans=[
+                ff.TextSpan(
+                    text="world",
+                    google_fonts="Aboreto",
+                    style=ft.TextStyle(size=24),
                 ),
-            )
-        ft.run(main)
+            ],
+        )
         ```
 
     Note:
-        after you use the `ff.TextSpan()` class,
-        you must enter a font theme. It cannot be empty,
-        and the default is `ADLaM Display`.
+        When `google_fonts` is not specified, this span inherits the font
+        from its parent `ff.Text`. Falls back to `"ADLaM Display"` if the
+        parent also has no font set.
     """
 
+    # ── Content ─────────────────────────────────────────────────────────
+
     text: str = ""
-    google_fonts: Union[FontFamily, str, None] = None
+    """The text content of this span.
+
+    When both `text` and parent `value` are defined, the parent's `value`
+    acts as a prefix and the span's `text` replaces it at the span position.
     """
-    If you cannot find the font you want to use,
-    you can copy and paste the font name you took from `https://fonts.google.com/`.
+
+    google_fonts: Union[FontFamily, str, None] = None
+    """The Google Font family name for this span.
+
+    You can use any font from `https://fonts.google.com/`. When not set,
+    the span inherits the font from its parent `ff.Text` control.
     """
 
     spans: Optional[list["TextSpan"]] = None
-    """
-    Additional spans to include as children.
+    """Nested child spans within this span.
 
-    Note:
-        If both `spans` and [`text`][(c).] are defined,
-        the `text` takes precedence.
+    Child spans inherit properties (e.g. `spell_out`) from this span
+    unless explicitly overridden.
     """
 
     style: Optional[ft.TextStyle] = None
+    """A `ft.TextStyle` to customise the appearance of this span.
+
+    When not set, the span inherits the style from its parent.
     """
-    Defines the style of this text span.
-    """
+
+    # ── Semantics ───────────────────────────────────────────────────────
 
     semantic_label: Optional[str] = None
-    """
-    An alternative semantics label for this text.
+    """Alternative label used by assistive technologies.
 
-    If present, the semantics of this control will contain this value instead of the
-    actual text.
-
-    Raises:
-        ValueError: If [`semantics_label`][(c).] is set when [`text`][(c).] is `None`.
+    When set, screen readers will announce this value instead of the
+    span's actual text content.
     """
 
     spell_out: Optional[bool] = None
-    """"
-    Whether the assistive technologies should spell out this text
-    character by character.
+    """Whether assistive technologies should spell the text character by
+    character.
 
-    If the text is 'hello world', setting this to true causes the assistive
-    technologies, such as VoiceOver or TalkBack, to pronounce
-    'h-e-l-l-o-space-w-o-r-l-d' instead of complete words.
-    This is useful for texts, such as passwords or verification codes.
+    When `True`, "hello" is pronounced "h-e-l-l-o" instead of the whole
+    word. This is useful for passwords, verification codes, etc.
 
-    If this span contains other text span children, they also inherit the property from
-    this span unless explicitly set.
-
-    If the property is not set, this text span inherits the spell out setting
-    from its parent. If this text span does not have a parent or the parent does
-    not have a spell out setting, this text span does not spell out the text by default.
+    Child spans inherit this value unless explicitly overridden.
+    Defaults to `False` when neither this span nor its parent set a value.
     """

@@ -48,15 +48,20 @@ class FletFontsControl extends StatelessWidget {
     }
 
     // jika selectable
-    if (selectable) {
-      // cek spans jika ada
-      if (spans.isNotEmpty) {
-        text = SelectableText.rich(
-          TextSpan(
-              text: value,
-              style: fonts,
-              semanticsLabel: semantics_label,
-              children: parseSpans(spans, context)),
+    // build widget berdasarkan kombinasi selectable dan spans
+    final hasSpans = spans.isNotEmpty;
+    final span = hasSpans
+        ? TextSpan(
+            text: value,
+            style: fonts,
+            semanticsLabel: semantics_label,
+            children: parseSpans(spans, context),
+          )
+        : null;
+
+    text = switch ((selectable, hasSpans)) {
+      (true, true) => SelectableText.rich(
+          span!,
           maxLines: max_lines,
           textAlign: text_align,
           showCursor: show_selection_cursor,
@@ -64,10 +69,8 @@ class FletFontsControl extends StatelessWidget {
           cursorWidth: selection_cursor_width,
           cursorHeight: selection_cursor_height,
           cursorColor: selection_cursor_color,
-        );
-        // ga ada spans tapi selectable
-      } else {
-        text = SelectableText(
+        ),
+      (true, false) => SelectableText(
           value!,
           style: fonts,
           maxLines: max_lines,
@@ -77,35 +80,24 @@ class FletFontsControl extends StatelessWidget {
           cursorWidth: selection_cursor_width,
           cursorHeight: selection_cursor_height,
           cursorColor: selection_cursor_color,
-        );
-      }
-      // tidak selectable tapi spans
-    } else {
-      if (spans.isNotEmpty) {
-        text = Text.rich(
-          TextSpan(
-              text: value,
-              style: fonts,
-              semanticsLabel: semantics_label,
-              children: parseSpans(spans, context)),
+        ),
+      (false, true) => Text.rich(
+          span!,
           style: fonts,
           maxLines: max_lines,
           textAlign: text_align,
           semanticsLabel: semantics_label,
           softWrap: !no_wrap,
-        );
-        // tidak selectable dan tidak spans
-      } else {
-        text = Text(
+        ),
+      (false, false) => Text(
           value!,
           style: fonts,
           maxLines: max_lines,
           textAlign: text_align,
           semanticsLabel: semantics_label,
           softWrap: !no_wrap,
-        );
-      }
-    }
+        ),
+    };
 
     return LayoutControl(
       control: control,
