@@ -1,102 +1,76 @@
-# FLET FONTS
+# Flet Fonts
 
-![PyPI - Downloads](https://img.shields.io/pypi/dw/flet-fonts)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/flet-fonts)
 ![PyPI - Version](https://img.shields.io/pypi/v/flet-fonts)
 
-## Introduction
-
-**Flet Fonts** is a library that provides **Google Fonts for Flet applications**.
-
-This project is a **port of Google Fonts (Flutter)**, designed to be used directly and easily within Flet without the need for manual font configuration.
-
-The main goals of this library are:
-
-* To use Google Fonts in Flet **without the hassle**
-* To provide a **simple & Pythonic** API
-* To maintain consistency with font behavior in Flutter
-
-With **Flet Fonts**, you can instantly access hundreds of Google Fonts simply by specifying the `google_fonts` property.
-
----
-
-## Features
-
-- 🚀 Direct port from **Google Fonts (Flutter)**
-- 🎨 Supports **hundreds of Google Fonts**
-- ⚡ Easy to use, no manual setup required
-- 🖥️ Multi-platform support:
-  - Android 🟢
-  - Linux 🟢
-  - Windows 🟢
-  - macOS 🟢
-  - Web 🔴
-
----
-
-## Requirements
-
-* **Python** `3.12`
-* **Flet** `0.8x.x`
-
-> [!WARNING]
-> ⚠️ This library is **not compatible** with Python versions below `3.12`.
+**Google Fonts, instantly in Flet** — no downloads, no manual font setup.
 
 ---
 
 ## Installation
 
-### Using UV
-
 ```bash
 uv add flet-fonts
 ```
 
+> **Python 3.12+** and **Flet ≥ 0.85** required.
+
 ---
 
-## How to Use
+## Platforms
 
-> [!NOTE]
-> Make sure to **build your project first** before running it. Why? Because Flet needs to register the fonts into the Flutter dependencies beforehand.
+![Android](https://img.shields.io/badge/Android-✓-brightgreen)
+![Linux](https://img.shields.io/badge/Linux-✓-brightgreen)
+![Windows](https://img.shields.io/badge/Windows-✓-brightgreen)
+![macOS](https://img.shields.io/badge/macOS-✓-brightgreen)
+![Web](https://img.shields.io/badge/Web-x-red)
+
+---
+
+## Usage
+
+> [!IMPORTANT]
+> **Build your project first** so Flet registers the fonts into the Flutter dependencies:
+> ```bash
+> flet build
+> ```
+
+### Basic
 
 ```python
 import flet as ft
 import flet_fonts as ff
 
-
 def main(page: ft.Page):
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.theme_mode = ft.ThemeMode.DARK
+    page.add(ff.Text(value="Hello!", google_fonts="Aboreto"))
 
-    page.add(
-        ft.Container(
-            padding=10,
-            bgcolor=ft.Colors.WHITE_30,
-            height=150,
-            width=300,
-            content=ff.Text(
-                value="from flet-fonts",
-                spans=[
-                    ff.TextSpan(
-                        value="inside flet-fonts",
-                        google_fonts="Aboreto",
-                        style=ft.TextStyle(size=15, overflow=ft.TextOverflow.ELLIPSIS),
-                        spans=[
-                            ff.TextSpan(
-                                value="nested span",
-                                google_fonts="Agdasima",
-                                style=ft.TextStyle(
-                                    size=15, overflow=ft.TextOverflow.ELLIPSIS
-                                ),
-                            )
-                        ],
-                    )
-                ],
-                max_lines=1,
-                style=ft.TextStyle(size=15),
-            ),
-        ),
-    )
-    
 ft.app(main)
 ```
+
+### Rich spans
+
+```python
+ff.Text(
+    value="hello",
+    google_fonts="ADLaM Display",
+    max_lines=1,
+    style=ft.TextStyle(size=20),
+    spans=[
+        ff.TextSpan(text=" world", google_fonts="Aboreto"),
+    ],
+)
+```
+
+### Selectable text
+
+```python
+ff.Text(
+    value="You can copy this text.",
+    google_fonts="Roboto",
+    selectable=True,
+)
+```
+
+---
+
+<p align="center" style="font-style: italic;">Semoga library ini membantu! 🌴</p>

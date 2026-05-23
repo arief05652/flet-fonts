@@ -8,9 +8,12 @@ from .text_span import TextSpan
 
 @ft.control("FletFonts")
 class Text(ft.LayoutControl):
-    """
-    class FletFonts uses Google Fonts to set the font family,
-    easy to use without downloading files and setting them manually.
+    """Renders text using Google Fonts without manual font file management.
+
+    This widget wraps Flutter's `Text` / `SelectableText` with automatic
+    Google Font resolution. Simply pass a font name from
+    `https://fonts.google.com/` — the font is resolved at runtime in the
+    Flutter layer.
 
     Example:
         ```python
@@ -18,84 +21,95 @@ class Text(ft.LayoutControl):
         import flet_fonts as ff
 
         def main(page: ft.Page):
-            page.theme_mode = ft.ThemeMode.DARK
-
             page.add(
-                ft.Container(
-                    padding=10,
-                    bgcolor=ft.Colors.WHITE_30,
-                    height=150,
-                    width=300,
-                    content=ff.Text(
-                        value="dari flet-fonts",
-                        google_fonts="Aboreto"
-                    ),
+                ff.Text(
+                    value="Hello from flet-fonts!",
+                    google_fonts="Aboreto",
                 ),
             )
-        ft.run(main)
+
+        ft.app(main)
         ```
 
     Note:
-        after you use the `ff.Text()` class,
-        you must enter a font theme. It cannot be empty,
-        and the default is `ADLaM Display`.
+        A `google_fonts` value is required. Falls back to `"ADLaM Display"`
+        when not specified.
     """
+
+    # ── Content ──────────────────────────────────────────────────────────
 
     value: str = ""
-    """Enter the text you want to display"""
+    """The text content to display."""
 
     google_fonts: Union[FontFamily, str, None] = None
-    """
-    If you cannot find the font you want to use,
-    you can copy and paste the font name you took from `https://fonts.google.com/`.
+    """The Google Font family name.
+
+    You can use any font from `https://fonts.google.com/`. Falls back to
+    `"ADLaM Display"` when not specified.
     """
 
     spans: Optional[list[TextSpan]] = None
-    """
-    In a single line of text, you can use different Google fonts
+    """Inline rich-text spans within the same text line.
+
+    Each span can use a different Google Font, style, or semantic label.
 
     Example:
-        ```
+        ```python
         ff.Text(
             value="hello",
             google_fonts="Ancizar Serif",
             spans=[
-                ff.TextSpan(
-                    value="hello",
-                    google_fonts="Aboreto",
-                )
-            ]
+                ff.TextSpan(value="world", google_fonts="Aboreto"),
+            ],
         )
         ```
     """
 
+    # ── Layout & Style ──────────────────────────────────────────────────
+
     text_align: ft.TextAlign = ft.TextAlign.START
-    """text layout"""
+    """Alignment of the text within its bounding box."""
 
     style: Optional[ft.TextStyle] = None
-    """You can design text widgets however you like using `flet.TextStyle`"""
+    """A `ft.TextStyle` to customise the appearance of the text."""
 
     max_lines: Optional[int] = None
-    """You can set the number of lines that can be filled with text"""
-
-    selectable: Optional[bool] = None
-    """Users can select text and copy it"""
+    """Maximum number of lines before the text overflows."""
 
     no_wrap: Optional[bool] = None
-    """Use this if you want to prevent text overflow"""
+    """Prevents text from wrapping to the next line on overflow."""
 
     semantics_label: Optional[str] = None
+    """Alternative label used by assistive technologies.
+
+    When set, screen readers will announce this value instead of the
+    actual text content.
+    """
+
+    # ── Selection ───────────────────────────────────────────────────────
+
+    selectable: Optional[bool] = None
+    """When `True`, users can select and copy the text."""
 
     show_selection_cursor: bool = False
-    """You can highlight the text that is currently selected"""
+    """Whether to show a visible cursor when the text is selected."""
 
     enable_interactive_selection: bool = True
+    """Whether the user can interactively select text via long-press or drag."""
 
     selection_cursor_width: int = 2
+    """Width of the selection cursor in device-independent pixels."""
 
     selection_cursor_height: Optional[int] = None
+    """Height of the selection cursor. When `None`, matches the text height."""
 
     selection_cursor_color: Optional[ft.ColorValue] = None
+    """Colour of the selection cursor. Falls back to the theme's default."""
 
-    # error
+    # ── Error Handling ──────────────────────────────────────────────────
+
     error_content: Optional[ft.Control] = None
+    """A fallback widget shown when the requested font cannot be resolved.
+
+    When `None`, an inline error message is displayed instead.
+    """

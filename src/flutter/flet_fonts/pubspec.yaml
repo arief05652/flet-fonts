@@ -9,10 +9,10 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  flet: 0.80.0
+  flet: 0.85.0
   flutter:
     sdk: flutter
-  google_fonts: ^8.0.2
+  google_fonts: ^8.1.0
 
 dev_dependencies:
   flutter_test:
