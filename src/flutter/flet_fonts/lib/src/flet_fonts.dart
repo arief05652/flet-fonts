@@ -1,5 +1,5 @@
 import 'package:flet/flet.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import 'utils/text_span.dart';
 import 'utils/google_fonts.dart';
@@ -35,15 +35,11 @@ class FletFontsControl extends StatelessWidget {
     var selection_cursor_height = control.getDouble("selection_cursor_height");
     var selection_cursor_color =
         control.getColor("selection_cursor_color", context);
-    // error
-    var error_content = control.buildWidget("error_content");
-
-    Widget text = SizedBox.shrink();
 
     // handle error jika font tidak ada
     var fonts = googleFonts(google_fonts, style: style);
     if (fonts == null) {
-      return error_content ??
+      return control.buildWidget("error_content") ??
           ErrorControl("The ${google_fonts} font cannot be found.");
     }
 
@@ -55,13 +51,14 @@ class FletFontsControl extends StatelessWidget {
             text: value,
             style: fonts,
             semanticsLabel: semantics_label,
-            children: parseSpans(spans, context),
+            children: parseSpans(spans, context, parentStyle: fonts),
           )
         : null;
 
-    text = switch ((selectable, hasSpans)) {
+    final text = switch ((selectable, hasSpans)) {
       (true, true) => SelectableText.rich(
           span!,
+          semanticsLabel: semantics_label,
           maxLines: max_lines,
           textAlign: text_align,
           showCursor: show_selection_cursor,
@@ -73,6 +70,7 @@ class FletFontsControl extends StatelessWidget {
       (true, false) => SelectableText(
           value!,
           style: fonts,
+          semanticsLabel: semantics_label,
           maxLines: max_lines,
           textAlign: text_align,
           showCursor: show_selection_cursor,

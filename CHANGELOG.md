@@ -1,3 +1,73 @@
+## [1.0.0] - 2026-11-07
+
+### ⚠️ Breaking Changes
+
+* Requires **Flet 1.1.2+** (Flutter 3.47.9). Flet 0.85.x is no longer supported.
+* Flutter package now requires Dart `>=3.13.0` and Flutter `>=3.47.0`.
+* Spans without `google_fonts` now inherit the parent `Text` font. Previously they always fell back to `ADLaM Display`.
+* Font list updated to `google_fonts` 9.0.0: `Finlandica` and `Saira Stencil One` removed.
+
+### ✨ Added
+
+* `ff.use_google_font(page, "Aboreto")` applies a Google Font to the whole app via `page.fonts` and `page.theme.font_family` (no wrapper widget).
+* Export `FontFamily` type from `flet_fonts`.
+* Total font: 1926
+* `semanticsLabel` is now forwarded to `SelectableText` (accessibility parity).
+* MIT license.
+
+#### font added (35 fonts):
+
+* Akt
+* Alien Block
+* Allkin
+* Alyamama
+* BJCree
+* Betania Patmos
+* Betania Patmos GDL
+* Betania Patmos In
+* Betania Patmos In GDL
+* Bpmf Huninn
+* Bpmf Iansui
+* Bpmf Zihi Kai Std
+* Datatype
+* Estedad
+* Finlandica Headline
+* Finlandica Text
+* Geist Pixel
+* Gveret Levin
+* Idiqlat
+* Iosevka Charon
+* Iosevka Charon Mono
+* LINE Seed JP
+* M PLUS U
+* Miranda Sans
+* Montenegrin Gothic One
+* Playwrite NZ Basic
+* Playwrite NZ Basic Guides
+* Pliant
+* Ramsina
+* SN Pro
+* STIX Two Math
+* Saira Stencil
+* Strichpunkt Sans
+* Yuyu
+* Yuyu Short
+
+### 🐛 Fixed
+
+* `google_fonts` and `TextSpan.google_fonts` are typed as `FontFamily | None` instead of `FontFamily | str | None`, so editors show the font list and flag unknown names.
+* Spans now inherit the parent font as documented.
+* Removed invalid `Momomakh` font entry (correct name is `Monomakh`).
+* `readme` path in `pyproject.toml` now matches `README.MD` (fixes wheel build on case-sensitive filesystems).
+* `error_content` is only built when the font is missing, not on every rebuild.
+
+### ⬆️ Dependencies
+
+* `flet`: 0.85.0 → 1.1.2
+* `google_fonts`: 8.2.1 → 9.0.0
+* `material_ui`: ^1.6.0 (Flet 1.x moved Material out of the Flutter SDK)
+* `flet-cli`, `flet-desktop`, `flet-web`: 0.85.0 → 1.1.2
+
 ## [0.1.6] - 2026-01-11
 
 ### ✨ Added

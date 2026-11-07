@@ -9,7 +9,7 @@ authors = [
 ]
 dependencies = [
   "flet-fonts",
-  "flet[all]==0.85.0",
+  "flet[all]==1.1.2",
 ]
 
 [tool.flet]
@@ -40,5 +40,5 @@ dev = []
 flet-fonts = { path = "../../", editable = true }
 
 [tool.dev.dependencies]
-flet = {extras = ["all"], version = "0.85.0"}
+flet = {extras = ["all"], version = "1.1.2"}
 flet-fonts = {path = "../../", develop = true}

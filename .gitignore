@@ -11,3 +11,5 @@ src/flet_fonts.egg-info
 
 # Build distribution
 dist/
+
+graphify-out/

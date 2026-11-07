@@ -1,5 +1,3 @@
-from typing import Optional, Union
-
 import flet as ft
 
 from .font_data import FontFamily
@@ -43,21 +41,21 @@ class TextSpan(ft.Control):
     acts as a prefix and the span's `text` replaces it at the span position.
     """
 
-    google_fonts: Union[FontFamily, str, None] = None
+    google_fonts: FontFamily | None = None
     """The Google Font family name for this span.
 
     You can use any font from `https://fonts.google.com/`. When not set,
     the span inherits the font from its parent `ff.Text` control.
     """
 
-    spans: Optional[list["TextSpan"]] = None
+    spans: list["TextSpan"] | None = None
     """Nested child spans within this span.
 
     Child spans inherit properties (e.g. `spell_out`) from this span
     unless explicitly overridden.
     """
 
-    style: Optional[ft.TextStyle] = None
+    style: ft.TextStyle | None = None
     """A `ft.TextStyle` to customise the appearance of this span.
 
     When not set, the span inherits the style from its parent.
@@ -65,14 +63,14 @@ class TextSpan(ft.Control):
 
     # ── Semantics ───────────────────────────────────────────────────────
 
-    semantic_label: Optional[str] = None
+    semantic_label: str | None = None
     """Alternative label used by assistive technologies.
 
     When set, screen readers will announce this value instead of the
     span's actual text content.
     """
 
-    spell_out: Optional[bool] = None
+    spell_out: bool | None = None
     """Whether assistive technologies should spell the text character by
     character.
 
