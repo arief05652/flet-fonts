@@ -1,5 +1,3 @@
-from typing import Optional, Union
-
 import flet as ft
 
 from .font_data import FontFamily
@@ -41,14 +39,14 @@ class Text(ft.LayoutControl):
     value: str = ""
     """The text content to display."""
 
-    google_fonts: Union[FontFamily, str, None] = None
+    google_fonts: FontFamily | None = None
     """The Google Font family name.
 
     You can use any font from `https://fonts.google.com/`. Falls back to
     `"ADLaM Display"` when not specified.
     """
 
-    spans: Optional[list[TextSpan]] = None
+    spans: list[TextSpan] | None = None
     """Inline rich-text spans within the same text line.
 
     Each span can use a different Google Font, style, or semantic label.
@@ -70,16 +68,16 @@ class Text(ft.LayoutControl):
     text_align: ft.TextAlign = ft.TextAlign.START
     """Alignment of the text within its bounding box."""
 
-    style: Optional[ft.TextStyle] = None
+    style: ft.TextStyle | None = None
     """A `ft.TextStyle` to customise the appearance of the text."""
 
-    max_lines: Optional[int] = None
+    max_lines: int | None = None
     """Maximum number of lines before the text overflows."""
 
-    no_wrap: Optional[bool] = None
+    no_wrap: bool | None = None
     """Prevents text from wrapping to the next line on overflow."""
 
-    semantics_label: Optional[str] = None
+    semantics_label: str | None = None
     """Alternative label used by assistive technologies.
 
     When set, screen readers will announce this value instead of the
@@ -88,7 +86,7 @@ class Text(ft.LayoutControl):
 
     # ── Selection ───────────────────────────────────────────────────────
 
-    selectable: Optional[bool] = None
+    selectable: bool | None = None
     """When `True`, users can select and copy the text."""
 
     show_selection_cursor: bool = False
@@ -100,15 +98,15 @@ class Text(ft.LayoutControl):
     selection_cursor_width: int = 2
     """Width of the selection cursor in device-independent pixels."""
 
-    selection_cursor_height: Optional[int] = None
+    selection_cursor_height: int | None = None
     """Height of the selection cursor. When `None`, matches the text height."""
 
-    selection_cursor_color: Optional[ft.ColorValue] = None
+    selection_cursor_color: ft.ColorValue | None = None
     """Colour of the selection cursor. Falls back to the theme's default."""
 
     # ── Error Handling ──────────────────────────────────────────────────
 
-    error_content: Optional[ft.Control] = None
+    error_content: ft.Control | None = None
     """A fallback widget shown when the requested font cannot be resolved.
 
     When `None`, an inline error message is displayed instead.

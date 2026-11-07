@@ -18,6 +18,6 @@ serve:
     uv run flet serve
 
 sync:
-    uv add flet-cli==0.80.0 && \
-    uv add flet-desktop==0.80.0 && \
-    uv add flet-web==0.80.0
+    uv add flet-cli==1.1.2 && \
+    uv add flet-desktop==1.1.2 && \
+    uv add flet-web==1.1.2
