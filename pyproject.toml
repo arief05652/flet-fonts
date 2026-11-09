@@ -1,6 +1,6 @@
 [project]
 name = "flet-fonts"
-version = "1.0.0"
+version = "1.0.1"
 description = "Utilizing Google Font dependencies to create a text widget in Flet that can change multiple font styles"
 readme = "README.MD"
 requires-python = ">=3.10"
