@@ -16,7 +16,7 @@ files yourself. Fonts are resolved at runtime by the
 - `ff.TextSpan` — rich spans, each with its own font, style, and semantics.
 - `ff.use_google_font()` — apply one font to every text in the app through
   the page theme.
-- Typed font names through `ff.FontFamily` (autocomplete for all 1926 families).
+- Font names as an enum: `ff.FontFamily.ABORETO`, with autocomplete for all 1926 families.
 - Selectable text, selection cursor styling, max lines, no-wrap, and
   accessibility labels.
 - Graceful error handling when a font cannot be resolved.
@@ -58,7 +58,7 @@ def main(page: ft.Page):
     page.add(
         ff.Text(
             value="Hello from flet-fonts!",
-            google_fonts="Aboreto",
+            google_fonts=ff.FontFamily.ABORETO,
             style=ft.TextStyle(size=32),
         )
     )
@@ -77,7 +77,7 @@ named in `google_fonts`.
 ```python
 ff.Text(
     value="Hello world",
-    google_fonts="Roboto",
+    google_fonts=ff.FontFamily.ROBOTO,
     style=ft.TextStyle(size=24, color=ft.Colors.AMBER),
     text_align=ft.TextAlign.CENTER,
     max_lines=2,
@@ -97,7 +97,7 @@ import flet_fonts as ff
 
 
 def main(page: ft.Page):
-    ff.use_google_font(page, "Aboreto")
+    ff.use_google_font(page, ff.FontFamily.ABORETO)
     page.add(ft.Text("Every text uses Aboreto"))
 
 
@@ -126,13 +126,13 @@ Each span can use a different font, style, or semantics:
 ```python
 ff.Text(
     value="Hello ",
-    google_fonts="ADLaM Display",
+    google_fonts=ff.FontFamily.ADLAM_DISPLAY,
     max_lines=1,
     style=ft.TextStyle(size=20),
     spans=[
         ff.TextSpan(
             text="world",
-            google_fonts="Aboreto",
+            google_fonts=ff.FontFamily.ABORETO,
             style=ft.TextStyle(color=ft.Colors.AMBER),
         ),
     ],
@@ -145,11 +145,11 @@ nested:
 ```python
 ff.Text(
     value="a",
-    google_fonts="Roboto",
+    google_fonts=ff.FontFamily.ROBOTO,
     spans=[
         ff.TextSpan(
             text="b",
-            google_fonts="Aboreto",
+            google_fonts=ff.FontFamily.ABORETO,
             spans=[ff.TextSpan(text="c")],
         ),
     ],
@@ -161,7 +161,7 @@ ff.Text(
 ```python
 ff.Text(
     value="You can select and copy this text.",
-    google_fonts="Roboto",
+    google_fonts=ff.FontFamily.ROBOTO,
     selectable=True,
     show_selection_cursor=True,
     selection_cursor_color=ft.Colors.AMBER,
@@ -175,7 +175,7 @@ ff.Text(
 ```python
 ff.Text(
     value="Password: 1234",
-    google_fonts="Roboto",
+    google_fonts=ff.FontFamily.ROBOTO,
     semantics_label="Password field",
     spans=[ff.TextSpan(text="1234", spell_out=True)],
 )
@@ -207,7 +207,7 @@ A `ft.LayoutControl` that renders text with a Google Font.
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | `value` | `str` | `""` | Text content. |
-| `google_fonts` | `FontFamily \| None` | `None` | Google Font family name. Falls back to `"ADLaM Display"`. |
+| `google_fonts` | `FontFamily \| str \| None` | `None` | Google Font family name. Falls back to `"ADLaM Display"`. |
 | `spans` | `list[TextSpan] \| None` | `None` | Inline rich-text spans. |
 | `text_align` | `ft.TextAlign` | `START` | Alignment inside the bounding box. |
 | `style` | `ft.TextStyle \| None` | `None` | Text style applied to the whole text. |
@@ -229,7 +229,7 @@ A styled fragment inside `ff.Text`.
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | `text` | `str` | `""` | Span text. |
-| `google_fonts` | `FontFamily \| None` | `None` | Font for this span. Inherits from the parent when omitted. |
+| `google_fonts` | `FontFamily \| str \| None` | `None` | Font for this span. Inherits from the parent when omitted. |
 | `spans` | `list[TextSpan] \| None` | `None` | Nested child spans. |
 | `style` | `ft.TextStyle \| None` | `None` | Span style. Inherits from the parent when omitted. |
 | `semantic_label` | `str \| None` | `None` | Accessibility label. |
@@ -242,28 +242,32 @@ Apply a Google Font to the whole app through the page theme.
 | Argument | Type | Description |
 | --- | --- | --- |
 | `page` | `ft.Page` | Target page. |
-| `font` | `FontFamily` | Google Font family name. |
+| `font` | `FontFamily \| str` | Google Font family name. |
 
 Raises `ValueError` when the family does not exist.
 
 ### `ff.FontFamily`
 
-A `Literal` type with all 1926 supported family names. Use it for type hints
-and editor autocomplete:
+An enum with all 1926 supported family names. Pick a member; the editor
+autocompletes it:
 
 ```python
-from flet_fonts import FontFamily, Text
+import flet_fonts as ff
 
+ff.Text(value="Hello", google_fonts=ff.FontFamily.ABORETO)
+```
 
-def heading(font: FontFamily) -> Text:
-    return Text(value="Title", google_fonts=font)
+Plain strings are still accepted at runtime, but they get no autocomplete:
+
+```python
+ff.Text(value="Hello", google_fonts="Aboreto")
 ```
 
 ## Fonts
 
 All families from <https://fonts.google.com/> that are supported by
-`google_fonts` 9.0.0 are available (1926 families). Font names are
-case-sensitive and must match the Google Fonts family name exactly.
+`google_fonts` 9.0.0 are available (1926 families). The enum value is the
+exact, case-sensitive Google Fonts family name.
 
 Browse the catalog at <https://fonts.google.com/>.
 
@@ -299,7 +303,7 @@ Project layout:
 src/flet_fonts/           Python package
   flet_fonts.py           ff.Text control
   text_span.py            ff.TextSpan control
-  font_data.py            FontFamily literal (1926 fonts)
+  font_data.py            FontFamily enum (1926 fonts)
   theme.py                use_google_font()
 src/flutter/flet_fonts/   Flutter extension (Dart)
 examples/                 example app

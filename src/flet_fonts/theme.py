@@ -11,7 +11,7 @@ from .font_data import FontFamily
 _TTF_URL = re.compile(r"src: url\((https://[^)]+\.ttf)\)")
 
 
-def use_google_font(page: ft.Page, font: FontFamily) -> None:
+def use_google_font(page: ft.Page, font: FontFamily | str) -> None:
     """Use a Google Font for all text in the app through the page theme.
 
     Loads the font with `page.fonts` and sets it as the default font family
@@ -25,15 +25,16 @@ def use_google_font(page: ft.Page, font: FontFamily) -> None:
         import flet_fonts as ff
 
         def main(page: ft.Page):
-            ff.use_google_font(page, "Aboreto")
+            ff.use_google_font(page, ff.FontFamily.ABORETO)
             page.add(ft.Text("Everything uses Aboreto"))
 
         ft.run(main)
         ```
     """
-    page.fonts = {**(page.fonts or {}), font: _ttf_url(font)}
-    page.theme = _with_font(page.theme, font)
-    page.dark_theme = _with_font(page.dark_theme, font)
+    family = font.value if isinstance(font, FontFamily) else font
+    page.fonts = {**(page.fonts or {}), family: _ttf_url(family)}
+    page.theme = _with_font(page.theme, family)
+    page.dark_theme = _with_font(page.dark_theme, family)
 
 
 def _with_font(theme: ft.Theme | None, font: str) -> ft.Theme:

@@ -19,7 +19,7 @@ class TextSpan(ft.Control):
             spans=[
                 ff.TextSpan(
                     text="world",
-                    google_fonts="Aboreto",
+                    google_fonts=ff.FontFamily.ABORETO,
                     style=ft.TextStyle(size=24),
                 ),
             ],
@@ -41,11 +41,11 @@ class TextSpan(ft.Control):
     acts as a prefix and the span's `text` replaces it at the span position.
     """
 
-    google_fonts: FontFamily | None = None
+    google_fonts: FontFamily | str | None = None
     """The Google Font family name for this span.
 
-    You can use any font from `https://fonts.google.com/`. When not set,
-    the span inherits the font from its parent `ff.Text` control.
+    Use a `FontFamily` member for autocomplete. When not set, the span
+    inherits the font from its parent `ff.Text` control.
     """
 
     spans: list["TextSpan"] | None = None
