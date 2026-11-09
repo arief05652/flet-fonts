@@ -1,1931 +1,1933 @@
-from typing import Literal
+from enum import Enum
+
 
 # Generated from google_fonts 9.0.0 GoogleFonts.asMap(). Regenerate on upgrade.
-FontFamily = Literal[
-    "ABeeZee",
-    "ADLaM Display",
-    "AR One Sans",
-    "Abel",
-    "Abhaya Libre",
-    "Aboreto",
-    "Abril Fatface",
-    "Abyssinica SIL",
-    "Aclonica",
-    "Acme",
-    "Actor",
-    "Adamina",
-    "Advent Pro",
-    "Afacad",
-    "Afacad Flux",
-    "Agbalumo",
-    "Agdasima",
-    "Agu Display",
-    "Aguafina Script",
-    "Akatab",
-    "Akaya Kanadaka",
-    "Akaya Telivigala",
-    "Akronim",
-    "Akshar",
-    "Akt",
-    "Aladin",
-    "Alan Sans",
-    "Alata",
-    "Alatsi",
-    "Albert Sans",
-    "Aldrich",
-    "Alef",
-    "Alegreya",
-    "Alegreya SC",
-    "Alegreya Sans",
-    "Alegreya Sans SC",
-    "Aleo",
-    "Alex Brush",
-    "Alexandria",
-    "Alfa Slab One",
-    "Alice",
-    "Alien Block",
-    "Alike",
-    "Alike Angular",
-    "Alkalami",
-    "Alkatra",
-    "Allan",
-    "Allerta",
-    "Allerta Stencil",
-    "Allison",
-    "Allkin",
-    "Allura",
-    "Almarai",
-    "Almendra",
-    "Almendra Display",
-    "Almendra SC",
-    "Alumni Sans",
-    "Alumni Sans Collegiate One",
-    "Alumni Sans Inline One",
-    "Alumni Sans Pinstripe",
-    "Alumni Sans SC",
-    "Alyamama",
-    "Amarante",
-    "Amaranth",
-    "Amarna",
-    "Amatic SC",
-    "Amethysta",
-    "Amiko",
-    "Amiri",
-    "Amiri Quran",
-    "Amita",
-    "Anaheim",
-    "Ancizar Sans",
-    "Ancizar Serif",
-    "Andada Pro",
-    "Andika",
-    "Anek Bangla",
-    "Anek Devanagari",
-    "Anek Gujarati",
-    "Anek Gurmukhi",
-    "Anek Kannada",
-    "Anek Latin",
-    "Anek Malayalam",
-    "Anek Odia",
-    "Anek Tamil",
-    "Anek Telugu",
-    "Angkor",
-    "Annapurna SIL",
-    "Annie Use Your Telescope",
-    "Anonymous Pro",
-    "Anta",
-    "Antic",
-    "Antic Didone",
-    "Antic Slab",
-    "Anton",
-    "Anton SC",
-    "Antonio",
-    "Anuphan",
-    "Anybody",
-    "Aoboshi One",
-    "Arapey",
-    "Arbutus",
-    "Arbutus Slab",
-    "Architects Daughter",
-    "Archivo",
-    "Archivo Black",
-    "Archivo Narrow",
-    "Are You Serious",
-    "Aref Ruqaa",
-    "Aref Ruqaa Ink",
-    "Arima",
-    "Arimo",
-    "Arizonia",
-    "Armata",
-    "Arsenal",
-    "Arsenal SC",
-    "Artifika",
-    "Arvo",
-    "Arya",
-    "Asap",
-    "Asar",
-    "Asimovian",
-    "Asset",
-    "Assistant",
-    "Asta Sans",
-    "Astloch",
-    "Asul",
-    "Athiti",
-    "Atkinson Hyperlegible",
-    "Atkinson Hyperlegible Mono",
-    "Atkinson Hyperlegible Next",
-    "Atma",
-    "Atomic Age",
-    "Aubrey",
-    "Audiowide",
-    "Autour One",
-    "Average",
-    "Average Sans",
-    "Averia Gruesa Libre",
-    "Averia Libre",
-    "Averia Sans Libre",
-    "Averia Serif Libre",
-    "Azeret Mono",
-    "B612",
-    "B612 Mono",
-    "BBH Bartle",
-    "BBH Bogle",
-    "BBH Hegarty",
-    "BIZ UDGothic",
-    "BIZ UDMincho",
-    "BIZ UDPGothic",
-    "BIZ UDPMincho",
-    "BJCree",
-    "Babylonica",
-    "Bacasime Antique",
-    "Bad Script",
-    "Badeen Display",
-    "Bagel Fat One",
-    "Bahiana",
-    "Bahianita",
-    "Bai Jamjuree",
-    "Bakbak One",
-    "Ballet",
-    "Baloo 2",
-    "Baloo Bhai 2",
-    "Baloo Bhaijaan 2",
-    "Baloo Bhaina 2",
-    "Baloo Chettan 2",
-    "Baloo Da 2",
-    "Baloo Paaji 2",
-    "Baloo Tamma 2",
-    "Baloo Tammudu 2",
-    "Baloo Thambi 2",
-    "Balsamiq Sans",
-    "Balthazar",
-    "Bangers",
-    "Barlow",
-    "Barlow Condensed",
-    "Barlow Semi Condensed",
-    "Barriecito",
-    "Barrio",
-    "Basic",
-    "Baskervville",
-    "Baskervville SC",
-    "Battambang",
-    "Baumans",
-    "Bayon",
-    "Be Vietnam Pro",
-    "Beau Rivage",
-    "Bebas Neue",
-    "Beiruti",
-    "Belanosima",
-    "Belgrano",
-    "Bellefair",
-    "Belleza",
-    "Bellota",
-    "Bellota Text",
-    "BenchNine",
-    "Benne",
-    "Bentham",
-    "Berkshire Swash",
-    "Besley",
-    "Betania Patmos",
-    "Betania Patmos GDL",
-    "Betania Patmos In",
-    "Betania Patmos In GDL",
-    "Beth Ellen",
-    "Bevan",
-    "BhuTuka Expanded One",
-    "Big Shoulders",
-    "Big Shoulders Inline",
-    "Big Shoulders Stencil",
-    "Bigelow Rules",
-    "Bigshot One",
-    "Bilbo",
-    "Bilbo Swash Caps",
-    "BioRhyme",
-    "Birthstone",
-    "Birthstone Bounce",
-    "Biryani",
-    "Bitcount",
-    "Bitcount Grid Double",
-    "Bitcount Grid Double Ink",
-    "Bitcount Grid Single",
-    "Bitcount Grid Single Ink",
-    "Bitcount Ink",
-    "Bitcount Prop Double",
-    "Bitcount Prop Double Ink",
-    "Bitcount Prop Single",
-    "Bitcount Prop Single Ink",
-    "Bitcount Single",
-    "Bitcount Single Ink",
-    "Bitter",
-    "Black And White Picture",
-    "Black Han Sans",
-    "Black Ops One",
-    "Blaka",
-    "Blaka Hollow",
-    "Blaka Ink",
-    "Blinker",
-    "Bodoni Moda",
-    "Bodoni Moda SC",
-    "Bokor",
-    "Boldonse",
-    "Bona Nova",
-    "Bona Nova SC",
-    "Bonbon",
-    "Bonheur Royale",
-    "Boogaloo",
-    "Borel",
-    "Bowlby One",
-    "Bowlby One SC",
-    "Bpmf Huninn",
-    "Bpmf Iansui",
-    "Bpmf Zihi Kai Std",
-    "Braah One",
-    "Brawler",
-    "Bree Serif",
-    "Bricolage Grotesque",
-    "Bruno Ace",
-    "Bruno Ace SC",
-    "Brygada 1918",
-    "Bubblegum Sans",
-    "Bubbler One",
-    "Buda",
-    "Buenard",
-    "Bungee",
-    "Bungee Hairline",
-    "Bungee Inline",
-    "Bungee Outline",
-    "Bungee Shade",
-    "Bungee Spice",
-    "Bungee Tint",
-    "Butcherman",
-    "Butterfly Kids",
-    "Bytesized",
-    "Cabin",
-    "Cabin Sketch",
-    "Cactus Classical Serif",
-    "Caesar Dressing",
-    "Cagliostro",
-    "Cairo",
-    "Cairo Play",
-    "Cal Sans",
-    "Caladea",
-    "Calistoga",
-    "Calligraffitti",
-    "Cambay",
-    "Cambo",
-    "Candal",
-    "Cantarell",
-    "Cantata One",
-    "Cantora One",
-    "Caprasimo",
-    "Capriola",
-    "Caramel",
-    "Carattere",
-    "Cardo",
-    "Carlito",
-    "Carme",
-    "Carrois Gothic",
-    "Carrois Gothic SC",
-    "Carter One",
-    "Cascadia Code",
-    "Cascadia Mono",
-    "Castoro",
-    "Castoro Titling",
-    "Catamaran",
-    "Caudex",
-    "Cause",
-    "Caveat",
-    "Caveat Brush",
-    "Cedarville Cursive",
-    "Ceviche One",
-    "Chakra Petch",
-    "Changa",
-    "Changa One",
-    "Chango",
-    "Charis SIL",
-    "Charm",
-    "Charmonman",
-    "Chathura",
-    "Chau Philomene One",
-    "Chela One",
-    "Chelsea Market",
-    "Chenla",
-    "Cherish",
-    "Cherry Bomb One",
-    "Cherry Cream Soda",
-    "Cherry Swash",
-    "Chewy",
-    "Chicle",
-    "Chilanka",
-    "Chiron Hei HK",
-    "Chivo",
-    "Chivo Mono",
-    "Chocolate Classical Sans",
-    "Chokokutai",
-    "Chonburi",
-    "Cinzel",
-    "Cinzel Decorative",
-    "Clicker Script",
-    "Climate Crisis",
-    "Coda",
-    "Codystar",
-    "Coiny",
-    "Combo",
-    "Comfortaa",
-    "Comforter",
-    "Comforter Brush",
-    "Comic Neue",
-    "Comic Relief",
-    "Coming Soon",
-    "Comme",
-    "Commissioner",
-    "Concert One",
-    "Condiment",
-    "Content",
-    "Contrail One",
-    "Convergence",
-    "Cookie",
-    "Copse",
-    "Coral Pixels",
-    "Corben",
-    "Corinthia",
-    "Cormorant",
-    "Cormorant Garamond",
-    "Cormorant Infant",
-    "Cormorant SC",
-    "Cormorant Unicase",
-    "Cormorant Upright",
-    "Cossette Texte",
-    "Cossette Titre",
-    "Courgette",
-    "Courier Prime",
-    "Cousine",
-    "Coustard",
-    "Covered By Your Grace",
-    "Crafty Girls",
-    "Creepster",
-    "Crete Round",
-    "Crimson Pro",
-    "Crimson Text",
-    "Croissant One",
-    "Crushed",
-    "Cuprum",
-    "Cute Font",
-    "Cutive",
-    "Cutive Mono",
-    "DM Mono",
-    "DM Sans",
-    "DM Serif Display",
-    "DM Serif Text",
-    "Dai Banna SIL",
-    "Damion",
-    "Dancing Script",
-    "Danfo",
-    "Dangrek",
-    "Darker Grotesque",
-    "Darumadrop One",
-    "Datatype",
-    "David Libre",
-    "Dawning of a New Day",
-    "Days One",
-    "Dekko",
-    "Dela Gothic One",
-    "Delicious Handrawn",
-    "Delius",
-    "Delius Swash Caps",
-    "Delius Unicase",
-    "Della Respira",
-    "Denk One",
-    "Devonshire",
-    "Dhurjati",
-    "Didact Gothic",
-    "Diphylleia",
-    "Diplomata",
-    "Diplomata SC",
-    "Do Hyeon",
-    "Dokdo",
-    "Domine",
-    "Donegal One",
-    "Dongle",
-    "Doppio One",
-    "Dorsa",
-    "Dosis",
-    "DotGothic16",
-    "Doto",
-    "Dr Sugiyama",
-    "Duru Sans",
-    "DynaPuff",
-    "Dynalight",
-    "EB Garamond",
-    "Eagle Lake",
-    "East Sea Dokdo",
-    "Eater",
-    "Economica",
-    "Eczar",
-    "Edu AU VIC WA NT Arrows",
-    "Edu AU VIC WA NT Dots",
-    "Edu AU VIC WA NT Guides",
-    "Edu AU VIC WA NT Hand",
-    "Edu AU VIC WA NT Pre",
-    "Edu NSW ACT Cursive",
-    "Edu NSW ACT Foundation",
-    "Edu NSW ACT Hand Pre",
-    "Edu QLD Beginner",
-    "Edu QLD Hand",
-    "Edu SA Beginner",
-    "Edu SA Hand",
-    "Edu TAS Beginner",
-    "Edu VIC WA NT Beginner",
-    "Edu VIC WA NT Hand",
-    "Edu VIC WA NT Hand Pre",
-    "El Messiri",
-    "Electrolize",
-    "Elms Sans",
-    "Elsie",
-    "Elsie Swash Caps",
-    "Emblema One",
-    "Emilys Candy",
-    "Encode Sans",
-    "Encode Sans SC",
-    "Engagement",
-    "Englebert",
-    "Enriqueta",
-    "Ephesis",
-    "Epilogue",
-    "Epunda Sans",
-    "Epunda Slab",
-    "Erica One",
-    "Esteban",
-    "Estedad",
-    "Estonia",
-    "Euphoria Script",
-    "Ewert",
-    "Exile",
-    "Exo",
-    "Exo 2",
-    "Expletus Sans",
-    "Explora",
-    "Faculty Glyphic",
-    "Fahkwang",
-    "Familjen Grotesk",
-    "Fanwood Text",
-    "Farro",
-    "Farsan",
-    "Fascinate",
-    "Fascinate Inline",
-    "Faster One",
-    "Fasthand",
-    "Fauna One",
-    "Faustina",
-    "Federant",
-    "Federo",
-    "Felipa",
-    "Fenix",
-    "Festive",
-    "Figtree",
-    "Finger Paint",
-    "Finlandica Headline",
-    "Finlandica Text",
-    "Fira Code",
-    "Fira Mono",
-    "Fira Sans",
-    "Fira Sans Condensed",
-    "Fira Sans Extra Condensed",
-    "Fjalla One",
-    "Fjord One",
-    "Flamenco",
-    "Flavors",
-    "Fleur De Leah",
-    "Flow Block",
-    "Flow Circular",
-    "Flow Rounded",
-    "Foldit",
-    "Fondamento",
-    "Fontdiner Swanky",
-    "Forum",
-    "Fragment Mono",
-    "Francois One",
-    "Frank Ruhl Libre",
-    "Fraunces",
-    "Freckle Face",
-    "Fredericka the Great",
-    "Fredoka",
-    "Freehand",
-    "Freeman",
-    "Fresca",
-    "Frijole",
-    "Fruktur",
-    "Fugaz One",
-    "Fuggles",
-    "Funnel Display",
-    "Funnel Sans",
-    "Fustat",
-    "Fuzzy Bubbles",
-    "GFS Didot",
-    "GFS Neohellenic",
-    "Ga Maamli",
-    "Gabarito",
-    "Gabriela",
-    "Gaegu",
-    "Gafata",
-    "Gajraj One",
-    "Galada",
-    "Galdeano",
-    "Galindo",
-    "Gamja Flower",
-    "Gantari",
-    "Gasoek One",
-    "Gayathri",
-    "Geist",
-    "Geist Mono",
-    "Geist Pixel",
-    "Gelasio",
-    "Gemunu Libre",
-    "Genos",
-    "Gentium Book Plus",
-    "Gentium Plus",
-    "Geo",
-    "Geologica",
-    "Geom",
-    "Georama",
-    "Geostar",
-    "Geostar Fill",
-    "Germania One",
-    "Gideon Roman",
-    "Gidole",
-    "Gidugu",
-    "Gilda Display",
-    "Girassol",
-    "Give You Glory",
-    "Glass Antiqua",
-    "Glegoo",
-    "Gloock",
-    "Gloria Hallelujah",
-    "Glory",
-    "Gluten",
-    "Goblin One",
-    "Gochi Hand",
-    "Goldman",
-    "Golos Text",
-    "Google Sans",
-    "Google Sans Code",
-    "Google Sans Flex",
-    "Gorditas",
-    "Gothic A1",
-    "Gotu",
-    "Goudy Bookletter 1911",
-    "Gowun Batang",
-    "Gowun Dodum",
-    "Graduate",
-    "Grand Hotel",
-    "Grandiflora One",
-    "Grandstander",
-    "Grape Nuts",
-    "Gravitas One",
-    "Great Vibes",
-    "Grechen Fuemen",
-    "Grenze",
-    "Grenze Gotisch",
-    "Grey Qo",
-    "Griffy",
-    "Gruppo",
-    "Gudea",
-    "Gugi",
-    "Gulzar",
-    "Gupter",
-    "Gurajada",
-    "Gveret Levin",
-    "Gwendolyn",
-    "Habibi",
-    "Hachi Maru Pop",
-    "Hahmlet",
-    "Halant",
-    "Hammersmith One",
-    "Hanalei",
-    "Hanalei Fill",
-    "Handjet",
-    "Handlee",
-    "Hanken Grotesk",
-    "Hanuman",
-    "Happy Monkey",
-    "Harmattan",
-    "Headland One",
-    "Hedvig Letters Sans",
-    "Hedvig Letters Serif",
-    "Heebo",
-    "Henny Penny",
-    "Hepta Slab",
-    "Herr Von Muellerhoff",
-    "Hi Melody",
-    "Hina Mincho",
-    "Hind",
-    "Hind Guntur",
-    "Hind Madurai",
-    "Hind Mysuru",
-    "Hind Siliguri",
-    "Hind Vadodara",
-    "Holtwood One SC",
-    "Homemade Apple",
-    "Homenaje",
-    "Honk",
-    "Host Grotesk",
-    "Hubballi",
-    "Hubot Sans",
-    "Huninn",
-    "Hurricane",
-    "IBM Plex Mono",
-    "IBM Plex Sans",
-    "IBM Plex Sans Arabic",
-    "IBM Plex Sans Devanagari",
-    "IBM Plex Sans Hebrew",
-    "IBM Plex Sans JP",
-    "IBM Plex Sans KR",
-    "IBM Plex Sans Thai",
-    "IBM Plex Sans Thai Looped",
-    "IBM Plex Serif",
-    "IM Fell DW Pica",
-    "IM Fell DW Pica SC",
-    "IM Fell Double Pica",
-    "IM Fell Double Pica SC",
-    "IM Fell English",
-    "IM Fell English SC",
-    "IM Fell French Canon",
-    "IM Fell French Canon SC",
-    "IM Fell Great Primer",
-    "IM Fell Great Primer SC",
-    "Iansui",
-    "Ibarra Real Nova",
-    "Iceberg",
-    "Iceland",
-    "Idiqlat",
-    "Imbue",
-    "Imperial Script",
-    "Imprima",
-    "Inclusive Sans",
-    "Inconsolata",
-    "Inder",
-    "Indie Flower",
-    "Ingrid Darling",
-    "Inika",
-    "Inknut Antiqua",
-    "Inria Sans",
-    "Inria Serif",
-    "Inspiration",
-    "Instrument Sans",
-    "Instrument Serif",
-    "Intel One Mono",
-    "Inter",
-    "Inter Tight",
-    "Iosevka Charon",
-    "Iosevka Charon Mono",
-    "Irish Grover",
-    "Island Moments",
-    "Istok Web",
-    "Italiana",
-    "Italianno",
-    "Itim",
-    "Jacquard 12",
-    "Jacquard 12 Charted",
-    "Jacquard 24",
-    "Jacquard 24 Charted",
-    "Jacquarda Bastarda 9",
-    "Jacquarda Bastarda 9 Charted",
-    "Jacques Francois",
-    "Jacques Francois Shadow",
-    "Jaini",
-    "Jaini Purva",
-    "Jaldi",
-    "Jaro",
-    "Jersey 10",
-    "Jersey 10 Charted",
-    "Jersey 15",
-    "Jersey 15 Charted",
-    "Jersey 20",
-    "Jersey 20 Charted",
-    "Jersey 25",
-    "Jersey 25 Charted",
-    "JetBrains Mono",
-    "Jim Nightshade",
-    "Joan",
-    "Jockey One",
-    "Jolly Lodger",
-    "Jomhuria",
-    "Jomolhari",
-    "Josefin Sans",
-    "Josefin Slab",
-    "Jost",
-    "Joti One",
-    "Jua",
-    "Judson",
-    "Julee",
-    "Julius Sans One",
-    "Junge",
-    "Jura",
-    "Just Another Hand",
-    "Just Me Again Down Here",
-    "K2D",
-    "Kablammo",
-    "Kadwa",
-    "Kaisei Decol",
-    "Kaisei HarunoUmi",
-    "Kaisei Opti",
-    "Kaisei Tokumin",
-    "Kalam",
-    "Kalnia",
-    "Kalnia Glaze",
-    "Kameron",
-    "Kanchenjunga",
-    "Kanit",
-    "Kantumruy Pro",
-    "Kapakana",
-    "Karantina",
-    "Karla",
-    "Karla Tamil Inclined",
-    "Karla Tamil Upright",
-    "Karma",
-    "Katibeh",
-    "Kaushan Script",
-    "Kavivanar",
-    "Kavoon",
-    "Kay Pho Du",
-    "Kdam Thmor Pro",
-    "Keania One",
-    "Kedebideri",
-    "Kelly Slab",
-    "Kenia",
-    "Khand",
-    "Khmer",
-    "Khula",
-    "Kings",
-    "Kirang Haerang",
-    "Kite One",
-    "Kiwi Maru",
-    "Klee One",
-    "Knewave",
-    "KoHo",
-    "Kodchasan",
-    "Kode Mono",
-    "Koh Santepheap",
-    "Kolker Brush",
-    "Konkhmer Sleokchher",
-    "Kosugi",
-    "Kosugi Maru",
-    "Kotta One",
-    "Koulen",
-    "Kranky",
-    "Kreon",
-    "Kristi",
-    "Krona One",
-    "Krub",
-    "Kufam",
-    "Kulim Park",
-    "Kumar One",
-    "Kumar One Outline",
-    "Kumbh Sans",
-    "Kurale",
-    "LINE Seed JP",
-    "LXGW Marker Gothic",
-    "LXGW WenKai Mono TC",
-    "LXGW WenKai TC",
-    "La Belle Aurore",
-    "Labrada",
-    "Lacquer",
-    "Laila",
-    "Lakki Reddy",
-    "Lalezar",
-    "Lancelot",
-    "Langar",
-    "Lateef",
-    "Lato",
-    "Lavishly Yours",
-    "League Gothic",
-    "League Script",
-    "League Spartan",
-    "Leckerli One",
-    "Ledger",
-    "Lekton",
-    "Lemon",
-    "Lemonada",
-    "Lexend",
-    "Lexend Deca",
-    "Lexend Exa",
-    "Lexend Giga",
-    "Lexend Mega",
-    "Lexend Peta",
-    "Lexend Tera",
-    "Lexend Zetta",
-    "Libertinus Keyboard",
-    "Libertinus Math",
-    "Libertinus Mono",
-    "Libertinus Sans",
-    "Libertinus Serif",
-    "Libertinus Serif Display",
-    "Libre Barcode 128",
-    "Libre Barcode 128 Text",
-    "Libre Barcode 39",
-    "Libre Barcode 39 Extended",
-    "Libre Barcode 39 Extended Text",
-    "Libre Barcode 39 Text",
-    "Libre Barcode EAN13 Text",
-    "Libre Baskerville",
-    "Libre Bodoni",
-    "Libre Caslon Display",
-    "Libre Caslon Text",
-    "Libre Franklin",
-    "Licorice",
-    "Life Savers",
-    "Lilex",
-    "Lilita One",
-    "Lily Script One",
-    "Limelight",
-    "Linden Hill",
-    "Linefont",
-    "Lisu Bosa",
-    "Liter",
-    "Literata",
-    "Liu Jian Mao Cao",
-    "Livvic",
-    "Lobster",
-    "Lobster Two",
-    "Londrina Outline",
-    "Londrina Shadow",
-    "Londrina Sketch",
-    "Londrina Solid",
-    "Long Cang",
-    "Lora",
-    "Love Light",
-    "Love Ya Like A Sister",
-    "Loved by the King",
-    "Lovers Quarrel",
-    "Luckiest Guy",
-    "Lugrasimo",
-    "Lumanosimo",
-    "Lunasima",
-    "Lusitana",
-    "Lustria",
-    "Luxurious Roman",
-    "Luxurious Script",
-    "M PLUS 1",
-    "M PLUS 1 Code",
-    "M PLUS 1p",
-    "M PLUS 2",
-    "M PLUS Code Latin",
-    "M PLUS Rounded 1c",
-    "M PLUS U",
-    "Ma Shan Zheng",
-    "Macondo",
-    "Macondo Swash Caps",
-    "Mada",
-    "Madimi One",
-    "Magra",
-    "Maiden Orange",
-    "Maitree",
-    "Major Mono Display",
-    "Mako",
-    "Mali",
-    "Mallanna",
-    "Maname",
-    "Mandali",
-    "Manjari",
-    "Manrope",
-    "Mansalva",
-    "Manuale",
-    "Manufacturing Consent",
-    "Marcellus",
-    "Marcellus SC",
-    "Marck Script",
-    "Margarine",
-    "Marhey",
-    "Markazi Text",
-    "Marko One",
-    "Marmelad",
-    "Martel",
-    "Martel Sans",
-    "Martian Mono",
-    "Marvel",
-    "Matangi",
-    "Mate",
-    "Mate SC",
-    "Matemasie",
-    "Maven Pro",
-    "McLaren",
-    "Mea Culpa",
-    "Meddon",
-    "MedievalSharp",
-    "Medula One",
-    "Meera Inimai",
-    "Megrim",
-    "Meie Script",
-    "Menbere",
-    "Meow Script",
-    "Merienda",
-    "Merriweather",
-    "Merriweather Sans",
-    "Metal",
-    "Metal Mania",
-    "Metamorphous",
-    "Metrophobic",
-    "Michroma",
-    "Micro 5",
-    "Micro 5 Charted",
-    "Milonga",
-    "Miltonian",
-    "Miltonian Tattoo",
-    "Mina",
-    "Mingzat",
-    "Miniver",
-    "Miranda Sans",
-    "Miriam Libre",
-    "Mirza",
-    "Miss Fajardose",
-    "Mitr",
-    "Mochiy Pop One",
-    "Mochiy Pop P One",
-    "Modak",
-    "Modern Antiqua",
-    "Moderustic",
-    "Mogra",
-    "Mohave",
-    "Moirai One",
-    "Molengo",
-    "Molle",
-    "Momo Signature",
-    "Momo Trust Display",
-    "Momo Trust Sans",
-    "Mona Sans",
-    "Monda",
-    "Monofett",
-    "Monomakh",
-    "Monomaniac One",
-    "Monoton",
-    "Monsieur La Doulaise",
-    "Montaga",
-    "Montagu Slab",
-    "MonteCarlo",
-    "Montenegrin Gothic One",
-    "Montez",
-    "Montserrat",
-    "Montserrat Alternates",
-    "Montserrat Underline",
-    "Moo Lah Lah",
-    "Mooli",
-    "Moon Dance",
-    "Moul",
-    "Moulpali",
-    "Mountains of Christmas",
-    "Mouse Memoirs",
-    "Mozilla Headline",
-    "Mozilla Text",
-    "Mr Bedfort",
-    "Mr Dafoe",
-    "Mr De Haviland",
-    "Mrs Saint Delafield",
-    "Mrs Sheppards",
-    "Ms Madi",
-    "Mukta",
-    "Mukta Mahee",
-    "Mukta Malar",
-    "Mukta Vaani",
-    "Mulish",
-    "Murecho",
-    "MuseoModerno",
-    "My Soul",
-    "Mynerve",
-    "Mystery Quest",
-    "NTR",
-    "Nabla",
-    "Namdhinggo",
-    "Nanum Brush Script",
-    "Nanum Gothic",
-    "Nanum Gothic Coding",
-    "Nanum Myeongjo",
-    "Nanum Pen Script",
-    "Narnoor",
-    "Nata Sans",
-    "National Park",
-    "Neonderthaw",
-    "Nerko One",
-    "Neucha",
-    "Neuton",
-    "New Amsterdam",
-    "New Rocker",
-    "New Tegomin",
-    "News Cycle",
-    "Newsreader",
-    "Niconne",
-    "Niramit",
-    "Nixie One",
-    "Nobile",
-    "Nokora",
-    "Norican",
-    "Nosifer",
-    "Notable",
-    "Nothing You Could Do",
-    "Noticia Text",
-    "Noto Color Emoji",
-    "Noto Emoji",
-    "Noto Kufi Arabic",
-    "Noto Music",
-    "Noto Naskh Arabic",
-    "Noto Nastaliq Urdu",
-    "Noto Rashi Hebrew",
-    "Noto Sans",
-    "Noto Sans Adlam",
-    "Noto Sans Adlam Unjoined",
-    "Noto Sans Anatolian Hieroglyphs",
-    "Noto Sans Arabic",
-    "Noto Sans Armenian",
-    "Noto Sans Avestan",
-    "Noto Sans Balinese",
-    "Noto Sans Bamum",
-    "Noto Sans Bassa Vah",
-    "Noto Sans Batak",
-    "Noto Sans Bengali",
-    "Noto Sans Bhaiksuki",
-    "Noto Sans Brahmi",
-    "Noto Sans Buginese",
-    "Noto Sans Buhid",
-    "Noto Sans Canadian Aboriginal",
-    "Noto Sans Carian",
-    "Noto Sans Caucasian Albanian",
-    "Noto Sans Chakma",
-    "Noto Sans Cham",
-    "Noto Sans Cherokee",
-    "Noto Sans Chorasmian",
-    "Noto Sans Coptic",
-    "Noto Sans Cuneiform",
-    "Noto Sans Cypriot",
-    "Noto Sans Cypro Minoan",
-    "Noto Sans Deseret",
-    "Noto Sans Devanagari",
-    "Noto Sans Display",
-    "Noto Sans Duployan",
-    "Noto Sans Egyptian Hieroglyphs",
-    "Noto Sans Elbasan",
-    "Noto Sans Elymaic",
-    "Noto Sans Ethiopic",
-    "Noto Sans Georgian",
-    "Noto Sans Glagolitic",
-    "Noto Sans Gothic",
-    "Noto Sans Grantha",
-    "Noto Sans Gujarati",
-    "Noto Sans Gunjala Gondi",
-    "Noto Sans Gurmukhi",
-    "Noto Sans HK",
-    "Noto Sans Hanifi Rohingya",
-    "Noto Sans Hanunoo",
-    "Noto Sans Hatran",
-    "Noto Sans Hebrew",
-    "Noto Sans Imperial Aramaic",
-    "Noto Sans Indic Siyaq Numbers",
-    "Noto Sans Inscriptional Pahlavi",
-    "Noto Sans Inscriptional Parthian",
-    "Noto Sans JP",
-    "Noto Sans Javanese",
-    "Noto Sans KR",
-    "Noto Sans Kaithi",
-    "Noto Sans Kannada",
-    "Noto Sans Kawi",
-    "Noto Sans Kayah Li",
-    "Noto Sans Kharoshthi",
-    "Noto Sans Khmer",
-    "Noto Sans Khojki",
-    "Noto Sans Khudawadi",
-    "Noto Sans Lao",
-    "Noto Sans Lao Looped",
-    "Noto Sans Lepcha",
-    "Noto Sans Limbu",
-    "Noto Sans Linear A",
-    "Noto Sans Linear B",
-    "Noto Sans Lisu",
-    "Noto Sans Lycian",
-    "Noto Sans Lydian",
-    "Noto Sans Mahajani",
-    "Noto Sans Malayalam",
-    "Noto Sans Mandaic",
-    "Noto Sans Manichaean",
-    "Noto Sans Marchen",
-    "Noto Sans Masaram Gondi",
-    "Noto Sans Math",
-    "Noto Sans Mayan Numerals",
-    "Noto Sans Medefaidrin",
-    "Noto Sans Meetei Mayek",
-    "Noto Sans Mende Kikakui",
-    "Noto Sans Meroitic",
-    "Noto Sans Miao",
-    "Noto Sans Modi",
-    "Noto Sans Mongolian",
-    "Noto Sans Mono",
-    "Noto Sans Mro",
-    "Noto Sans Multani",
-    "Noto Sans Myanmar",
-    "Noto Sans NKo",
-    "Noto Sans NKo Unjoined",
-    "Noto Sans Nabataean",
-    "Noto Sans Nag Mundari",
-    "Noto Sans Nandinagari",
-    "Noto Sans New Tai Lue",
-    "Noto Sans Newa",
-    "Noto Sans Nushu",
-    "Noto Sans Ogham",
-    "Noto Sans Ol Chiki",
-    "Noto Sans Old Hungarian",
-    "Noto Sans Old Italic",
-    "Noto Sans Old North Arabian",
-    "Noto Sans Old Permic",
-    "Noto Sans Old Persian",
-    "Noto Sans Old Sogdian",
-    "Noto Sans Old South Arabian",
-    "Noto Sans Old Turkic",
-    "Noto Sans Oriya",
-    "Noto Sans Osage",
-    "Noto Sans Osmanya",
-    "Noto Sans Pahawh Hmong",
-    "Noto Sans Palmyrene",
-    "Noto Sans Pau Cin Hau",
-    "Noto Sans PhagsPa",
-    "Noto Sans Phoenician",
-    "Noto Sans Psalter Pahlavi",
-    "Noto Sans Rejang",
-    "Noto Sans Runic",
-    "Noto Sans SC",
-    "Noto Sans Samaritan",
-    "Noto Sans Saurashtra",
-    "Noto Sans Sharada",
-    "Noto Sans Shavian",
-    "Noto Sans Siddham",
-    "Noto Sans SignWriting",
-    "Noto Sans Sinhala",
-    "Noto Sans Sogdian",
-    "Noto Sans Sora Sompeng",
-    "Noto Sans Soyombo",
-    "Noto Sans Sundanese",
-    "Noto Sans Sunuwar",
-    "Noto Sans Syloti Nagri",
-    "Noto Sans Symbols",
-    "Noto Sans Symbols 2",
-    "Noto Sans Syriac",
-    "Noto Sans Syriac Eastern",
-    "Noto Sans Syriac Western",
-    "Noto Sans TC",
-    "Noto Sans Tagalog",
-    "Noto Sans Tagbanwa",
-    "Noto Sans Tai Le",
-    "Noto Sans Tai Tham",
-    "Noto Sans Tai Viet",
-    "Noto Sans Takri",
-    "Noto Sans Tamil",
-    "Noto Sans Tamil Supplement",
-    "Noto Sans Tangsa",
-    "Noto Sans Telugu",
-    "Noto Sans Thaana",
-    "Noto Sans Thai",
-    "Noto Sans Thai Looped",
-    "Noto Sans Tifinagh",
-    "Noto Sans Tirhuta",
-    "Noto Sans Ugaritic",
-    "Noto Sans Vai",
-    "Noto Sans Vithkuqi",
-    "Noto Sans Wancho",
-    "Noto Sans Warang Citi",
-    "Noto Sans Yi",
-    "Noto Sans Zanabazar Square",
-    "Noto Serif",
-    "Noto Serif Ahom",
-    "Noto Serif Armenian",
-    "Noto Serif Balinese",
-    "Noto Serif Bengali",
-    "Noto Serif Devanagari",
-    "Noto Serif Display",
-    "Noto Serif Dives Akuru",
-    "Noto Serif Dogra",
-    "Noto Serif Ethiopic",
-    "Noto Serif Georgian",
-    "Noto Serif Grantha",
-    "Noto Serif Gujarati",
-    "Noto Serif Gurmukhi",
-    "Noto Serif HK",
-    "Noto Serif Hebrew",
-    "Noto Serif Hentaigana",
-    "Noto Serif JP",
-    "Noto Serif KR",
-    "Noto Serif Kannada",
-    "Noto Serif Khitan Small Script",
-    "Noto Serif Khmer",
-    "Noto Serif Khojki",
-    "Noto Serif Lao",
-    "Noto Serif Makasar",
-    "Noto Serif Malayalam",
-    "Noto Serif Myanmar",
-    "Noto Serif NP Hmong",
-    "Noto Serif Old Uyghur",
-    "Noto Serif Oriya",
-    "Noto Serif Ottoman Siyaq",
-    "Noto Serif SC",
-    "Noto Serif Sinhala",
-    "Noto Serif TC",
-    "Noto Serif Tamil",
-    "Noto Serif Tangut",
-    "Noto Serif Telugu",
-    "Noto Serif Thai",
-    "Noto Serif Tibetan",
-    "Noto Serif Todhri",
-    "Noto Serif Toto",
-    "Noto Serif Vithkuqi",
-    "Noto Serif Yezidi",
-    "Noto Traditional Nushu",
-    "Noto Znamenny Musical Notation",
-    "Nova Cut",
-    "Nova Flat",
-    "Nova Mono",
-    "Nova Oval",
-    "Nova Round",
-    "Nova Script",
-    "Nova Slim",
-    "Nova Square",
-    "Numans",
-    "Nunito",
-    "Nunito Sans",
-    "Nuosu SIL",
-    "Odibee Sans",
-    "Odor Mean Chey",
-    "Offside",
-    "Oi",
-    "Ojuju",
-    "Old Standard TT",
-    "Oldenburg",
-    "Ole",
-    "Oleo Script",
-    "Oleo Script Swash Caps",
-    "Onest",
-    "Oooh Baby",
-    "Open Sans",
-    "Oranienbaum",
-    "Orbit",
-    "Orbitron",
-    "Oregano",
-    "Orelega One",
-    "Orienta",
-    "Original Surfer",
-    "Oswald",
-    "Outfit",
-    "Over the Rainbow",
-    "Overlock",
-    "Overlock SC",
-    "Overpass",
-    "Overpass Mono",
-    "Ovo",
-    "Oxanium",
-    "Oxygen",
-    "Oxygen Mono",
-    "PT Mono",
-    "PT Sans",
-    "PT Sans Caption",
-    "PT Sans Narrow",
-    "PT Serif",
-    "PT Serif Caption",
-    "Pacifico",
-    "Padauk",
-    "Padyakke Expanded One",
-    "Palanquin",
-    "Palanquin Dark",
-    "Palette Mosaic",
-    "Pangolin",
-    "Paprika",
-    "Parastoo",
-    "Parisienne",
-    "Parkinsans",
-    "Passero One",
-    "Passion One",
-    "Passions Conflict",
-    "Pathway Extreme",
-    "Pathway Gothic One",
-    "Patrick Hand",
-    "Patrick Hand SC",
-    "Pattaya",
-    "Patua One",
-    "Pavanam",
-    "Paytone One",
-    "Peddana",
-    "Peralta",
-    "Permanent Marker",
-    "Petemoss",
-    "Petit Formal Script",
-    "Petrona",
-    "Phetsarath",
-    "Philosopher",
-    "Phudu",
-    "Piazzolla",
-    "Piedra",
-    "Pinyon Script",
-    "Pirata One",
-    "Pixelify Sans",
-    "Plaster",
-    "Platypi",
-    "Play",
-    "Playball",
-    "Playfair",
-    "Playfair Display",
-    "Playfair Display SC",
-    "Playpen Sans",
-    "Playpen Sans Arabic",
-    "Playpen Sans Deva",
-    "Playpen Sans Hebrew",
-    "Playpen Sans Thai",
-    "Playwrite AR",
-    "Playwrite AR Guides",
-    "Playwrite AT",
-    "Playwrite AT Guides",
-    "Playwrite AU NSW",
-    "Playwrite AU NSW Guides",
-    "Playwrite AU QLD",
-    "Playwrite AU QLD Guides",
-    "Playwrite AU SA",
-    "Playwrite AU SA Guides",
-    "Playwrite AU TAS",
-    "Playwrite AU TAS Guides",
-    "Playwrite AU VIC",
-    "Playwrite AU VIC Guides",
-    "Playwrite BE VLG",
-    "Playwrite BE VLG Guides",
-    "Playwrite BE WAL",
-    "Playwrite BE WAL Guides",
-    "Playwrite BR",
-    "Playwrite BR Guides",
-    "Playwrite CA",
-    "Playwrite CA Guides",
-    "Playwrite CL",
-    "Playwrite CL Guides",
-    "Playwrite CO",
-    "Playwrite CO Guides",
-    "Playwrite CU",
-    "Playwrite CU Guides",
-    "Playwrite CZ",
-    "Playwrite CZ Guides",
-    "Playwrite DE Grund",
-    "Playwrite DE Grund Guides",
-    "Playwrite DE LA",
-    "Playwrite DE LA Guides",
-    "Playwrite DE SAS",
-    "Playwrite DE SAS Guides",
-    "Playwrite DE VA",
-    "Playwrite DE VA Guides",
-    "Playwrite DK Loopet",
-    "Playwrite DK Loopet Guides",
-    "Playwrite DK Uloopet",
-    "Playwrite DK Uloopet Guides",
-    "Playwrite ES",
-    "Playwrite ES Deco",
-    "Playwrite ES Deco Guides",
-    "Playwrite ES Guides",
-    "Playwrite FR Moderne",
-    "Playwrite FR Moderne Guides",
-    "Playwrite FR Trad",
-    "Playwrite FR Trad Guides",
-    "Playwrite GB J",
-    "Playwrite GB J Guides",
-    "Playwrite GB S",
-    "Playwrite GB S Guides",
-    "Playwrite HR",
-    "Playwrite HR Guides",
-    "Playwrite HR Lijeva",
-    "Playwrite HR Lijeva Guides",
-    "Playwrite HU",
-    "Playwrite HU Guides",
-    "Playwrite ID",
-    "Playwrite ID Guides",
-    "Playwrite IE",
-    "Playwrite IE Guides",
-    "Playwrite IN",
-    "Playwrite IN Guides",
-    "Playwrite IS",
-    "Playwrite IS Guides",
-    "Playwrite IT Moderna",
-    "Playwrite IT Moderna Guides",
-    "Playwrite IT Trad",
-    "Playwrite IT Trad Guides",
-    "Playwrite MX",
-    "Playwrite MX Guides",
-    "Playwrite NG Modern",
-    "Playwrite NG Modern Guides",
-    "Playwrite NL",
-    "Playwrite NL Guides",
-    "Playwrite NO",
-    "Playwrite NO Guides",
-    "Playwrite NZ",
-    "Playwrite NZ Basic",
-    "Playwrite NZ Basic Guides",
-    "Playwrite NZ Guides",
-    "Playwrite PE",
-    "Playwrite PE Guides",
-    "Playwrite PL",
-    "Playwrite PL Guides",
-    "Playwrite PT",
-    "Playwrite PT Guides",
-    "Playwrite RO",
-    "Playwrite RO Guides",
-    "Playwrite SK",
-    "Playwrite SK Guides",
-    "Playwrite TZ",
-    "Playwrite TZ Guides",
-    "Playwrite US Modern",
-    "Playwrite US Modern Guides",
-    "Playwrite US Trad",
-    "Playwrite US Trad Guides",
-    "Playwrite VN",
-    "Playwrite VN Guides",
-    "Playwrite ZA",
-    "Playwrite ZA Guides",
-    "Pliant",
-    "Plus Jakarta Sans",
-    "Pochaevsk",
-    "Podkova",
-    "Poetsen One",
-    "Poiret One",
-    "Poller One",
-    "Poltawski Nowy",
-    "Poly",
-    "Pompiere",
-    "Ponnala",
-    "Ponomar",
-    "Pontano Sans",
-    "Poor Story",
-    "Poppins",
-    "Port Lligat Sans",
-    "Port Lligat Slab",
-    "Potta One",
-    "Pragati Narrow",
-    "Praise",
-    "Prata",
-    "Preahvihear",
-    "Press Start 2P",
-    "Pridi",
-    "Princess Sofia",
-    "Prociono",
-    "Prompt",
-    "Prosto One",
-    "Protest Guerrilla",
-    "Protest Revolution",
-    "Protest Riot",
-    "Protest Strike",
-    "Proza Libre",
-    "Public Sans",
-    "Puppies Play",
-    "Puritan",
-    "Purple Purse",
-    "Qahiri",
-    "Quando",
-    "Quantico",
-    "Quattrocento",
-    "Quattrocento Sans",
-    "Questrial",
-    "Quicksand",
-    "Quintessential",
-    "Qwigley",
-    "Qwitcher Grypen",
-    "REM",
-    "Racing Sans One",
-    "Radio Canada",
-    "Radio Canada Big",
-    "Radley",
-    "Rajdhani",
-    "Rakkas",
-    "Raleway",
-    "Raleway Dots",
-    "Ramabhadra",
-    "Ramaraja",
-    "Rambla",
-    "Rammetto One",
-    "Rampart One",
-    "Ramsina",
-    "Ranchers",
-    "Rancho",
-    "Ranga",
-    "Rasa",
-    "Rationale",
-    "Ravi Prakash",
-    "Readex Pro",
-    "Recursive",
-    "Red Hat Display",
-    "Red Hat Mono",
-    "Red Hat Text",
-    "Red Rose",
-    "Redacted",
-    "Redacted Script",
-    "Reddit Mono",
-    "Reddit Sans",
-    "Reddit Sans Condensed",
-    "Redressed",
-    "Reem Kufi",
-    "Reem Kufi Fun",
-    "Reem Kufi Ink",
-    "Reenie Beanie",
-    "Reggae One",
-    "Rethink Sans",
-    "Revalia",
-    "Rhodium Libre",
-    "Ribeye",
-    "Ribeye Marrow",
-    "Righteous",
-    "Risque",
-    "Road Rage",
-    "Roboto",
-    "Roboto Flex",
-    "Roboto Mono",
-    "Roboto Serif",
-    "Roboto Slab",
-    "Rochester",
-    "Rock 3D",
-    "Rock Salt",
-    "RocknRoll One",
-    "Rokkitt",
-    "Romanesco",
-    "Ropa Sans",
-    "Rosario",
-    "Rosarivo",
-    "Rouge Script",
-    "Rowdies",
-    "Rozha One",
-    "Rubik",
-    "Rubik 80s Fade",
-    "Rubik Beastly",
-    "Rubik Broken Fax",
-    "Rubik Bubbles",
-    "Rubik Burned",
-    "Rubik Dirt",
-    "Rubik Distressed",
-    "Rubik Doodle Shadow",
-    "Rubik Doodle Triangles",
-    "Rubik Gemstones",
-    "Rubik Glitch",
-    "Rubik Glitch Pop",
-    "Rubik Iso",
-    "Rubik Lines",
-    "Rubik Maps",
-    "Rubik Marker Hatch",
-    "Rubik Maze",
-    "Rubik Microbe",
-    "Rubik Mono One",
-    "Rubik Moonrocks",
-    "Rubik Pixels",
-    "Rubik Puddles",
-    "Rubik Scribble",
-    "Rubik Spray Paint",
-    "Rubik Storm",
-    "Rubik Vinyl",
-    "Rubik Wet Paint",
-    "Ruda",
-    "Rufina",
-    "Ruge Boogie",
-    "Ruluko",
-    "Rum Raisin",
-    "Ruslan Display",
-    "Russo One",
-    "Ruthie",
-    "Ruwudu",
-    "Rye",
-    "SN Pro",
-    "STIX Two Math",
-    "STIX Two Text",
-    "SUSE",
-    "SUSE Mono",
-    "Sacramento",
-    "Sahitya",
-    "Sail",
-    "Saira",
-    "Saira Stencil",
-    "Salsa",
-    "Sanchez",
-    "Sancreek",
-    "Sankofa Display",
-    "Sansation",
-    "Sansita",
-    "Sansita Swashed",
-    "Sarabun",
-    "Sarala",
-    "Sarina",
-    "Sarpanch",
-    "Sassy Frass",
-    "Satisfy",
-    "Savate",
-    "Sawarabi Gothic",
-    "Sawarabi Mincho",
-    "Scada",
-    "Scheherazade New",
-    "Schibsted Grotesk",
-    "Schoolbell",
-    "Science Gothic",
-    "Scope One",
-    "Seaweed Script",
-    "Secular One",
-    "Sedan",
-    "Sedan SC",
-    "Sedgwick Ave",
-    "Sedgwick Ave Display",
-    "Sekuya",
-    "Sen",
-    "Send Flowers",
-    "Sevillana",
-    "Seymour One",
-    "Shadows Into Light",
-    "Shadows Into Light Two",
-    "Shafarik",
-    "Shalimar",
-    "Shantell Sans",
-    "Shanti",
-    "Share",
-    "Share Tech",
-    "Share Tech Mono",
-    "Shippori Antique",
-    "Shippori Antique B1",
-    "Shippori Mincho",
-    "Shippori Mincho B1",
-    "Shizuru",
-    "Shojumaru",
-    "Short Stack",
-    "Shrikhand",
-    "Siemreap",
-    "Sigmar",
-    "Sigmar One",
-    "Signika",
-    "Signika Negative",
-    "Silkscreen",
-    "Simonetta",
-    "Single Day",
-    "Sintony",
-    "Sirin Stencil",
-    "Sirivennela",
-    "Six Caps",
-    "Sixtyfour",
-    "Sixtyfour Convergence",
-    "Skranji",
-    "Slabo 13px",
-    "Slabo 27px",
-    "Slackey",
-    "Slackside One",
-    "Smokum",
-    "Smooch",
-    "Smooch Sans",
-    "Smythe",
-    "Sniglet",
-    "Snippet",
-    "Snowburst One",
-    "Sofadi One",
-    "Sofia",
-    "Sofia Sans",
-    "Sofia Sans Condensed",
-    "Sofia Sans Extra Condensed",
-    "Sofia Sans Semi Condensed",
-    "Solitreo",
-    "Solway",
-    "Sometype Mono",
-    "Song Myung",
-    "Sono",
-    "Sonsie One",
-    "Sora",
-    "Sorts Mill Goudy",
-    "Sour Gummy",
-    "Source Code Pro",
-    "Source Sans 3",
-    "Source Serif 4",
-    "Space Grotesk",
-    "Space Mono",
-    "Special Elite",
-    "Special Gothic",
-    "Special Gothic Condensed One",
-    "Special Gothic Expanded One",
-    "Spectral",
-    "Spectral SC",
-    "Spicy Rice",
-    "Spinnaker",
-    "Spirax",
-    "Splash",
-    "Spline Sans",
-    "Spline Sans Mono",
-    "Squada One",
-    "Square Peg",
-    "Sree Krushnadevaraya",
-    "Sriracha",
-    "Srisakdi",
-    "Staatliches",
-    "Stack Sans Headline",
-    "Stack Sans Notch",
-    "Stack Sans Text",
-    "Stalemate",
-    "Stalinist One",
-    "Stardos Stencil",
-    "Stick",
-    "Stick No Bills",
-    "Stint Ultra Condensed",
-    "Stint Ultra Expanded",
-    "Stoke",
-    "Story Script",
-    "Strait",
-    "Strichpunkt Sans",
-    "Style Script",
-    "Stylish",
-    "Sue Ellen Francisco",
-    "Suez One",
-    "Sulphur Point",
-    "Sumana",
-    "Sunflower",
-    "Sunshiney",
-    "Supermercado One",
-    "Sura",
-    "Suranna",
-    "Suravaram",
-    "Suwannaphum",
-    "Swanky and Moo Moo",
-    "Syncopate",
-    "Syne",
-    "Syne Mono",
-    "Syne Tactile",
-    "TASA Explorer",
-    "TASA Orbiter",
-    "Tac One",
-    "Tagesschrift",
-    "Tai Heritage Pro",
-    "Tajawal",
-    "Tangerine",
-    "Tapestry",
-    "Taprom",
-    "Tauri",
-    "Taviraj",
-    "Teachers",
-    "Teko",
-    "Tektur",
-    "Telex",
-    "Tenali Ramakrishna",
-    "Tenor Sans",
-    "Text Me One",
-    "Texturina",
-    "Thasadith",
-    "The Girl Next Door",
-    "The Nautigal",
-    "Tienne",
-    "TikTok Sans",
-    "Tillana",
-    "Tilt Neon",
-    "Tilt Prism",
-    "Tilt Warp",
-    "Timmana",
-    "Tinos",
-    "Tiny5",
-    "Tiro Bangla",
-    "Tiro Devanagari Hindi",
-    "Tiro Devanagari Marathi",
-    "Tiro Devanagari Sanskrit",
-    "Tiro Gurmukhi",
-    "Tiro Kannada",
-    "Tiro Tamil",
-    "Tiro Telugu",
-    "Tirra",
-    "Titan One",
-    "Titillium Web",
-    "Tomorrow",
-    "Tourney",
-    "Trade Winds",
-    "Train One",
-    "Triodion",
-    "Trirong",
-    "Trispace",
-    "Trocchi",
-    "Trochut",
-    "Truculenta",
-    "Trykker",
-    "Tsukimi Rounded",
-    "Tuffy",
-    "Tulpen One",
-    "Turret Road",
-    "Twinkle Star",
-    "Ubuntu",
-    "Ubuntu Condensed",
-    "Ubuntu Mono",
-    "Ubuntu Sans",
-    "Ubuntu Sans Mono",
-    "Uchen",
-    "Ultra",
-    "Unbounded",
-    "Uncial Antiqua",
-    "Underdog",
-    "Unica One",
-    "UnifrakturCook",
-    "UnifrakturMaguntia",
-    "Unkempt",
-    "Unlock",
-    "Unna",
-    "UoqMunThenKhung",
-    "Updock",
-    "Urbanist",
-    "VT323",
-    "Vampiro One",
-    "Varela",
-    "Varela Round",
-    "Varta",
-    "Vast Shadow",
-    "Vazirmatn",
-    "Vend Sans",
-    "Vesper Libre",
-    "Viaoda Libre",
-    "Vibes",
-    "Vibur",
-    "Victor Mono",
-    "Vidaloka",
-    "Viga",
-    "Vina Sans",
-    "Voces",
-    "Volkhov",
-    "Vollkorn",
-    "Vollkorn SC",
-    "Voltaire",
-    "Vujahday Script",
-    "WDXL Lubrifont JP N",
-    "WDXL Lubrifont SC",
-    "WDXL Lubrifont TC",
-    "Waiting for the Sunrise",
-    "Wallpoet",
-    "Walter Turncoat",
-    "Warnes",
-    "Water Brush",
-    "Waterfall",
-    "Wavefont",
-    "Wellfleet",
-    "Wendy One",
-    "Whisper",
-    "WindSong",
-    "Winky Rough",
-    "Winky Sans",
-    "Wire One",
-    "Wittgenstein",
-    "Wix Madefor Display",
-    "Wix Madefor Text",
-    "Work Sans",
-    "Workbench",
-    "Xanh Mono",
-    "Yaldevi",
-    "Yanone Kaffeesatz",
-    "Yantramanav",
-    "Yarndings 12",
-    "Yarndings 12 Charted",
-    "Yarndings 20",
-    "Yarndings 20 Charted",
-    "Yatra One",
-    "Yellowtail",
-    "Yeon Sung",
-    "Yeseva One",
-    "Yesteryear",
-    "Yomogi",
-    "Young Serif",
-    "Yrsa",
-    "Ysabeau",
-    "Ysabeau Infant",
-    "Ysabeau Office",
-    "Ysabeau SC",
-    "Yuji Boku",
-    "Yuji Hentaigana Akari",
-    "Yuji Hentaigana Akebono",
-    "Yuji Mai",
-    "Yuji Syuku",
-    "Yusei Magic",
-    "Yuyu",
-    "Yuyu Short",
-    "ZCOOL KuaiLe",
-    "ZCOOL QingKe HuangYou",
-    "ZCOOL XiaoWei",
-    "Zain",
-    "Zalando Sans",
-    "Zalando Sans Expanded",
-    "Zalando Sans SemiExpanded",
-    "Zen Antique",
-    "Zen Antique Soft",
-    "Zen Dots",
-    "Zen Kaku Gothic Antique",
-    "Zen Kaku Gothic New",
-    "Zen Kurenaido",
-    "Zen Loop",
-    "Zen Maru Gothic",
-    "Zen Old Mincho",
-    "Zen Tokyo Zoo",
-    "Zeyada",
-    "Zhi Mang Xing",
-    "Zilla Slab",
-    "Zilla Slab Highlight",
-]
+class FontFamily(Enum):
+    """Google Fonts families supported by google_fonts 9.0.0."""
+
+    ABEEZEE = "ABeeZee"
+    ADLAM_DISPLAY = "ADLaM Display"
+    AR_ONE_SANS = "AR One Sans"
+    ABEL = "Abel"
+    ABHAYA_LIBRE = "Abhaya Libre"
+    ABORETO = "Aboreto"
+    ABRIL_FATFACE = "Abril Fatface"
+    ABYSSINICA_SIL = "Abyssinica SIL"
+    ACLONICA = "Aclonica"
+    ACME = "Acme"
+    ACTOR = "Actor"
+    ADAMINA = "Adamina"
+    ADVENT_PRO = "Advent Pro"
+    AFACAD = "Afacad"
+    AFACAD_FLUX = "Afacad Flux"
+    AGBALUMO = "Agbalumo"
+    AGDASIMA = "Agdasima"
+    AGU_DISPLAY = "Agu Display"
+    AGUAFINA_SCRIPT = "Aguafina Script"
+    AKATAB = "Akatab"
+    AKAYA_KANADAKA = "Akaya Kanadaka"
+    AKAYA_TELIVIGALA = "Akaya Telivigala"
+    AKRONIM = "Akronim"
+    AKSHAR = "Akshar"
+    AKT = "Akt"
+    ALADIN = "Aladin"
+    ALAN_SANS = "Alan Sans"
+    ALATA = "Alata"
+    ALATSI = "Alatsi"
+    ALBERT_SANS = "Albert Sans"
+    ALDRICH = "Aldrich"
+    ALEF = "Alef"
+    ALEGREYA = "Alegreya"
+    ALEGREYA_SC = "Alegreya SC"
+    ALEGREYA_SANS = "Alegreya Sans"
+    ALEGREYA_SANS_SC = "Alegreya Sans SC"
+    ALEO = "Aleo"
+    ALEX_BRUSH = "Alex Brush"
+    ALEXANDRIA = "Alexandria"
+    ALFA_SLAB_ONE = "Alfa Slab One"
+    ALICE = "Alice"
+    ALIEN_BLOCK = "Alien Block"
+    ALIKE = "Alike"
+    ALIKE_ANGULAR = "Alike Angular"
+    ALKALAMI = "Alkalami"
+    ALKATRA = "Alkatra"
+    ALLAN = "Allan"
+    ALLERTA = "Allerta"
+    ALLERTA_STENCIL = "Allerta Stencil"
+    ALLISON = "Allison"
+    ALLKIN = "Allkin"
+    ALLURA = "Allura"
+    ALMARAI = "Almarai"
+    ALMENDRA = "Almendra"
+    ALMENDRA_DISPLAY = "Almendra Display"
+    ALMENDRA_SC = "Almendra SC"
+    ALUMNI_SANS = "Alumni Sans"
+    ALUMNI_SANS_COLLEGIATE_ONE = "Alumni Sans Collegiate One"
+    ALUMNI_SANS_INLINE_ONE = "Alumni Sans Inline One"
+    ALUMNI_SANS_PINSTRIPE = "Alumni Sans Pinstripe"
+    ALUMNI_SANS_SC = "Alumni Sans SC"
+    ALYAMAMA = "Alyamama"
+    AMARANTE = "Amarante"
+    AMARANTH = "Amaranth"
+    AMARNA = "Amarna"
+    AMATIC_SC = "Amatic SC"
+    AMETHYSTA = "Amethysta"
+    AMIKO = "Amiko"
+    AMIRI = "Amiri"
+    AMIRI_QURAN = "Amiri Quran"
+    AMITA = "Amita"
+    ANAHEIM = "Anaheim"
+    ANCIZAR_SANS = "Ancizar Sans"
+    ANCIZAR_SERIF = "Ancizar Serif"
+    ANDADA_PRO = "Andada Pro"
+    ANDIKA = "Andika"
+    ANEK_BANGLA = "Anek Bangla"
+    ANEK_DEVANAGARI = "Anek Devanagari"
+    ANEK_GUJARATI = "Anek Gujarati"
+    ANEK_GURMUKHI = "Anek Gurmukhi"
+    ANEK_KANNADA = "Anek Kannada"
+    ANEK_LATIN = "Anek Latin"
+    ANEK_MALAYALAM = "Anek Malayalam"
+    ANEK_ODIA = "Anek Odia"
+    ANEK_TAMIL = "Anek Tamil"
+    ANEK_TELUGU = "Anek Telugu"
+    ANGKOR = "Angkor"
+    ANNAPURNA_SIL = "Annapurna SIL"
+    ANNIE_USE_YOUR_TELESCOPE = "Annie Use Your Telescope"
+    ANONYMOUS_PRO = "Anonymous Pro"
+    ANTA = "Anta"
+    ANTIC = "Antic"
+    ANTIC_DIDONE = "Antic Didone"
+    ANTIC_SLAB = "Antic Slab"
+    ANTON = "Anton"
+    ANTON_SC = "Anton SC"
+    ANTONIO = "Antonio"
+    ANUPHAN = "Anuphan"
+    ANYBODY = "Anybody"
+    AOBOSHI_ONE = "Aoboshi One"
+    ARAPEY = "Arapey"
+    ARBUTUS = "Arbutus"
+    ARBUTUS_SLAB = "Arbutus Slab"
+    ARCHITECTS_DAUGHTER = "Architects Daughter"
+    ARCHIVO = "Archivo"
+    ARCHIVO_BLACK = "Archivo Black"
+    ARCHIVO_NARROW = "Archivo Narrow"
+    ARE_YOU_SERIOUS = "Are You Serious"
+    AREF_RUQAA = "Aref Ruqaa"
+    AREF_RUQAA_INK = "Aref Ruqaa Ink"
+    ARIMA = "Arima"
+    ARIMO = "Arimo"
+    ARIZONIA = "Arizonia"
+    ARMATA = "Armata"
+    ARSENAL = "Arsenal"
+    ARSENAL_SC = "Arsenal SC"
+    ARTIFIKA = "Artifika"
+    ARVO = "Arvo"
+    ARYA = "Arya"
+    ASAP = "Asap"
+    ASAR = "Asar"
+    ASIMOVIAN = "Asimovian"
+    ASSET = "Asset"
+    ASSISTANT = "Assistant"
+    ASTA_SANS = "Asta Sans"
+    ASTLOCH = "Astloch"
+    ASUL = "Asul"
+    ATHITI = "Athiti"
+    ATKINSON_HYPERLEGIBLE = "Atkinson Hyperlegible"
+    ATKINSON_HYPERLEGIBLE_MONO = "Atkinson Hyperlegible Mono"
+    ATKINSON_HYPERLEGIBLE_NEXT = "Atkinson Hyperlegible Next"
+    ATMA = "Atma"
+    ATOMIC_AGE = "Atomic Age"
+    AUBREY = "Aubrey"
+    AUDIOWIDE = "Audiowide"
+    AUTOUR_ONE = "Autour One"
+    AVERAGE = "Average"
+    AVERAGE_SANS = "Average Sans"
+    AVERIA_GRUESA_LIBRE = "Averia Gruesa Libre"
+    AVERIA_LIBRE = "Averia Libre"
+    AVERIA_SANS_LIBRE = "Averia Sans Libre"
+    AVERIA_SERIF_LIBRE = "Averia Serif Libre"
+    AZERET_MONO = "Azeret Mono"
+    B612 = "B612"
+    B612_MONO = "B612 Mono"
+    BBH_BARTLE = "BBH Bartle"
+    BBH_BOGLE = "BBH Bogle"
+    BBH_HEGARTY = "BBH Hegarty"
+    BIZ_UDGOTHIC = "BIZ UDGothic"
+    BIZ_UDMINCHO = "BIZ UDMincho"
+    BIZ_UDPGOTHIC = "BIZ UDPGothic"
+    BIZ_UDPMINCHO = "BIZ UDPMincho"
+    BJCREE = "BJCree"
+    BABYLONICA = "Babylonica"
+    BACASIME_ANTIQUE = "Bacasime Antique"
+    BAD_SCRIPT = "Bad Script"
+    BADEEN_DISPLAY = "Badeen Display"
+    BAGEL_FAT_ONE = "Bagel Fat One"
+    BAHIANA = "Bahiana"
+    BAHIANITA = "Bahianita"
+    BAI_JAMJUREE = "Bai Jamjuree"
+    BAKBAK_ONE = "Bakbak One"
+    BALLET = "Ballet"
+    BALOO_2 = "Baloo 2"
+    BALOO_BHAI_2 = "Baloo Bhai 2"
+    BALOO_BHAIJAAN_2 = "Baloo Bhaijaan 2"
+    BALOO_BHAINA_2 = "Baloo Bhaina 2"
+    BALOO_CHETTAN_2 = "Baloo Chettan 2"
+    BALOO_DA_2 = "Baloo Da 2"
+    BALOO_PAAJI_2 = "Baloo Paaji 2"
+    BALOO_TAMMA_2 = "Baloo Tamma 2"
+    BALOO_TAMMUDU_2 = "Baloo Tammudu 2"
+    BALOO_THAMBI_2 = "Baloo Thambi 2"
+    BALSAMIQ_SANS = "Balsamiq Sans"
+    BALTHAZAR = "Balthazar"
+    BANGERS = "Bangers"
+    BARLOW = "Barlow"
+    BARLOW_CONDENSED = "Barlow Condensed"
+    BARLOW_SEMI_CONDENSED = "Barlow Semi Condensed"
+    BARRIECITO = "Barriecito"
+    BARRIO = "Barrio"
+    BASIC = "Basic"
+    BASKERVVILLE = "Baskervville"
+    BASKERVVILLE_SC = "Baskervville SC"
+    BATTAMBANG = "Battambang"
+    BAUMANS = "Baumans"
+    BAYON = "Bayon"
+    BE_VIETNAM_PRO = "Be Vietnam Pro"
+    BEAU_RIVAGE = "Beau Rivage"
+    BEBAS_NEUE = "Bebas Neue"
+    BEIRUTI = "Beiruti"
+    BELANOSIMA = "Belanosima"
+    BELGRANO = "Belgrano"
+    BELLEFAIR = "Bellefair"
+    BELLEZA = "Belleza"
+    BELLOTA = "Bellota"
+    BELLOTA_TEXT = "Bellota Text"
+    BENCHNINE = "BenchNine"
+    BENNE = "Benne"
+    BENTHAM = "Bentham"
+    BERKSHIRE_SWASH = "Berkshire Swash"
+    BESLEY = "Besley"
+    BETANIA_PATMOS = "Betania Patmos"
+    BETANIA_PATMOS_GDL = "Betania Patmos GDL"
+    BETANIA_PATMOS_IN = "Betania Patmos In"
+    BETANIA_PATMOS_IN_GDL = "Betania Patmos In GDL"
+    BETH_ELLEN = "Beth Ellen"
+    BEVAN = "Bevan"
+    BHUTUKA_EXPANDED_ONE = "BhuTuka Expanded One"
+    BIG_SHOULDERS = "Big Shoulders"
+    BIG_SHOULDERS_INLINE = "Big Shoulders Inline"
+    BIG_SHOULDERS_STENCIL = "Big Shoulders Stencil"
+    BIGELOW_RULES = "Bigelow Rules"
+    BIGSHOT_ONE = "Bigshot One"
+    BILBO = "Bilbo"
+    BILBO_SWASH_CAPS = "Bilbo Swash Caps"
+    BIORHYME = "BioRhyme"
+    BIRTHSTONE = "Birthstone"
+    BIRTHSTONE_BOUNCE = "Birthstone Bounce"
+    BIRYANI = "Biryani"
+    BITCOUNT = "Bitcount"
+    BITCOUNT_GRID_DOUBLE = "Bitcount Grid Double"
+    BITCOUNT_GRID_DOUBLE_INK = "Bitcount Grid Double Ink"
+    BITCOUNT_GRID_SINGLE = "Bitcount Grid Single"
+    BITCOUNT_GRID_SINGLE_INK = "Bitcount Grid Single Ink"
+    BITCOUNT_INK = "Bitcount Ink"
+    BITCOUNT_PROP_DOUBLE = "Bitcount Prop Double"
+    BITCOUNT_PROP_DOUBLE_INK = "Bitcount Prop Double Ink"
+    BITCOUNT_PROP_SINGLE = "Bitcount Prop Single"
+    BITCOUNT_PROP_SINGLE_INK = "Bitcount Prop Single Ink"
+    BITCOUNT_SINGLE = "Bitcount Single"
+    BITCOUNT_SINGLE_INK = "Bitcount Single Ink"
+    BITTER = "Bitter"
+    BLACK_AND_WHITE_PICTURE = "Black And White Picture"
+    BLACK_HAN_SANS = "Black Han Sans"
+    BLACK_OPS_ONE = "Black Ops One"
+    BLAKA = "Blaka"
+    BLAKA_HOLLOW = "Blaka Hollow"
+    BLAKA_INK = "Blaka Ink"
+    BLINKER = "Blinker"
+    BODONI_MODA = "Bodoni Moda"
+    BODONI_MODA_SC = "Bodoni Moda SC"
+    BOKOR = "Bokor"
+    BOLDONSE = "Boldonse"
+    BONA_NOVA = "Bona Nova"
+    BONA_NOVA_SC = "Bona Nova SC"
+    BONBON = "Bonbon"
+    BONHEUR_ROYALE = "Bonheur Royale"
+    BOOGALOO = "Boogaloo"
+    BOREL = "Borel"
+    BOWLBY_ONE = "Bowlby One"
+    BOWLBY_ONE_SC = "Bowlby One SC"
+    BPMF_HUNINN = "Bpmf Huninn"
+    BPMF_IANSUI = "Bpmf Iansui"
+    BPMF_ZIHI_KAI_STD = "Bpmf Zihi Kai Std"
+    BRAAH_ONE = "Braah One"
+    BRAWLER = "Brawler"
+    BREE_SERIF = "Bree Serif"
+    BRICOLAGE_GROTESQUE = "Bricolage Grotesque"
+    BRUNO_ACE = "Bruno Ace"
+    BRUNO_ACE_SC = "Bruno Ace SC"
+    BRYGADA_1918 = "Brygada 1918"
+    BUBBLEGUM_SANS = "Bubblegum Sans"
+    BUBBLER_ONE = "Bubbler One"
+    BUDA = "Buda"
+    BUENARD = "Buenard"
+    BUNGEE = "Bungee"
+    BUNGEE_HAIRLINE = "Bungee Hairline"
+    BUNGEE_INLINE = "Bungee Inline"
+    BUNGEE_OUTLINE = "Bungee Outline"
+    BUNGEE_SHADE = "Bungee Shade"
+    BUNGEE_SPICE = "Bungee Spice"
+    BUNGEE_TINT = "Bungee Tint"
+    BUTCHERMAN = "Butcherman"
+    BUTTERFLY_KIDS = "Butterfly Kids"
+    BYTESIZED = "Bytesized"
+    CABIN = "Cabin"
+    CABIN_SKETCH = "Cabin Sketch"
+    CACTUS_CLASSICAL_SERIF = "Cactus Classical Serif"
+    CAESAR_DRESSING = "Caesar Dressing"
+    CAGLIOSTRO = "Cagliostro"
+    CAIRO = "Cairo"
+    CAIRO_PLAY = "Cairo Play"
+    CAL_SANS = "Cal Sans"
+    CALADEA = "Caladea"
+    CALISTOGA = "Calistoga"
+    CALLIGRAFFITTI = "Calligraffitti"
+    CAMBAY = "Cambay"
+    CAMBO = "Cambo"
+    CANDAL = "Candal"
+    CANTARELL = "Cantarell"
+    CANTATA_ONE = "Cantata One"
+    CANTORA_ONE = "Cantora One"
+    CAPRASIMO = "Caprasimo"
+    CAPRIOLA = "Capriola"
+    CARAMEL = "Caramel"
+    CARATTERE = "Carattere"
+    CARDO = "Cardo"
+    CARLITO = "Carlito"
+    CARME = "Carme"
+    CARROIS_GOTHIC = "Carrois Gothic"
+    CARROIS_GOTHIC_SC = "Carrois Gothic SC"
+    CARTER_ONE = "Carter One"
+    CASCADIA_CODE = "Cascadia Code"
+    CASCADIA_MONO = "Cascadia Mono"
+    CASTORO = "Castoro"
+    CASTORO_TITLING = "Castoro Titling"
+    CATAMARAN = "Catamaran"
+    CAUDEX = "Caudex"
+    CAUSE = "Cause"
+    CAVEAT = "Caveat"
+    CAVEAT_BRUSH = "Caveat Brush"
+    CEDARVILLE_CURSIVE = "Cedarville Cursive"
+    CEVICHE_ONE = "Ceviche One"
+    CHAKRA_PETCH = "Chakra Petch"
+    CHANGA = "Changa"
+    CHANGA_ONE = "Changa One"
+    CHANGO = "Chango"
+    CHARIS_SIL = "Charis SIL"
+    CHARM = "Charm"
+    CHARMONMAN = "Charmonman"
+    CHATHURA = "Chathura"
+    CHAU_PHILOMENE_ONE = "Chau Philomene One"
+    CHELA_ONE = "Chela One"
+    CHELSEA_MARKET = "Chelsea Market"
+    CHENLA = "Chenla"
+    CHERISH = "Cherish"
+    CHERRY_BOMB_ONE = "Cherry Bomb One"
+    CHERRY_CREAM_SODA = "Cherry Cream Soda"
+    CHERRY_SWASH = "Cherry Swash"
+    CHEWY = "Chewy"
+    CHICLE = "Chicle"
+    CHILANKA = "Chilanka"
+    CHIRON_HEI_HK = "Chiron Hei HK"
+    CHIVO = "Chivo"
+    CHIVO_MONO = "Chivo Mono"
+    CHOCOLATE_CLASSICAL_SANS = "Chocolate Classical Sans"
+    CHOKOKUTAI = "Chokokutai"
+    CHONBURI = "Chonburi"
+    CINZEL = "Cinzel"
+    CINZEL_DECORATIVE = "Cinzel Decorative"
+    CLICKER_SCRIPT = "Clicker Script"
+    CLIMATE_CRISIS = "Climate Crisis"
+    CODA = "Coda"
+    CODYSTAR = "Codystar"
+    COINY = "Coiny"
+    COMBO = "Combo"
+    COMFORTAA = "Comfortaa"
+    COMFORTER = "Comforter"
+    COMFORTER_BRUSH = "Comforter Brush"
+    COMIC_NEUE = "Comic Neue"
+    COMIC_RELIEF = "Comic Relief"
+    COMING_SOON = "Coming Soon"
+    COMME = "Comme"
+    COMMISSIONER = "Commissioner"
+    CONCERT_ONE = "Concert One"
+    CONDIMENT = "Condiment"
+    CONTENT = "Content"
+    CONTRAIL_ONE = "Contrail One"
+    CONVERGENCE = "Convergence"
+    COOKIE = "Cookie"
+    COPSE = "Copse"
+    CORAL_PIXELS = "Coral Pixels"
+    CORBEN = "Corben"
+    CORINTHIA = "Corinthia"
+    CORMORANT = "Cormorant"
+    CORMORANT_GARAMOND = "Cormorant Garamond"
+    CORMORANT_INFANT = "Cormorant Infant"
+    CORMORANT_SC = "Cormorant SC"
+    CORMORANT_UNICASE = "Cormorant Unicase"
+    CORMORANT_UPRIGHT = "Cormorant Upright"
+    COSSETTE_TEXTE = "Cossette Texte"
+    COSSETTE_TITRE = "Cossette Titre"
+    COURGETTE = "Courgette"
+    COURIER_PRIME = "Courier Prime"
+    COUSINE = "Cousine"
+    COUSTARD = "Coustard"
+    COVERED_BY_YOUR_GRACE = "Covered By Your Grace"
+    CRAFTY_GIRLS = "Crafty Girls"
+    CREEPSTER = "Creepster"
+    CRETE_ROUND = "Crete Round"
+    CRIMSON_PRO = "Crimson Pro"
+    CRIMSON_TEXT = "Crimson Text"
+    CROISSANT_ONE = "Croissant One"
+    CRUSHED = "Crushed"
+    CUPRUM = "Cuprum"
+    CUTE_FONT = "Cute Font"
+    CUTIVE = "Cutive"
+    CUTIVE_MONO = "Cutive Mono"
+    DM_MONO = "DM Mono"
+    DM_SANS = "DM Sans"
+    DM_SERIF_DISPLAY = "DM Serif Display"
+    DM_SERIF_TEXT = "DM Serif Text"
+    DAI_BANNA_SIL = "Dai Banna SIL"
+    DAMION = "Damion"
+    DANCING_SCRIPT = "Dancing Script"
+    DANFO = "Danfo"
+    DANGREK = "Dangrek"
+    DARKER_GROTESQUE = "Darker Grotesque"
+    DARUMADROP_ONE = "Darumadrop One"
+    DATATYPE = "Datatype"
+    DAVID_LIBRE = "David Libre"
+    DAWNING_OF_A_NEW_DAY = "Dawning of a New Day"
+    DAYS_ONE = "Days One"
+    DEKKO = "Dekko"
+    DELA_GOTHIC_ONE = "Dela Gothic One"
+    DELICIOUS_HANDRAWN = "Delicious Handrawn"
+    DELIUS = "Delius"
+    DELIUS_SWASH_CAPS = "Delius Swash Caps"
+    DELIUS_UNICASE = "Delius Unicase"
+    DELLA_RESPIRA = "Della Respira"
+    DENK_ONE = "Denk One"
+    DEVONSHIRE = "Devonshire"
+    DHURJATI = "Dhurjati"
+    DIDACT_GOTHIC = "Didact Gothic"
+    DIPHYLLEIA = "Diphylleia"
+    DIPLOMATA = "Diplomata"
+    DIPLOMATA_SC = "Diplomata SC"
+    DO_HYEON = "Do Hyeon"
+    DOKDO = "Dokdo"
+    DOMINE = "Domine"
+    DONEGAL_ONE = "Donegal One"
+    DONGLE = "Dongle"
+    DOPPIO_ONE = "Doppio One"
+    DORSA = "Dorsa"
+    DOSIS = "Dosis"
+    DOTGOTHIC16 = "DotGothic16"
+    DOTO = "Doto"
+    DR_SUGIYAMA = "Dr Sugiyama"
+    DURU_SANS = "Duru Sans"
+    DYNAPUFF = "DynaPuff"
+    DYNALIGHT = "Dynalight"
+    EB_GARAMOND = "EB Garamond"
+    EAGLE_LAKE = "Eagle Lake"
+    EAST_SEA_DOKDO = "East Sea Dokdo"
+    EATER = "Eater"
+    ECONOMICA = "Economica"
+    ECZAR = "Eczar"
+    EDU_AU_VIC_WA_NT_ARROWS = "Edu AU VIC WA NT Arrows"
+    EDU_AU_VIC_WA_NT_DOTS = "Edu AU VIC WA NT Dots"
+    EDU_AU_VIC_WA_NT_GUIDES = "Edu AU VIC WA NT Guides"
+    EDU_AU_VIC_WA_NT_HAND = "Edu AU VIC WA NT Hand"
+    EDU_AU_VIC_WA_NT_PRE = "Edu AU VIC WA NT Pre"
+    EDU_NSW_ACT_CURSIVE = "Edu NSW ACT Cursive"
+    EDU_NSW_ACT_FOUNDATION = "Edu NSW ACT Foundation"
+    EDU_NSW_ACT_HAND_PRE = "Edu NSW ACT Hand Pre"
+    EDU_QLD_BEGINNER = "Edu QLD Beginner"
+    EDU_QLD_HAND = "Edu QLD Hand"
+    EDU_SA_BEGINNER = "Edu SA Beginner"
+    EDU_SA_HAND = "Edu SA Hand"
+    EDU_TAS_BEGINNER = "Edu TAS Beginner"
+    EDU_VIC_WA_NT_BEGINNER = "Edu VIC WA NT Beginner"
+    EDU_VIC_WA_NT_HAND = "Edu VIC WA NT Hand"
+    EDU_VIC_WA_NT_HAND_PRE = "Edu VIC WA NT Hand Pre"
+    EL_MESSIRI = "El Messiri"
+    ELECTROLIZE = "Electrolize"
+    ELMS_SANS = "Elms Sans"
+    ELSIE = "Elsie"
+    ELSIE_SWASH_CAPS = "Elsie Swash Caps"
+    EMBLEMA_ONE = "Emblema One"
+    EMILYS_CANDY = "Emilys Candy"
+    ENCODE_SANS = "Encode Sans"
+    ENCODE_SANS_SC = "Encode Sans SC"
+    ENGAGEMENT = "Engagement"
+    ENGLEBERT = "Englebert"
+    ENRIQUETA = "Enriqueta"
+    EPHESIS = "Ephesis"
+    EPILOGUE = "Epilogue"
+    EPUNDA_SANS = "Epunda Sans"
+    EPUNDA_SLAB = "Epunda Slab"
+    ERICA_ONE = "Erica One"
+    ESTEBAN = "Esteban"
+    ESTEDAD = "Estedad"
+    ESTONIA = "Estonia"
+    EUPHORIA_SCRIPT = "Euphoria Script"
+    EWERT = "Ewert"
+    EXILE = "Exile"
+    EXO = "Exo"
+    EXO_2 = "Exo 2"
+    EXPLETUS_SANS = "Expletus Sans"
+    EXPLORA = "Explora"
+    FACULTY_GLYPHIC = "Faculty Glyphic"
+    FAHKWANG = "Fahkwang"
+    FAMILJEN_GROTESK = "Familjen Grotesk"
+    FANWOOD_TEXT = "Fanwood Text"
+    FARRO = "Farro"
+    FARSAN = "Farsan"
+    FASCINATE = "Fascinate"
+    FASCINATE_INLINE = "Fascinate Inline"
+    FASTER_ONE = "Faster One"
+    FASTHAND = "Fasthand"
+    FAUNA_ONE = "Fauna One"
+    FAUSTINA = "Faustina"
+    FEDERANT = "Federant"
+    FEDERO = "Federo"
+    FELIPA = "Felipa"
+    FENIX = "Fenix"
+    FESTIVE = "Festive"
+    FIGTREE = "Figtree"
+    FINGER_PAINT = "Finger Paint"
+    FINLANDICA_HEADLINE = "Finlandica Headline"
+    FINLANDICA_TEXT = "Finlandica Text"
+    FIRA_CODE = "Fira Code"
+    FIRA_MONO = "Fira Mono"
+    FIRA_SANS = "Fira Sans"
+    FIRA_SANS_CONDENSED = "Fira Sans Condensed"
+    FIRA_SANS_EXTRA_CONDENSED = "Fira Sans Extra Condensed"
+    FJALLA_ONE = "Fjalla One"
+    FJORD_ONE = "Fjord One"
+    FLAMENCO = "Flamenco"
+    FLAVORS = "Flavors"
+    FLEUR_DE_LEAH = "Fleur De Leah"
+    FLOW_BLOCK = "Flow Block"
+    FLOW_CIRCULAR = "Flow Circular"
+    FLOW_ROUNDED = "Flow Rounded"
+    FOLDIT = "Foldit"
+    FONDAMENTO = "Fondamento"
+    FONTDINER_SWANKY = "Fontdiner Swanky"
+    FORUM = "Forum"
+    FRAGMENT_MONO = "Fragment Mono"
+    FRANCOIS_ONE = "Francois One"
+    FRANK_RUHL_LIBRE = "Frank Ruhl Libre"
+    FRAUNCES = "Fraunces"
+    FRECKLE_FACE = "Freckle Face"
+    FREDERICKA_THE_GREAT = "Fredericka the Great"
+    FREDOKA = "Fredoka"
+    FREEHAND = "Freehand"
+    FREEMAN = "Freeman"
+    FRESCA = "Fresca"
+    FRIJOLE = "Frijole"
+    FRUKTUR = "Fruktur"
+    FUGAZ_ONE = "Fugaz One"
+    FUGGLES = "Fuggles"
+    FUNNEL_DISPLAY = "Funnel Display"
+    FUNNEL_SANS = "Funnel Sans"
+    FUSTAT = "Fustat"
+    FUZZY_BUBBLES = "Fuzzy Bubbles"
+    GFS_DIDOT = "GFS Didot"
+    GFS_NEOHELLENIC = "GFS Neohellenic"
+    GA_MAAMLI = "Ga Maamli"
+    GABARITO = "Gabarito"
+    GABRIELA = "Gabriela"
+    GAEGU = "Gaegu"
+    GAFATA = "Gafata"
+    GAJRAJ_ONE = "Gajraj One"
+    GALADA = "Galada"
+    GALDEANO = "Galdeano"
+    GALINDO = "Galindo"
+    GAMJA_FLOWER = "Gamja Flower"
+    GANTARI = "Gantari"
+    GASOEK_ONE = "Gasoek One"
+    GAYATHRI = "Gayathri"
+    GEIST = "Geist"
+    GEIST_MONO = "Geist Mono"
+    GEIST_PIXEL = "Geist Pixel"
+    GELASIO = "Gelasio"
+    GEMUNU_LIBRE = "Gemunu Libre"
+    GENOS = "Genos"
+    GENTIUM_BOOK_PLUS = "Gentium Book Plus"
+    GENTIUM_PLUS = "Gentium Plus"
+    GEO = "Geo"
+    GEOLOGICA = "Geologica"
+    GEOM = "Geom"
+    GEORAMA = "Georama"
+    GEOSTAR = "Geostar"
+    GEOSTAR_FILL = "Geostar Fill"
+    GERMANIA_ONE = "Germania One"
+    GIDEON_ROMAN = "Gideon Roman"
+    GIDOLE = "Gidole"
+    GIDUGU = "Gidugu"
+    GILDA_DISPLAY = "Gilda Display"
+    GIRASSOL = "Girassol"
+    GIVE_YOU_GLORY = "Give You Glory"
+    GLASS_ANTIQUA = "Glass Antiqua"
+    GLEGOO = "Glegoo"
+    GLOOCK = "Gloock"
+    GLORIA_HALLELUJAH = "Gloria Hallelujah"
+    GLORY = "Glory"
+    GLUTEN = "Gluten"
+    GOBLIN_ONE = "Goblin One"
+    GOCHI_HAND = "Gochi Hand"
+    GOLDMAN = "Goldman"
+    GOLOS_TEXT = "Golos Text"
+    GOOGLE_SANS = "Google Sans"
+    GOOGLE_SANS_CODE = "Google Sans Code"
+    GOOGLE_SANS_FLEX = "Google Sans Flex"
+    GORDITAS = "Gorditas"
+    GOTHIC_A1 = "Gothic A1"
+    GOTU = "Gotu"
+    GOUDY_BOOKLETTER_1911 = "Goudy Bookletter 1911"
+    GOWUN_BATANG = "Gowun Batang"
+    GOWUN_DODUM = "Gowun Dodum"
+    GRADUATE = "Graduate"
+    GRAND_HOTEL = "Grand Hotel"
+    GRANDIFLORA_ONE = "Grandiflora One"
+    GRANDSTANDER = "Grandstander"
+    GRAPE_NUTS = "Grape Nuts"
+    GRAVITAS_ONE = "Gravitas One"
+    GREAT_VIBES = "Great Vibes"
+    GRECHEN_FUEMEN = "Grechen Fuemen"
+    GRENZE = "Grenze"
+    GRENZE_GOTISCH = "Grenze Gotisch"
+    GREY_QO = "Grey Qo"
+    GRIFFY = "Griffy"
+    GRUPPO = "Gruppo"
+    GUDEA = "Gudea"
+    GUGI = "Gugi"
+    GULZAR = "Gulzar"
+    GUPTER = "Gupter"
+    GURAJADA = "Gurajada"
+    GVERET_LEVIN = "Gveret Levin"
+    GWENDOLYN = "Gwendolyn"
+    HABIBI = "Habibi"
+    HACHI_MARU_POP = "Hachi Maru Pop"
+    HAHMLET = "Hahmlet"
+    HALANT = "Halant"
+    HAMMERSMITH_ONE = "Hammersmith One"
+    HANALEI = "Hanalei"
+    HANALEI_FILL = "Hanalei Fill"
+    HANDJET = "Handjet"
+    HANDLEE = "Handlee"
+    HANKEN_GROTESK = "Hanken Grotesk"
+    HANUMAN = "Hanuman"
+    HAPPY_MONKEY = "Happy Monkey"
+    HARMATTAN = "Harmattan"
+    HEADLAND_ONE = "Headland One"
+    HEDVIG_LETTERS_SANS = "Hedvig Letters Sans"
+    HEDVIG_LETTERS_SERIF = "Hedvig Letters Serif"
+    HEEBO = "Heebo"
+    HENNY_PENNY = "Henny Penny"
+    HEPTA_SLAB = "Hepta Slab"
+    HERR_VON_MUELLERHOFF = "Herr Von Muellerhoff"
+    HI_MELODY = "Hi Melody"
+    HINA_MINCHO = "Hina Mincho"
+    HIND = "Hind"
+    HIND_GUNTUR = "Hind Guntur"
+    HIND_MADURAI = "Hind Madurai"
+    HIND_MYSURU = "Hind Mysuru"
+    HIND_SILIGURI = "Hind Siliguri"
+    HIND_VADODARA = "Hind Vadodara"
+    HOLTWOOD_ONE_SC = "Holtwood One SC"
+    HOMEMADE_APPLE = "Homemade Apple"
+    HOMENAJE = "Homenaje"
+    HONK = "Honk"
+    HOST_GROTESK = "Host Grotesk"
+    HUBBALLI = "Hubballi"
+    HUBOT_SANS = "Hubot Sans"
+    HUNINN = "Huninn"
+    HURRICANE = "Hurricane"
+    IBM_PLEX_MONO = "IBM Plex Mono"
+    IBM_PLEX_SANS = "IBM Plex Sans"
+    IBM_PLEX_SANS_ARABIC = "IBM Plex Sans Arabic"
+    IBM_PLEX_SANS_DEVANAGARI = "IBM Plex Sans Devanagari"
+    IBM_PLEX_SANS_HEBREW = "IBM Plex Sans Hebrew"
+    IBM_PLEX_SANS_JP = "IBM Plex Sans JP"
+    IBM_PLEX_SANS_KR = "IBM Plex Sans KR"
+    IBM_PLEX_SANS_THAI = "IBM Plex Sans Thai"
+    IBM_PLEX_SANS_THAI_LOOPED = "IBM Plex Sans Thai Looped"
+    IBM_PLEX_SERIF = "IBM Plex Serif"
+    IM_FELL_DW_PICA = "IM Fell DW Pica"
+    IM_FELL_DW_PICA_SC = "IM Fell DW Pica SC"
+    IM_FELL_DOUBLE_PICA = "IM Fell Double Pica"
+    IM_FELL_DOUBLE_PICA_SC = "IM Fell Double Pica SC"
+    IM_FELL_ENGLISH = "IM Fell English"
+    IM_FELL_ENGLISH_SC = "IM Fell English SC"
+    IM_FELL_FRENCH_CANON = "IM Fell French Canon"
+    IM_FELL_FRENCH_CANON_SC = "IM Fell French Canon SC"
+    IM_FELL_GREAT_PRIMER = "IM Fell Great Primer"
+    IM_FELL_GREAT_PRIMER_SC = "IM Fell Great Primer SC"
+    IANSUI = "Iansui"
+    IBARRA_REAL_NOVA = "Ibarra Real Nova"
+    ICEBERG = "Iceberg"
+    ICELAND = "Iceland"
+    IDIQLAT = "Idiqlat"
+    IMBUE = "Imbue"
+    IMPERIAL_SCRIPT = "Imperial Script"
+    IMPRIMA = "Imprima"
+    INCLUSIVE_SANS = "Inclusive Sans"
+    INCONSOLATA = "Inconsolata"
+    INDER = "Inder"
+    INDIE_FLOWER = "Indie Flower"
+    INGRID_DARLING = "Ingrid Darling"
+    INIKA = "Inika"
+    INKNUT_ANTIQUA = "Inknut Antiqua"
+    INRIA_SANS = "Inria Sans"
+    INRIA_SERIF = "Inria Serif"
+    INSPIRATION = "Inspiration"
+    INSTRUMENT_SANS = "Instrument Sans"
+    INSTRUMENT_SERIF = "Instrument Serif"
+    INTEL_ONE_MONO = "Intel One Mono"
+    INTER = "Inter"
+    INTER_TIGHT = "Inter Tight"
+    IOSEVKA_CHARON = "Iosevka Charon"
+    IOSEVKA_CHARON_MONO = "Iosevka Charon Mono"
+    IRISH_GROVER = "Irish Grover"
+    ISLAND_MOMENTS = "Island Moments"
+    ISTOK_WEB = "Istok Web"
+    ITALIANA = "Italiana"
+    ITALIANNO = "Italianno"
+    ITIM = "Itim"
+    JACQUARD_12 = "Jacquard 12"
+    JACQUARD_12_CHARTED = "Jacquard 12 Charted"
+    JACQUARD_24 = "Jacquard 24"
+    JACQUARD_24_CHARTED = "Jacquard 24 Charted"
+    JACQUARDA_BASTARDA_9 = "Jacquarda Bastarda 9"
+    JACQUARDA_BASTARDA_9_CHARTED = "Jacquarda Bastarda 9 Charted"
+    JACQUES_FRANCOIS = "Jacques Francois"
+    JACQUES_FRANCOIS_SHADOW = "Jacques Francois Shadow"
+    JAINI = "Jaini"
+    JAINI_PURVA = "Jaini Purva"
+    JALDI = "Jaldi"
+    JARO = "Jaro"
+    JERSEY_10 = "Jersey 10"
+    JERSEY_10_CHARTED = "Jersey 10 Charted"
+    JERSEY_15 = "Jersey 15"
+    JERSEY_15_CHARTED = "Jersey 15 Charted"
+    JERSEY_20 = "Jersey 20"
+    JERSEY_20_CHARTED = "Jersey 20 Charted"
+    JERSEY_25 = "Jersey 25"
+    JERSEY_25_CHARTED = "Jersey 25 Charted"
+    JETBRAINS_MONO = "JetBrains Mono"
+    JIM_NIGHTSHADE = "Jim Nightshade"
+    JOAN = "Joan"
+    JOCKEY_ONE = "Jockey One"
+    JOLLY_LODGER = "Jolly Lodger"
+    JOMHURIA = "Jomhuria"
+    JOMOLHARI = "Jomolhari"
+    JOSEFIN_SANS = "Josefin Sans"
+    JOSEFIN_SLAB = "Josefin Slab"
+    JOST = "Jost"
+    JOTI_ONE = "Joti One"
+    JUA = "Jua"
+    JUDSON = "Judson"
+    JULEE = "Julee"
+    JULIUS_SANS_ONE = "Julius Sans One"
+    JUNGE = "Junge"
+    JURA = "Jura"
+    JUST_ANOTHER_HAND = "Just Another Hand"
+    JUST_ME_AGAIN_DOWN_HERE = "Just Me Again Down Here"
+    K2D = "K2D"
+    KABLAMMO = "Kablammo"
+    KADWA = "Kadwa"
+    KAISEI_DECOL = "Kaisei Decol"
+    KAISEI_HARUNOUMI = "Kaisei HarunoUmi"
+    KAISEI_OPTI = "Kaisei Opti"
+    KAISEI_TOKUMIN = "Kaisei Tokumin"
+    KALAM = "Kalam"
+    KALNIA = "Kalnia"
+    KALNIA_GLAZE = "Kalnia Glaze"
+    KAMERON = "Kameron"
+    KANCHENJUNGA = "Kanchenjunga"
+    KANIT = "Kanit"
+    KANTUMRUY_PRO = "Kantumruy Pro"
+    KAPAKANA = "Kapakana"
+    KARANTINA = "Karantina"
+    KARLA = "Karla"
+    KARLA_TAMIL_INCLINED = "Karla Tamil Inclined"
+    KARLA_TAMIL_UPRIGHT = "Karla Tamil Upright"
+    KARMA = "Karma"
+    KATIBEH = "Katibeh"
+    KAUSHAN_SCRIPT = "Kaushan Script"
+    KAVIVANAR = "Kavivanar"
+    KAVOON = "Kavoon"
+    KAY_PHO_DU = "Kay Pho Du"
+    KDAM_THMOR_PRO = "Kdam Thmor Pro"
+    KEANIA_ONE = "Keania One"
+    KEDEBIDERI = "Kedebideri"
+    KELLY_SLAB = "Kelly Slab"
+    KENIA = "Kenia"
+    KHAND = "Khand"
+    KHMER = "Khmer"
+    KHULA = "Khula"
+    KINGS = "Kings"
+    KIRANG_HAERANG = "Kirang Haerang"
+    KITE_ONE = "Kite One"
+    KIWI_MARU = "Kiwi Maru"
+    KLEE_ONE = "Klee One"
+    KNEWAVE = "Knewave"
+    KOHO = "KoHo"
+    KODCHASAN = "Kodchasan"
+    KODE_MONO = "Kode Mono"
+    KOH_SANTEPHEAP = "Koh Santepheap"
+    KOLKER_BRUSH = "Kolker Brush"
+    KONKHMER_SLEOKCHHER = "Konkhmer Sleokchher"
+    KOSUGI = "Kosugi"
+    KOSUGI_MARU = "Kosugi Maru"
+    KOTTA_ONE = "Kotta One"
+    KOULEN = "Koulen"
+    KRANKY = "Kranky"
+    KREON = "Kreon"
+    KRISTI = "Kristi"
+    KRONA_ONE = "Krona One"
+    KRUB = "Krub"
+    KUFAM = "Kufam"
+    KULIM_PARK = "Kulim Park"
+    KUMAR_ONE = "Kumar One"
+    KUMAR_ONE_OUTLINE = "Kumar One Outline"
+    KUMBH_SANS = "Kumbh Sans"
+    KURALE = "Kurale"
+    LINE_SEED_JP = "LINE Seed JP"
+    LXGW_MARKER_GOTHIC = "LXGW Marker Gothic"
+    LXGW_WENKAI_MONO_TC = "LXGW WenKai Mono TC"
+    LXGW_WENKAI_TC = "LXGW WenKai TC"
+    LA_BELLE_AURORE = "La Belle Aurore"
+    LABRADA = "Labrada"
+    LACQUER = "Lacquer"
+    LAILA = "Laila"
+    LAKKI_REDDY = "Lakki Reddy"
+    LALEZAR = "Lalezar"
+    LANCELOT = "Lancelot"
+    LANGAR = "Langar"
+    LATEEF = "Lateef"
+    LATO = "Lato"
+    LAVISHLY_YOURS = "Lavishly Yours"
+    LEAGUE_GOTHIC = "League Gothic"
+    LEAGUE_SCRIPT = "League Script"
+    LEAGUE_SPARTAN = "League Spartan"
+    LECKERLI_ONE = "Leckerli One"
+    LEDGER = "Ledger"
+    LEKTON = "Lekton"
+    LEMON = "Lemon"
+    LEMONADA = "Lemonada"
+    LEXEND = "Lexend"
+    LEXEND_DECA = "Lexend Deca"
+    LEXEND_EXA = "Lexend Exa"
+    LEXEND_GIGA = "Lexend Giga"
+    LEXEND_MEGA = "Lexend Mega"
+    LEXEND_PETA = "Lexend Peta"
+    LEXEND_TERA = "Lexend Tera"
+    LEXEND_ZETTA = "Lexend Zetta"
+    LIBERTINUS_KEYBOARD = "Libertinus Keyboard"
+    LIBERTINUS_MATH = "Libertinus Math"
+    LIBERTINUS_MONO = "Libertinus Mono"
+    LIBERTINUS_SANS = "Libertinus Sans"
+    LIBERTINUS_SERIF = "Libertinus Serif"
+    LIBERTINUS_SERIF_DISPLAY = "Libertinus Serif Display"
+    LIBRE_BARCODE_128 = "Libre Barcode 128"
+    LIBRE_BARCODE_128_TEXT = "Libre Barcode 128 Text"
+    LIBRE_BARCODE_39 = "Libre Barcode 39"
+    LIBRE_BARCODE_39_EXTENDED = "Libre Barcode 39 Extended"
+    LIBRE_BARCODE_39_EXTENDED_TEXT = "Libre Barcode 39 Extended Text"
+    LIBRE_BARCODE_39_TEXT = "Libre Barcode 39 Text"
+    LIBRE_BARCODE_EAN13_TEXT = "Libre Barcode EAN13 Text"
+    LIBRE_BASKERVILLE = "Libre Baskerville"
+    LIBRE_BODONI = "Libre Bodoni"
+    LIBRE_CASLON_DISPLAY = "Libre Caslon Display"
+    LIBRE_CASLON_TEXT = "Libre Caslon Text"
+    LIBRE_FRANKLIN = "Libre Franklin"
+    LICORICE = "Licorice"
+    LIFE_SAVERS = "Life Savers"
+    LILEX = "Lilex"
+    LILITA_ONE = "Lilita One"
+    LILY_SCRIPT_ONE = "Lily Script One"
+    LIMELIGHT = "Limelight"
+    LINDEN_HILL = "Linden Hill"
+    LINEFONT = "Linefont"
+    LISU_BOSA = "Lisu Bosa"
+    LITER = "Liter"
+    LITERATA = "Literata"
+    LIU_JIAN_MAO_CAO = "Liu Jian Mao Cao"
+    LIVVIC = "Livvic"
+    LOBSTER = "Lobster"
+    LOBSTER_TWO = "Lobster Two"
+    LONDRINA_OUTLINE = "Londrina Outline"
+    LONDRINA_SHADOW = "Londrina Shadow"
+    LONDRINA_SKETCH = "Londrina Sketch"
+    LONDRINA_SOLID = "Londrina Solid"
+    LONG_CANG = "Long Cang"
+    LORA = "Lora"
+    LOVE_LIGHT = "Love Light"
+    LOVE_YA_LIKE_A_SISTER = "Love Ya Like A Sister"
+    LOVED_BY_THE_KING = "Loved by the King"
+    LOVERS_QUARREL = "Lovers Quarrel"
+    LUCKIEST_GUY = "Luckiest Guy"
+    LUGRASIMO = "Lugrasimo"
+    LUMANOSIMO = "Lumanosimo"
+    LUNASIMA = "Lunasima"
+    LUSITANA = "Lusitana"
+    LUSTRIA = "Lustria"
+    LUXURIOUS_ROMAN = "Luxurious Roman"
+    LUXURIOUS_SCRIPT = "Luxurious Script"
+    M_PLUS_1 = "M PLUS 1"
+    M_PLUS_1_CODE = "M PLUS 1 Code"
+    M_PLUS_1P = "M PLUS 1p"
+    M_PLUS_2 = "M PLUS 2"
+    M_PLUS_CODE_LATIN = "M PLUS Code Latin"
+    M_PLUS_ROUNDED_1C = "M PLUS Rounded 1c"
+    M_PLUS_U = "M PLUS U"
+    MA_SHAN_ZHENG = "Ma Shan Zheng"
+    MACONDO = "Macondo"
+    MACONDO_SWASH_CAPS = "Macondo Swash Caps"
+    MADA = "Mada"
+    MADIMI_ONE = "Madimi One"
+    MAGRA = "Magra"
+    MAIDEN_ORANGE = "Maiden Orange"
+    MAITREE = "Maitree"
+    MAJOR_MONO_DISPLAY = "Major Mono Display"
+    MAKO = "Mako"
+    MALI = "Mali"
+    MALLANNA = "Mallanna"
+    MANAME = "Maname"
+    MANDALI = "Mandali"
+    MANJARI = "Manjari"
+    MANROPE = "Manrope"
+    MANSALVA = "Mansalva"
+    MANUALE = "Manuale"
+    MANUFACTURING_CONSENT = "Manufacturing Consent"
+    MARCELLUS = "Marcellus"
+    MARCELLUS_SC = "Marcellus SC"
+    MARCK_SCRIPT = "Marck Script"
+    MARGARINE = "Margarine"
+    MARHEY = "Marhey"
+    MARKAZI_TEXT = "Markazi Text"
+    MARKO_ONE = "Marko One"
+    MARMELAD = "Marmelad"
+    MARTEL = "Martel"
+    MARTEL_SANS = "Martel Sans"
+    MARTIAN_MONO = "Martian Mono"
+    MARVEL = "Marvel"
+    MATANGI = "Matangi"
+    MATE = "Mate"
+    MATE_SC = "Mate SC"
+    MATEMASIE = "Matemasie"
+    MAVEN_PRO = "Maven Pro"
+    MCLAREN = "McLaren"
+    MEA_CULPA = "Mea Culpa"
+    MEDDON = "Meddon"
+    MEDIEVALSHARP = "MedievalSharp"
+    MEDULA_ONE = "Medula One"
+    MEERA_INIMAI = "Meera Inimai"
+    MEGRIM = "Megrim"
+    MEIE_SCRIPT = "Meie Script"
+    MENBERE = "Menbere"
+    MEOW_SCRIPT = "Meow Script"
+    MERIENDA = "Merienda"
+    MERRIWEATHER = "Merriweather"
+    MERRIWEATHER_SANS = "Merriweather Sans"
+    METAL = "Metal"
+    METAL_MANIA = "Metal Mania"
+    METAMORPHOUS = "Metamorphous"
+    METROPHOBIC = "Metrophobic"
+    MICHROMA = "Michroma"
+    MICRO_5 = "Micro 5"
+    MICRO_5_CHARTED = "Micro 5 Charted"
+    MILONGA = "Milonga"
+    MILTONIAN = "Miltonian"
+    MILTONIAN_TATTOO = "Miltonian Tattoo"
+    MINA = "Mina"
+    MINGZAT = "Mingzat"
+    MINIVER = "Miniver"
+    MIRANDA_SANS = "Miranda Sans"
+    MIRIAM_LIBRE = "Miriam Libre"
+    MIRZA = "Mirza"
+    MISS_FAJARDOSE = "Miss Fajardose"
+    MITR = "Mitr"
+    MOCHIY_POP_ONE = "Mochiy Pop One"
+    MOCHIY_POP_P_ONE = "Mochiy Pop P One"
+    MODAK = "Modak"
+    MODERN_ANTIQUA = "Modern Antiqua"
+    MODERUSTIC = "Moderustic"
+    MOGRA = "Mogra"
+    MOHAVE = "Mohave"
+    MOIRAI_ONE = "Moirai One"
+    MOLENGO = "Molengo"
+    MOLLE = "Molle"
+    MOMO_SIGNATURE = "Momo Signature"
+    MOMO_TRUST_DISPLAY = "Momo Trust Display"
+    MOMO_TRUST_SANS = "Momo Trust Sans"
+    MONA_SANS = "Mona Sans"
+    MONDA = "Monda"
+    MONOFETT = "Monofett"
+    MONOMAKH = "Monomakh"
+    MONOMANIAC_ONE = "Monomaniac One"
+    MONOTON = "Monoton"
+    MONSIEUR_LA_DOULAISE = "Monsieur La Doulaise"
+    MONTAGA = "Montaga"
+    MONTAGU_SLAB = "Montagu Slab"
+    MONTECARLO = "MonteCarlo"
+    MONTENEGRIN_GOTHIC_ONE = "Montenegrin Gothic One"
+    MONTEZ = "Montez"
+    MONTSERRAT = "Montserrat"
+    MONTSERRAT_ALTERNATES = "Montserrat Alternates"
+    MONTSERRAT_UNDERLINE = "Montserrat Underline"
+    MOO_LAH_LAH = "Moo Lah Lah"
+    MOOLI = "Mooli"
+    MOON_DANCE = "Moon Dance"
+    MOUL = "Moul"
+    MOULPALI = "Moulpali"
+    MOUNTAINS_OF_CHRISTMAS = "Mountains of Christmas"
+    MOUSE_MEMOIRS = "Mouse Memoirs"
+    MOZILLA_HEADLINE = "Mozilla Headline"
+    MOZILLA_TEXT = "Mozilla Text"
+    MR_BEDFORT = "Mr Bedfort"
+    MR_DAFOE = "Mr Dafoe"
+    MR_DE_HAVILAND = "Mr De Haviland"
+    MRS_SAINT_DELAFIELD = "Mrs Saint Delafield"
+    MRS_SHEPPARDS = "Mrs Sheppards"
+    MS_MADI = "Ms Madi"
+    MUKTA = "Mukta"
+    MUKTA_MAHEE = "Mukta Mahee"
+    MUKTA_MALAR = "Mukta Malar"
+    MUKTA_VAANI = "Mukta Vaani"
+    MULISH = "Mulish"
+    MURECHO = "Murecho"
+    MUSEOMODERNO = "MuseoModerno"
+    MY_SOUL = "My Soul"
+    MYNERVE = "Mynerve"
+    MYSTERY_QUEST = "Mystery Quest"
+    NTR = "NTR"
+    NABLA = "Nabla"
+    NAMDHINGGO = "Namdhinggo"
+    NANUM_BRUSH_SCRIPT = "Nanum Brush Script"
+    NANUM_GOTHIC = "Nanum Gothic"
+    NANUM_GOTHIC_CODING = "Nanum Gothic Coding"
+    NANUM_MYEONGJO = "Nanum Myeongjo"
+    NANUM_PEN_SCRIPT = "Nanum Pen Script"
+    NARNOOR = "Narnoor"
+    NATA_SANS = "Nata Sans"
+    NATIONAL_PARK = "National Park"
+    NEONDERTHAW = "Neonderthaw"
+    NERKO_ONE = "Nerko One"
+    NEUCHA = "Neucha"
+    NEUTON = "Neuton"
+    NEW_AMSTERDAM = "New Amsterdam"
+    NEW_ROCKER = "New Rocker"
+    NEW_TEGOMIN = "New Tegomin"
+    NEWS_CYCLE = "News Cycle"
+    NEWSREADER = "Newsreader"
+    NICONNE = "Niconne"
+    NIRAMIT = "Niramit"
+    NIXIE_ONE = "Nixie One"
+    NOBILE = "Nobile"
+    NOKORA = "Nokora"
+    NORICAN = "Norican"
+    NOSIFER = "Nosifer"
+    NOTABLE = "Notable"
+    NOTHING_YOU_COULD_DO = "Nothing You Could Do"
+    NOTICIA_TEXT = "Noticia Text"
+    NOTO_COLOR_EMOJI = "Noto Color Emoji"
+    NOTO_EMOJI = "Noto Emoji"
+    NOTO_KUFI_ARABIC = "Noto Kufi Arabic"
+    NOTO_MUSIC = "Noto Music"
+    NOTO_NASKH_ARABIC = "Noto Naskh Arabic"
+    NOTO_NASTALIQ_URDU = "Noto Nastaliq Urdu"
+    NOTO_RASHI_HEBREW = "Noto Rashi Hebrew"
+    NOTO_SANS = "Noto Sans"
+    NOTO_SANS_ADLAM = "Noto Sans Adlam"
+    NOTO_SANS_ADLAM_UNJOINED = "Noto Sans Adlam Unjoined"
+    NOTO_SANS_ANATOLIAN_HIEROGLYPHS = "Noto Sans Anatolian Hieroglyphs"
+    NOTO_SANS_ARABIC = "Noto Sans Arabic"
+    NOTO_SANS_ARMENIAN = "Noto Sans Armenian"
+    NOTO_SANS_AVESTAN = "Noto Sans Avestan"
+    NOTO_SANS_BALINESE = "Noto Sans Balinese"
+    NOTO_SANS_BAMUM = "Noto Sans Bamum"
+    NOTO_SANS_BASSA_VAH = "Noto Sans Bassa Vah"
+    NOTO_SANS_BATAK = "Noto Sans Batak"
+    NOTO_SANS_BENGALI = "Noto Sans Bengali"
+    NOTO_SANS_BHAIKSUKI = "Noto Sans Bhaiksuki"
+    NOTO_SANS_BRAHMI = "Noto Sans Brahmi"
+    NOTO_SANS_BUGINESE = "Noto Sans Buginese"
+    NOTO_SANS_BUHID = "Noto Sans Buhid"
+    NOTO_SANS_CANADIAN_ABORIGINAL = "Noto Sans Canadian Aboriginal"
+    NOTO_SANS_CARIAN = "Noto Sans Carian"
+    NOTO_SANS_CAUCASIAN_ALBANIAN = "Noto Sans Caucasian Albanian"
+    NOTO_SANS_CHAKMA = "Noto Sans Chakma"
+    NOTO_SANS_CHAM = "Noto Sans Cham"
+    NOTO_SANS_CHEROKEE = "Noto Sans Cherokee"
+    NOTO_SANS_CHORASMIAN = "Noto Sans Chorasmian"
+    NOTO_SANS_COPTIC = "Noto Sans Coptic"
+    NOTO_SANS_CUNEIFORM = "Noto Sans Cuneiform"
+    NOTO_SANS_CYPRIOT = "Noto Sans Cypriot"
+    NOTO_SANS_CYPRO_MINOAN = "Noto Sans Cypro Minoan"
+    NOTO_SANS_DESERET = "Noto Sans Deseret"
+    NOTO_SANS_DEVANAGARI = "Noto Sans Devanagari"
+    NOTO_SANS_DISPLAY = "Noto Sans Display"
+    NOTO_SANS_DUPLOYAN = "Noto Sans Duployan"
+    NOTO_SANS_EGYPTIAN_HIEROGLYPHS = "Noto Sans Egyptian Hieroglyphs"
+    NOTO_SANS_ELBASAN = "Noto Sans Elbasan"
+    NOTO_SANS_ELYMAIC = "Noto Sans Elymaic"
+    NOTO_SANS_ETHIOPIC = "Noto Sans Ethiopic"
+    NOTO_SANS_GEORGIAN = "Noto Sans Georgian"
+    NOTO_SANS_GLAGOLITIC = "Noto Sans Glagolitic"
+    NOTO_SANS_GOTHIC = "Noto Sans Gothic"
+    NOTO_SANS_GRANTHA = "Noto Sans Grantha"
+    NOTO_SANS_GUJARATI = "Noto Sans Gujarati"
+    NOTO_SANS_GUNJALA_GONDI = "Noto Sans Gunjala Gondi"
+    NOTO_SANS_GURMUKHI = "Noto Sans Gurmukhi"
+    NOTO_SANS_HK = "Noto Sans HK"
+    NOTO_SANS_HANIFI_ROHINGYA = "Noto Sans Hanifi Rohingya"
+    NOTO_SANS_HANUNOO = "Noto Sans Hanunoo"
+    NOTO_SANS_HATRAN = "Noto Sans Hatran"
+    NOTO_SANS_HEBREW = "Noto Sans Hebrew"
+    NOTO_SANS_IMPERIAL_ARAMAIC = "Noto Sans Imperial Aramaic"
+    NOTO_SANS_INDIC_SIYAQ_NUMBERS = "Noto Sans Indic Siyaq Numbers"
+    NOTO_SANS_INSCRIPTIONAL_PAHLAVI = "Noto Sans Inscriptional Pahlavi"
+    NOTO_SANS_INSCRIPTIONAL_PARTHIAN = "Noto Sans Inscriptional Parthian"
+    NOTO_SANS_JP = "Noto Sans JP"
+    NOTO_SANS_JAVANESE = "Noto Sans Javanese"
+    NOTO_SANS_KR = "Noto Sans KR"
+    NOTO_SANS_KAITHI = "Noto Sans Kaithi"
+    NOTO_SANS_KANNADA = "Noto Sans Kannada"
+    NOTO_SANS_KAWI = "Noto Sans Kawi"
+    NOTO_SANS_KAYAH_LI = "Noto Sans Kayah Li"
+    NOTO_SANS_KHAROSHTHI = "Noto Sans Kharoshthi"
+    NOTO_SANS_KHMER = "Noto Sans Khmer"
+    NOTO_SANS_KHOJKI = "Noto Sans Khojki"
+    NOTO_SANS_KHUDAWADI = "Noto Sans Khudawadi"
+    NOTO_SANS_LAO = "Noto Sans Lao"
+    NOTO_SANS_LAO_LOOPED = "Noto Sans Lao Looped"
+    NOTO_SANS_LEPCHA = "Noto Sans Lepcha"
+    NOTO_SANS_LIMBU = "Noto Sans Limbu"
+    NOTO_SANS_LINEAR_A = "Noto Sans Linear A"
+    NOTO_SANS_LINEAR_B = "Noto Sans Linear B"
+    NOTO_SANS_LISU = "Noto Sans Lisu"
+    NOTO_SANS_LYCIAN = "Noto Sans Lycian"
+    NOTO_SANS_LYDIAN = "Noto Sans Lydian"
+    NOTO_SANS_MAHAJANI = "Noto Sans Mahajani"
+    NOTO_SANS_MALAYALAM = "Noto Sans Malayalam"
+    NOTO_SANS_MANDAIC = "Noto Sans Mandaic"
+    NOTO_SANS_MANICHAEAN = "Noto Sans Manichaean"
+    NOTO_SANS_MARCHEN = "Noto Sans Marchen"
+    NOTO_SANS_MASARAM_GONDI = "Noto Sans Masaram Gondi"
+    NOTO_SANS_MATH = "Noto Sans Math"
+    NOTO_SANS_MAYAN_NUMERALS = "Noto Sans Mayan Numerals"
+    NOTO_SANS_MEDEFAIDRIN = "Noto Sans Medefaidrin"
+    NOTO_SANS_MEETEI_MAYEK = "Noto Sans Meetei Mayek"
+    NOTO_SANS_MENDE_KIKAKUI = "Noto Sans Mende Kikakui"
+    NOTO_SANS_MEROITIC = "Noto Sans Meroitic"
+    NOTO_SANS_MIAO = "Noto Sans Miao"
+    NOTO_SANS_MODI = "Noto Sans Modi"
+    NOTO_SANS_MONGOLIAN = "Noto Sans Mongolian"
+    NOTO_SANS_MONO = "Noto Sans Mono"
+    NOTO_SANS_MRO = "Noto Sans Mro"
+    NOTO_SANS_MULTANI = "Noto Sans Multani"
+    NOTO_SANS_MYANMAR = "Noto Sans Myanmar"
+    NOTO_SANS_NKO = "Noto Sans NKo"
+    NOTO_SANS_NKO_UNJOINED = "Noto Sans NKo Unjoined"
+    NOTO_SANS_NABATAEAN = "Noto Sans Nabataean"
+    NOTO_SANS_NAG_MUNDARI = "Noto Sans Nag Mundari"
+    NOTO_SANS_NANDINAGARI = "Noto Sans Nandinagari"
+    NOTO_SANS_NEW_TAI_LUE = "Noto Sans New Tai Lue"
+    NOTO_SANS_NEWA = "Noto Sans Newa"
+    NOTO_SANS_NUSHU = "Noto Sans Nushu"
+    NOTO_SANS_OGHAM = "Noto Sans Ogham"
+    NOTO_SANS_OL_CHIKI = "Noto Sans Ol Chiki"
+    NOTO_SANS_OLD_HUNGARIAN = "Noto Sans Old Hungarian"
+    NOTO_SANS_OLD_ITALIC = "Noto Sans Old Italic"
+    NOTO_SANS_OLD_NORTH_ARABIAN = "Noto Sans Old North Arabian"
+    NOTO_SANS_OLD_PERMIC = "Noto Sans Old Permic"
+    NOTO_SANS_OLD_PERSIAN = "Noto Sans Old Persian"
+    NOTO_SANS_OLD_SOGDIAN = "Noto Sans Old Sogdian"
+    NOTO_SANS_OLD_SOUTH_ARABIAN = "Noto Sans Old South Arabian"
+    NOTO_SANS_OLD_TURKIC = "Noto Sans Old Turkic"
+    NOTO_SANS_ORIYA = "Noto Sans Oriya"
+    NOTO_SANS_OSAGE = "Noto Sans Osage"
+    NOTO_SANS_OSMANYA = "Noto Sans Osmanya"
+    NOTO_SANS_PAHAWH_HMONG = "Noto Sans Pahawh Hmong"
+    NOTO_SANS_PALMYRENE = "Noto Sans Palmyrene"
+    NOTO_SANS_PAU_CIN_HAU = "Noto Sans Pau Cin Hau"
+    NOTO_SANS_PHAGSPA = "Noto Sans PhagsPa"
+    NOTO_SANS_PHOENICIAN = "Noto Sans Phoenician"
+    NOTO_SANS_PSALTER_PAHLAVI = "Noto Sans Psalter Pahlavi"
+    NOTO_SANS_REJANG = "Noto Sans Rejang"
+    NOTO_SANS_RUNIC = "Noto Sans Runic"
+    NOTO_SANS_SC = "Noto Sans SC"
+    NOTO_SANS_SAMARITAN = "Noto Sans Samaritan"
+    NOTO_SANS_SAURASHTRA = "Noto Sans Saurashtra"
+    NOTO_SANS_SHARADA = "Noto Sans Sharada"
+    NOTO_SANS_SHAVIAN = "Noto Sans Shavian"
+    NOTO_SANS_SIDDHAM = "Noto Sans Siddham"
+    NOTO_SANS_SIGNWRITING = "Noto Sans SignWriting"
+    NOTO_SANS_SINHALA = "Noto Sans Sinhala"
+    NOTO_SANS_SOGDIAN = "Noto Sans Sogdian"
+    NOTO_SANS_SORA_SOMPENG = "Noto Sans Sora Sompeng"
+    NOTO_SANS_SOYOMBO = "Noto Sans Soyombo"
+    NOTO_SANS_SUNDANESE = "Noto Sans Sundanese"
+    NOTO_SANS_SUNUWAR = "Noto Sans Sunuwar"
+    NOTO_SANS_SYLOTI_NAGRI = "Noto Sans Syloti Nagri"
+    NOTO_SANS_SYMBOLS = "Noto Sans Symbols"
+    NOTO_SANS_SYMBOLS_2 = "Noto Sans Symbols 2"
+    NOTO_SANS_SYRIAC = "Noto Sans Syriac"
+    NOTO_SANS_SYRIAC_EASTERN = "Noto Sans Syriac Eastern"
+    NOTO_SANS_SYRIAC_WESTERN = "Noto Sans Syriac Western"
+    NOTO_SANS_TC = "Noto Sans TC"
+    NOTO_SANS_TAGALOG = "Noto Sans Tagalog"
+    NOTO_SANS_TAGBANWA = "Noto Sans Tagbanwa"
+    NOTO_SANS_TAI_LE = "Noto Sans Tai Le"
+    NOTO_SANS_TAI_THAM = "Noto Sans Tai Tham"
+    NOTO_SANS_TAI_VIET = "Noto Sans Tai Viet"
+    NOTO_SANS_TAKRI = "Noto Sans Takri"
+    NOTO_SANS_TAMIL = "Noto Sans Tamil"
+    NOTO_SANS_TAMIL_SUPPLEMENT = "Noto Sans Tamil Supplement"
+    NOTO_SANS_TANGSA = "Noto Sans Tangsa"
+    NOTO_SANS_TELUGU = "Noto Sans Telugu"
+    NOTO_SANS_THAANA = "Noto Sans Thaana"
+    NOTO_SANS_THAI = "Noto Sans Thai"
+    NOTO_SANS_THAI_LOOPED = "Noto Sans Thai Looped"
+    NOTO_SANS_TIFINAGH = "Noto Sans Tifinagh"
+    NOTO_SANS_TIRHUTA = "Noto Sans Tirhuta"
+    NOTO_SANS_UGARITIC = "Noto Sans Ugaritic"
+    NOTO_SANS_VAI = "Noto Sans Vai"
+    NOTO_SANS_VITHKUQI = "Noto Sans Vithkuqi"
+    NOTO_SANS_WANCHO = "Noto Sans Wancho"
+    NOTO_SANS_WARANG_CITI = "Noto Sans Warang Citi"
+    NOTO_SANS_YI = "Noto Sans Yi"
+    NOTO_SANS_ZANABAZAR_SQUARE = "Noto Sans Zanabazar Square"
+    NOTO_SERIF = "Noto Serif"
+    NOTO_SERIF_AHOM = "Noto Serif Ahom"
+    NOTO_SERIF_ARMENIAN = "Noto Serif Armenian"
+    NOTO_SERIF_BALINESE = "Noto Serif Balinese"
+    NOTO_SERIF_BENGALI = "Noto Serif Bengali"
+    NOTO_SERIF_DEVANAGARI = "Noto Serif Devanagari"
+    NOTO_SERIF_DISPLAY = "Noto Serif Display"
+    NOTO_SERIF_DIVES_AKURU = "Noto Serif Dives Akuru"
+    NOTO_SERIF_DOGRA = "Noto Serif Dogra"
+    NOTO_SERIF_ETHIOPIC = "Noto Serif Ethiopic"
+    NOTO_SERIF_GEORGIAN = "Noto Serif Georgian"
+    NOTO_SERIF_GRANTHA = "Noto Serif Grantha"
+    NOTO_SERIF_GUJARATI = "Noto Serif Gujarati"
+    NOTO_SERIF_GURMUKHI = "Noto Serif Gurmukhi"
+    NOTO_SERIF_HK = "Noto Serif HK"
+    NOTO_SERIF_HEBREW = "Noto Serif Hebrew"
+    NOTO_SERIF_HENTAIGANA = "Noto Serif Hentaigana"
+    NOTO_SERIF_JP = "Noto Serif JP"
+    NOTO_SERIF_KR = "Noto Serif KR"
+    NOTO_SERIF_KANNADA = "Noto Serif Kannada"
+    NOTO_SERIF_KHITAN_SMALL_SCRIPT = "Noto Serif Khitan Small Script"
+    NOTO_SERIF_KHMER = "Noto Serif Khmer"
+    NOTO_SERIF_KHOJKI = "Noto Serif Khojki"
+    NOTO_SERIF_LAO = "Noto Serif Lao"
+    NOTO_SERIF_MAKASAR = "Noto Serif Makasar"
+    NOTO_SERIF_MALAYALAM = "Noto Serif Malayalam"
+    NOTO_SERIF_MYANMAR = "Noto Serif Myanmar"
+    NOTO_SERIF_NP_HMONG = "Noto Serif NP Hmong"
+    NOTO_SERIF_OLD_UYGHUR = "Noto Serif Old Uyghur"
+    NOTO_SERIF_ORIYA = "Noto Serif Oriya"
+    NOTO_SERIF_OTTOMAN_SIYAQ = "Noto Serif Ottoman Siyaq"
+    NOTO_SERIF_SC = "Noto Serif SC"
+    NOTO_SERIF_SINHALA = "Noto Serif Sinhala"
+    NOTO_SERIF_TC = "Noto Serif TC"
+    NOTO_SERIF_TAMIL = "Noto Serif Tamil"
+    NOTO_SERIF_TANGUT = "Noto Serif Tangut"
+    NOTO_SERIF_TELUGU = "Noto Serif Telugu"
+    NOTO_SERIF_THAI = "Noto Serif Thai"
+    NOTO_SERIF_TIBETAN = "Noto Serif Tibetan"
+    NOTO_SERIF_TODHRI = "Noto Serif Todhri"
+    NOTO_SERIF_TOTO = "Noto Serif Toto"
+    NOTO_SERIF_VITHKUQI = "Noto Serif Vithkuqi"
+    NOTO_SERIF_YEZIDI = "Noto Serif Yezidi"
+    NOTO_TRADITIONAL_NUSHU = "Noto Traditional Nushu"
+    NOTO_ZNAMENNY_MUSICAL_NOTATION = "Noto Znamenny Musical Notation"
+    NOVA_CUT = "Nova Cut"
+    NOVA_FLAT = "Nova Flat"
+    NOVA_MONO = "Nova Mono"
+    NOVA_OVAL = "Nova Oval"
+    NOVA_ROUND = "Nova Round"
+    NOVA_SCRIPT = "Nova Script"
+    NOVA_SLIM = "Nova Slim"
+    NOVA_SQUARE = "Nova Square"
+    NUMANS = "Numans"
+    NUNITO = "Nunito"
+    NUNITO_SANS = "Nunito Sans"
+    NUOSU_SIL = "Nuosu SIL"
+    ODIBEE_SANS = "Odibee Sans"
+    ODOR_MEAN_CHEY = "Odor Mean Chey"
+    OFFSIDE = "Offside"
+    OI = "Oi"
+    OJUJU = "Ojuju"
+    OLD_STANDARD_TT = "Old Standard TT"
+    OLDENBURG = "Oldenburg"
+    OLE = "Ole"
+    OLEO_SCRIPT = "Oleo Script"
+    OLEO_SCRIPT_SWASH_CAPS = "Oleo Script Swash Caps"
+    ONEST = "Onest"
+    OOOH_BABY = "Oooh Baby"
+    OPEN_SANS = "Open Sans"
+    ORANIENBAUM = "Oranienbaum"
+    ORBIT = "Orbit"
+    ORBITRON = "Orbitron"
+    OREGANO = "Oregano"
+    ORELEGA_ONE = "Orelega One"
+    ORIENTA = "Orienta"
+    ORIGINAL_SURFER = "Original Surfer"
+    OSWALD = "Oswald"
+    OUTFIT = "Outfit"
+    OVER_THE_RAINBOW = "Over the Rainbow"
+    OVERLOCK = "Overlock"
+    OVERLOCK_SC = "Overlock SC"
+    OVERPASS = "Overpass"
+    OVERPASS_MONO = "Overpass Mono"
+    OVO = "Ovo"
+    OXANIUM = "Oxanium"
+    OXYGEN = "Oxygen"
+    OXYGEN_MONO = "Oxygen Mono"
+    PT_MONO = "PT Mono"
+    PT_SANS = "PT Sans"
+    PT_SANS_CAPTION = "PT Sans Caption"
+    PT_SANS_NARROW = "PT Sans Narrow"
+    PT_SERIF = "PT Serif"
+    PT_SERIF_CAPTION = "PT Serif Caption"
+    PACIFICO = "Pacifico"
+    PADAUK = "Padauk"
+    PADYAKKE_EXPANDED_ONE = "Padyakke Expanded One"
+    PALANQUIN = "Palanquin"
+    PALANQUIN_DARK = "Palanquin Dark"
+    PALETTE_MOSAIC = "Palette Mosaic"
+    PANGOLIN = "Pangolin"
+    PAPRIKA = "Paprika"
+    PARASTOO = "Parastoo"
+    PARISIENNE = "Parisienne"
+    PARKINSANS = "Parkinsans"
+    PASSERO_ONE = "Passero One"
+    PASSION_ONE = "Passion One"
+    PASSIONS_CONFLICT = "Passions Conflict"
+    PATHWAY_EXTREME = "Pathway Extreme"
+    PATHWAY_GOTHIC_ONE = "Pathway Gothic One"
+    PATRICK_HAND = "Patrick Hand"
+    PATRICK_HAND_SC = "Patrick Hand SC"
+    PATTAYA = "Pattaya"
+    PATUA_ONE = "Patua One"
+    PAVANAM = "Pavanam"
+    PAYTONE_ONE = "Paytone One"
+    PEDDANA = "Peddana"
+    PERALTA = "Peralta"
+    PERMANENT_MARKER = "Permanent Marker"
+    PETEMOSS = "Petemoss"
+    PETIT_FORMAL_SCRIPT = "Petit Formal Script"
+    PETRONA = "Petrona"
+    PHETSARATH = "Phetsarath"
+    PHILOSOPHER = "Philosopher"
+    PHUDU = "Phudu"
+    PIAZZOLLA = "Piazzolla"
+    PIEDRA = "Piedra"
+    PINYON_SCRIPT = "Pinyon Script"
+    PIRATA_ONE = "Pirata One"
+    PIXELIFY_SANS = "Pixelify Sans"
+    PLASTER = "Plaster"
+    PLATYPI = "Platypi"
+    PLAY = "Play"
+    PLAYBALL = "Playball"
+    PLAYFAIR = "Playfair"
+    PLAYFAIR_DISPLAY = "Playfair Display"
+    PLAYFAIR_DISPLAY_SC = "Playfair Display SC"
+    PLAYPEN_SANS = "Playpen Sans"
+    PLAYPEN_SANS_ARABIC = "Playpen Sans Arabic"
+    PLAYPEN_SANS_DEVA = "Playpen Sans Deva"
+    PLAYPEN_SANS_HEBREW = "Playpen Sans Hebrew"
+    PLAYPEN_SANS_THAI = "Playpen Sans Thai"
+    PLAYWRITE_AR = "Playwrite AR"
+    PLAYWRITE_AR_GUIDES = "Playwrite AR Guides"
+    PLAYWRITE_AT = "Playwrite AT"
+    PLAYWRITE_AT_GUIDES = "Playwrite AT Guides"
+    PLAYWRITE_AU_NSW = "Playwrite AU NSW"
+    PLAYWRITE_AU_NSW_GUIDES = "Playwrite AU NSW Guides"
+    PLAYWRITE_AU_QLD = "Playwrite AU QLD"
+    PLAYWRITE_AU_QLD_GUIDES = "Playwrite AU QLD Guides"
+    PLAYWRITE_AU_SA = "Playwrite AU SA"
+    PLAYWRITE_AU_SA_GUIDES = "Playwrite AU SA Guides"
+    PLAYWRITE_AU_TAS = "Playwrite AU TAS"
+    PLAYWRITE_AU_TAS_GUIDES = "Playwrite AU TAS Guides"
+    PLAYWRITE_AU_VIC = "Playwrite AU VIC"
+    PLAYWRITE_AU_VIC_GUIDES = "Playwrite AU VIC Guides"
+    PLAYWRITE_BE_VLG = "Playwrite BE VLG"
+    PLAYWRITE_BE_VLG_GUIDES = "Playwrite BE VLG Guides"
+    PLAYWRITE_BE_WAL = "Playwrite BE WAL"
+    PLAYWRITE_BE_WAL_GUIDES = "Playwrite BE WAL Guides"
+    PLAYWRITE_BR = "Playwrite BR"
+    PLAYWRITE_BR_GUIDES = "Playwrite BR Guides"
+    PLAYWRITE_CA = "Playwrite CA"
+    PLAYWRITE_CA_GUIDES = "Playwrite CA Guides"
+    PLAYWRITE_CL = "Playwrite CL"
+    PLAYWRITE_CL_GUIDES = "Playwrite CL Guides"
+    PLAYWRITE_CO = "Playwrite CO"
+    PLAYWRITE_CO_GUIDES = "Playwrite CO Guides"
+    PLAYWRITE_CU = "Playwrite CU"
+    PLAYWRITE_CU_GUIDES = "Playwrite CU Guides"
+    PLAYWRITE_CZ = "Playwrite CZ"
+    PLAYWRITE_CZ_GUIDES = "Playwrite CZ Guides"
+    PLAYWRITE_DE_GRUND = "Playwrite DE Grund"
+    PLAYWRITE_DE_GRUND_GUIDES = "Playwrite DE Grund Guides"
+    PLAYWRITE_DE_LA = "Playwrite DE LA"
+    PLAYWRITE_DE_LA_GUIDES = "Playwrite DE LA Guides"
+    PLAYWRITE_DE_SAS = "Playwrite DE SAS"
+    PLAYWRITE_DE_SAS_GUIDES = "Playwrite DE SAS Guides"
+    PLAYWRITE_DE_VA = "Playwrite DE VA"
+    PLAYWRITE_DE_VA_GUIDES = "Playwrite DE VA Guides"
+    PLAYWRITE_DK_LOOPET = "Playwrite DK Loopet"
+    PLAYWRITE_DK_LOOPET_GUIDES = "Playwrite DK Loopet Guides"
+    PLAYWRITE_DK_ULOOPET = "Playwrite DK Uloopet"
+    PLAYWRITE_DK_ULOOPET_GUIDES = "Playwrite DK Uloopet Guides"
+    PLAYWRITE_ES = "Playwrite ES"
+    PLAYWRITE_ES_DECO = "Playwrite ES Deco"
+    PLAYWRITE_ES_DECO_GUIDES = "Playwrite ES Deco Guides"
+    PLAYWRITE_ES_GUIDES = "Playwrite ES Guides"
+    PLAYWRITE_FR_MODERNE = "Playwrite FR Moderne"
+    PLAYWRITE_FR_MODERNE_GUIDES = "Playwrite FR Moderne Guides"
+    PLAYWRITE_FR_TRAD = "Playwrite FR Trad"
+    PLAYWRITE_FR_TRAD_GUIDES = "Playwrite FR Trad Guides"
+    PLAYWRITE_GB_J = "Playwrite GB J"
+    PLAYWRITE_GB_J_GUIDES = "Playwrite GB J Guides"
+    PLAYWRITE_GB_S = "Playwrite GB S"
+    PLAYWRITE_GB_S_GUIDES = "Playwrite GB S Guides"
+    PLAYWRITE_HR = "Playwrite HR"
+    PLAYWRITE_HR_GUIDES = "Playwrite HR Guides"
+    PLAYWRITE_HR_LIJEVA = "Playwrite HR Lijeva"
+    PLAYWRITE_HR_LIJEVA_GUIDES = "Playwrite HR Lijeva Guides"
+    PLAYWRITE_HU = "Playwrite HU"
+    PLAYWRITE_HU_GUIDES = "Playwrite HU Guides"
+    PLAYWRITE_ID = "Playwrite ID"
+    PLAYWRITE_ID_GUIDES = "Playwrite ID Guides"
+    PLAYWRITE_IE = "Playwrite IE"
+    PLAYWRITE_IE_GUIDES = "Playwrite IE Guides"
+    PLAYWRITE_IN = "Playwrite IN"
+    PLAYWRITE_IN_GUIDES = "Playwrite IN Guides"
+    PLAYWRITE_IS = "Playwrite IS"
+    PLAYWRITE_IS_GUIDES = "Playwrite IS Guides"
+    PLAYWRITE_IT_MODERNA = "Playwrite IT Moderna"
+    PLAYWRITE_IT_MODERNA_GUIDES = "Playwrite IT Moderna Guides"
+    PLAYWRITE_IT_TRAD = "Playwrite IT Trad"
+    PLAYWRITE_IT_TRAD_GUIDES = "Playwrite IT Trad Guides"
+    PLAYWRITE_MX = "Playwrite MX"
+    PLAYWRITE_MX_GUIDES = "Playwrite MX Guides"
+    PLAYWRITE_NG_MODERN = "Playwrite NG Modern"
+    PLAYWRITE_NG_MODERN_GUIDES = "Playwrite NG Modern Guides"
+    PLAYWRITE_NL = "Playwrite NL"
+    PLAYWRITE_NL_GUIDES = "Playwrite NL Guides"
+    PLAYWRITE_NO = "Playwrite NO"
+    PLAYWRITE_NO_GUIDES = "Playwrite NO Guides"
+    PLAYWRITE_NZ = "Playwrite NZ"
+    PLAYWRITE_NZ_BASIC = "Playwrite NZ Basic"
+    PLAYWRITE_NZ_BASIC_GUIDES = "Playwrite NZ Basic Guides"
+    PLAYWRITE_NZ_GUIDES = "Playwrite NZ Guides"
+    PLAYWRITE_PE = "Playwrite PE"
+    PLAYWRITE_PE_GUIDES = "Playwrite PE Guides"
+    PLAYWRITE_PL = "Playwrite PL"
+    PLAYWRITE_PL_GUIDES = "Playwrite PL Guides"
+    PLAYWRITE_PT = "Playwrite PT"
+    PLAYWRITE_PT_GUIDES = "Playwrite PT Guides"
+    PLAYWRITE_RO = "Playwrite RO"
+    PLAYWRITE_RO_GUIDES = "Playwrite RO Guides"
+    PLAYWRITE_SK = "Playwrite SK"
+    PLAYWRITE_SK_GUIDES = "Playwrite SK Guides"
+    PLAYWRITE_TZ = "Playwrite TZ"
+    PLAYWRITE_TZ_GUIDES = "Playwrite TZ Guides"
+    PLAYWRITE_US_MODERN = "Playwrite US Modern"
+    PLAYWRITE_US_MODERN_GUIDES = "Playwrite US Modern Guides"
+    PLAYWRITE_US_TRAD = "Playwrite US Trad"
+    PLAYWRITE_US_TRAD_GUIDES = "Playwrite US Trad Guides"
+    PLAYWRITE_VN = "Playwrite VN"
+    PLAYWRITE_VN_GUIDES = "Playwrite VN Guides"
+    PLAYWRITE_ZA = "Playwrite ZA"
+    PLAYWRITE_ZA_GUIDES = "Playwrite ZA Guides"
+    PLIANT = "Pliant"
+    PLUS_JAKARTA_SANS = "Plus Jakarta Sans"
+    POCHAEVSK = "Pochaevsk"
+    PODKOVA = "Podkova"
+    POETSEN_ONE = "Poetsen One"
+    POIRET_ONE = "Poiret One"
+    POLLER_ONE = "Poller One"
+    POLTAWSKI_NOWY = "Poltawski Nowy"
+    POLY = "Poly"
+    POMPIERE = "Pompiere"
+    PONNALA = "Ponnala"
+    PONOMAR = "Ponomar"
+    PONTANO_SANS = "Pontano Sans"
+    POOR_STORY = "Poor Story"
+    POPPINS = "Poppins"
+    PORT_LLIGAT_SANS = "Port Lligat Sans"
+    PORT_LLIGAT_SLAB = "Port Lligat Slab"
+    POTTA_ONE = "Potta One"
+    PRAGATI_NARROW = "Pragati Narrow"
+    PRAISE = "Praise"
+    PRATA = "Prata"
+    PREAHVIHEAR = "Preahvihear"
+    PRESS_START_2P = "Press Start 2P"
+    PRIDI = "Pridi"
+    PRINCESS_SOFIA = "Princess Sofia"
+    PROCIONO = "Prociono"
+    PROMPT = "Prompt"
+    PROSTO_ONE = "Prosto One"
+    PROTEST_GUERRILLA = "Protest Guerrilla"
+    PROTEST_REVOLUTION = "Protest Revolution"
+    PROTEST_RIOT = "Protest Riot"
+    PROTEST_STRIKE = "Protest Strike"
+    PROZA_LIBRE = "Proza Libre"
+    PUBLIC_SANS = "Public Sans"
+    PUPPIES_PLAY = "Puppies Play"
+    PURITAN = "Puritan"
+    PURPLE_PURSE = "Purple Purse"
+    QAHIRI = "Qahiri"
+    QUANDO = "Quando"
+    QUANTICO = "Quantico"
+    QUATTROCENTO = "Quattrocento"
+    QUATTROCENTO_SANS = "Quattrocento Sans"
+    QUESTRIAL = "Questrial"
+    QUICKSAND = "Quicksand"
+    QUINTESSENTIAL = "Quintessential"
+    QWIGLEY = "Qwigley"
+    QWITCHER_GRYPEN = "Qwitcher Grypen"
+    REM = "REM"
+    RACING_SANS_ONE = "Racing Sans One"
+    RADIO_CANADA = "Radio Canada"
+    RADIO_CANADA_BIG = "Radio Canada Big"
+    RADLEY = "Radley"
+    RAJDHANI = "Rajdhani"
+    RAKKAS = "Rakkas"
+    RALEWAY = "Raleway"
+    RALEWAY_DOTS = "Raleway Dots"
+    RAMABHADRA = "Ramabhadra"
+    RAMARAJA = "Ramaraja"
+    RAMBLA = "Rambla"
+    RAMMETTO_ONE = "Rammetto One"
+    RAMPART_ONE = "Rampart One"
+    RAMSINA = "Ramsina"
+    RANCHERS = "Ranchers"
+    RANCHO = "Rancho"
+    RANGA = "Ranga"
+    RASA = "Rasa"
+    RATIONALE = "Rationale"
+    RAVI_PRAKASH = "Ravi Prakash"
+    READEX_PRO = "Readex Pro"
+    RECURSIVE = "Recursive"
+    RED_HAT_DISPLAY = "Red Hat Display"
+    RED_HAT_MONO = "Red Hat Mono"
+    RED_HAT_TEXT = "Red Hat Text"
+    RED_ROSE = "Red Rose"
+    REDACTED = "Redacted"
+    REDACTED_SCRIPT = "Redacted Script"
+    REDDIT_MONO = "Reddit Mono"
+    REDDIT_SANS = "Reddit Sans"
+    REDDIT_SANS_CONDENSED = "Reddit Sans Condensed"
+    REDRESSED = "Redressed"
+    REEM_KUFI = "Reem Kufi"
+    REEM_KUFI_FUN = "Reem Kufi Fun"
+    REEM_KUFI_INK = "Reem Kufi Ink"
+    REENIE_BEANIE = "Reenie Beanie"
+    REGGAE_ONE = "Reggae One"
+    RETHINK_SANS = "Rethink Sans"
+    REVALIA = "Revalia"
+    RHODIUM_LIBRE = "Rhodium Libre"
+    RIBEYE = "Ribeye"
+    RIBEYE_MARROW = "Ribeye Marrow"
+    RIGHTEOUS = "Righteous"
+    RISQUE = "Risque"
+    ROAD_RAGE = "Road Rage"
+    ROBOTO = "Roboto"
+    ROBOTO_FLEX = "Roboto Flex"
+    ROBOTO_MONO = "Roboto Mono"
+    ROBOTO_SERIF = "Roboto Serif"
+    ROBOTO_SLAB = "Roboto Slab"
+    ROCHESTER = "Rochester"
+    ROCK_3D = "Rock 3D"
+    ROCK_SALT = "Rock Salt"
+    ROCKNROLL_ONE = "RocknRoll One"
+    ROKKITT = "Rokkitt"
+    ROMANESCO = "Romanesco"
+    ROPA_SANS = "Ropa Sans"
+    ROSARIO = "Rosario"
+    ROSARIVO = "Rosarivo"
+    ROUGE_SCRIPT = "Rouge Script"
+    ROWDIES = "Rowdies"
+    ROZHA_ONE = "Rozha One"
+    RUBIK = "Rubik"
+    RUBIK_80S_FADE = "Rubik 80s Fade"
+    RUBIK_BEASTLY = "Rubik Beastly"
+    RUBIK_BROKEN_FAX = "Rubik Broken Fax"
+    RUBIK_BUBBLES = "Rubik Bubbles"
+    RUBIK_BURNED = "Rubik Burned"
+    RUBIK_DIRT = "Rubik Dirt"
+    RUBIK_DISTRESSED = "Rubik Distressed"
+    RUBIK_DOODLE_SHADOW = "Rubik Doodle Shadow"
+    RUBIK_DOODLE_TRIANGLES = "Rubik Doodle Triangles"
+    RUBIK_GEMSTONES = "Rubik Gemstones"
+    RUBIK_GLITCH = "Rubik Glitch"
+    RUBIK_GLITCH_POP = "Rubik Glitch Pop"
+    RUBIK_ISO = "Rubik Iso"
+    RUBIK_LINES = "Rubik Lines"
+    RUBIK_MAPS = "Rubik Maps"
+    RUBIK_MARKER_HATCH = "Rubik Marker Hatch"
+    RUBIK_MAZE = "Rubik Maze"
+    RUBIK_MICROBE = "Rubik Microbe"
+    RUBIK_MONO_ONE = "Rubik Mono One"
+    RUBIK_MOONROCKS = "Rubik Moonrocks"
+    RUBIK_PIXELS = "Rubik Pixels"
+    RUBIK_PUDDLES = "Rubik Puddles"
+    RUBIK_SCRIBBLE = "Rubik Scribble"
+    RUBIK_SPRAY_PAINT = "Rubik Spray Paint"
+    RUBIK_STORM = "Rubik Storm"
+    RUBIK_VINYL = "Rubik Vinyl"
+    RUBIK_WET_PAINT = "Rubik Wet Paint"
+    RUDA = "Ruda"
+    RUFINA = "Rufina"
+    RUGE_BOOGIE = "Ruge Boogie"
+    RULUKO = "Ruluko"
+    RUM_RAISIN = "Rum Raisin"
+    RUSLAN_DISPLAY = "Ruslan Display"
+    RUSSO_ONE = "Russo One"
+    RUTHIE = "Ruthie"
+    RUWUDU = "Ruwudu"
+    RYE = "Rye"
+    SN_PRO = "SN Pro"
+    STIX_TWO_MATH = "STIX Two Math"
+    STIX_TWO_TEXT = "STIX Two Text"
+    SUSE = "SUSE"
+    SUSE_MONO = "SUSE Mono"
+    SACRAMENTO = "Sacramento"
+    SAHITYA = "Sahitya"
+    SAIL = "Sail"
+    SAIRA = "Saira"
+    SAIRA_STENCIL = "Saira Stencil"
+    SALSA = "Salsa"
+    SANCHEZ = "Sanchez"
+    SANCREEK = "Sancreek"
+    SANKOFA_DISPLAY = "Sankofa Display"
+    SANSATION = "Sansation"
+    SANSITA = "Sansita"
+    SANSITA_SWASHED = "Sansita Swashed"
+    SARABUN = "Sarabun"
+    SARALA = "Sarala"
+    SARINA = "Sarina"
+    SARPANCH = "Sarpanch"
+    SASSY_FRASS = "Sassy Frass"
+    SATISFY = "Satisfy"
+    SAVATE = "Savate"
+    SAWARABI_GOTHIC = "Sawarabi Gothic"
+    SAWARABI_MINCHO = "Sawarabi Mincho"
+    SCADA = "Scada"
+    SCHEHERAZADE_NEW = "Scheherazade New"
+    SCHIBSTED_GROTESK = "Schibsted Grotesk"
+    SCHOOLBELL = "Schoolbell"
+    SCIENCE_GOTHIC = "Science Gothic"
+    SCOPE_ONE = "Scope One"
+    SEAWEED_SCRIPT = "Seaweed Script"
+    SECULAR_ONE = "Secular One"
+    SEDAN = "Sedan"
+    SEDAN_SC = "Sedan SC"
+    SEDGWICK_AVE = "Sedgwick Ave"
+    SEDGWICK_AVE_DISPLAY = "Sedgwick Ave Display"
+    SEKUYA = "Sekuya"
+    SEN = "Sen"
+    SEND_FLOWERS = "Send Flowers"
+    SEVILLANA = "Sevillana"
+    SEYMOUR_ONE = "Seymour One"
+    SHADOWS_INTO_LIGHT = "Shadows Into Light"
+    SHADOWS_INTO_LIGHT_TWO = "Shadows Into Light Two"
+    SHAFARIK = "Shafarik"
+    SHALIMAR = "Shalimar"
+    SHANTELL_SANS = "Shantell Sans"
+    SHANTI = "Shanti"
+    SHARE = "Share"
+    SHARE_TECH = "Share Tech"
+    SHARE_TECH_MONO = "Share Tech Mono"
+    SHIPPORI_ANTIQUE = "Shippori Antique"
+    SHIPPORI_ANTIQUE_B1 = "Shippori Antique B1"
+    SHIPPORI_MINCHO = "Shippori Mincho"
+    SHIPPORI_MINCHO_B1 = "Shippori Mincho B1"
+    SHIZURU = "Shizuru"
+    SHOJUMARU = "Shojumaru"
+    SHORT_STACK = "Short Stack"
+    SHRIKHAND = "Shrikhand"
+    SIEMREAP = "Siemreap"
+    SIGMAR = "Sigmar"
+    SIGMAR_ONE = "Sigmar One"
+    SIGNIKA = "Signika"
+    SIGNIKA_NEGATIVE = "Signika Negative"
+    SILKSCREEN = "Silkscreen"
+    SIMONETTA = "Simonetta"
+    SINGLE_DAY = "Single Day"
+    SINTONY = "Sintony"
+    SIRIN_STENCIL = "Sirin Stencil"
+    SIRIVENNELA = "Sirivennela"
+    SIX_CAPS = "Six Caps"
+    SIXTYFOUR = "Sixtyfour"
+    SIXTYFOUR_CONVERGENCE = "Sixtyfour Convergence"
+    SKRANJI = "Skranji"
+    SLABO_13PX = "Slabo 13px"
+    SLABO_27PX = "Slabo 27px"
+    SLACKEY = "Slackey"
+    SLACKSIDE_ONE = "Slackside One"
+    SMOKUM = "Smokum"
+    SMOOCH = "Smooch"
+    SMOOCH_SANS = "Smooch Sans"
+    SMYTHE = "Smythe"
+    SNIGLET = "Sniglet"
+    SNIPPET = "Snippet"
+    SNOWBURST_ONE = "Snowburst One"
+    SOFADI_ONE = "Sofadi One"
+    SOFIA = "Sofia"
+    SOFIA_SANS = "Sofia Sans"
+    SOFIA_SANS_CONDENSED = "Sofia Sans Condensed"
+    SOFIA_SANS_EXTRA_CONDENSED = "Sofia Sans Extra Condensed"
+    SOFIA_SANS_SEMI_CONDENSED = "Sofia Sans Semi Condensed"
+    SOLITREO = "Solitreo"
+    SOLWAY = "Solway"
+    SOMETYPE_MONO = "Sometype Mono"
+    SONG_MYUNG = "Song Myung"
+    SONO = "Sono"
+    SONSIE_ONE = "Sonsie One"
+    SORA = "Sora"
+    SORTS_MILL_GOUDY = "Sorts Mill Goudy"
+    SOUR_GUMMY = "Sour Gummy"
+    SOURCE_CODE_PRO = "Source Code Pro"
+    SOURCE_SANS_3 = "Source Sans 3"
+    SOURCE_SERIF_4 = "Source Serif 4"
+    SPACE_GROTESK = "Space Grotesk"
+    SPACE_MONO = "Space Mono"
+    SPECIAL_ELITE = "Special Elite"
+    SPECIAL_GOTHIC = "Special Gothic"
+    SPECIAL_GOTHIC_CONDENSED_ONE = "Special Gothic Condensed One"
+    SPECIAL_GOTHIC_EXPANDED_ONE = "Special Gothic Expanded One"
+    SPECTRAL = "Spectral"
+    SPECTRAL_SC = "Spectral SC"
+    SPICY_RICE = "Spicy Rice"
+    SPINNAKER = "Spinnaker"
+    SPIRAX = "Spirax"
+    SPLASH = "Splash"
+    SPLINE_SANS = "Spline Sans"
+    SPLINE_SANS_MONO = "Spline Sans Mono"
+    SQUADA_ONE = "Squada One"
+    SQUARE_PEG = "Square Peg"
+    SREE_KRUSHNADEVARAYA = "Sree Krushnadevaraya"
+    SRIRACHA = "Sriracha"
+    SRISAKDI = "Srisakdi"
+    STAATLICHES = "Staatliches"
+    STACK_SANS_HEADLINE = "Stack Sans Headline"
+    STACK_SANS_NOTCH = "Stack Sans Notch"
+    STACK_SANS_TEXT = "Stack Sans Text"
+    STALEMATE = "Stalemate"
+    STALINIST_ONE = "Stalinist One"
+    STARDOS_STENCIL = "Stardos Stencil"
+    STICK = "Stick"
+    STICK_NO_BILLS = "Stick No Bills"
+    STINT_ULTRA_CONDENSED = "Stint Ultra Condensed"
+    STINT_ULTRA_EXPANDED = "Stint Ultra Expanded"
+    STOKE = "Stoke"
+    STORY_SCRIPT = "Story Script"
+    STRAIT = "Strait"
+    STRICHPUNKT_SANS = "Strichpunkt Sans"
+    STYLE_SCRIPT = "Style Script"
+    STYLISH = "Stylish"
+    SUE_ELLEN_FRANCISCO = "Sue Ellen Francisco"
+    SUEZ_ONE = "Suez One"
+    SULPHUR_POINT = "Sulphur Point"
+    SUMANA = "Sumana"
+    SUNFLOWER = "Sunflower"
+    SUNSHINEY = "Sunshiney"
+    SUPERMERCADO_ONE = "Supermercado One"
+    SURA = "Sura"
+    SURANNA = "Suranna"
+    SURAVARAM = "Suravaram"
+    SUWANNAPHUM = "Suwannaphum"
+    SWANKY_AND_MOO_MOO = "Swanky and Moo Moo"
+    SYNCOPATE = "Syncopate"
+    SYNE = "Syne"
+    SYNE_MONO = "Syne Mono"
+    SYNE_TACTILE = "Syne Tactile"
+    TASA_EXPLORER = "TASA Explorer"
+    TASA_ORBITER = "TASA Orbiter"
+    TAC_ONE = "Tac One"
+    TAGESSCHRIFT = "Tagesschrift"
+    TAI_HERITAGE_PRO = "Tai Heritage Pro"
+    TAJAWAL = "Tajawal"
+    TANGERINE = "Tangerine"
+    TAPESTRY = "Tapestry"
+    TAPROM = "Taprom"
+    TAURI = "Tauri"
+    TAVIRAJ = "Taviraj"
+    TEACHERS = "Teachers"
+    TEKO = "Teko"
+    TEKTUR = "Tektur"
+    TELEX = "Telex"
+    TENALI_RAMAKRISHNA = "Tenali Ramakrishna"
+    TENOR_SANS = "Tenor Sans"
+    TEXT_ME_ONE = "Text Me One"
+    TEXTURINA = "Texturina"
+    THASADITH = "Thasadith"
+    THE_GIRL_NEXT_DOOR = "The Girl Next Door"
+    THE_NAUTIGAL = "The Nautigal"
+    TIENNE = "Tienne"
+    TIKTOK_SANS = "TikTok Sans"
+    TILLANA = "Tillana"
+    TILT_NEON = "Tilt Neon"
+    TILT_PRISM = "Tilt Prism"
+    TILT_WARP = "Tilt Warp"
+    TIMMANA = "Timmana"
+    TINOS = "Tinos"
+    TINY5 = "Tiny5"
+    TIRO_BANGLA = "Tiro Bangla"
+    TIRO_DEVANAGARI_HINDI = "Tiro Devanagari Hindi"
+    TIRO_DEVANAGARI_MARATHI = "Tiro Devanagari Marathi"
+    TIRO_DEVANAGARI_SANSKRIT = "Tiro Devanagari Sanskrit"
+    TIRO_GURMUKHI = "Tiro Gurmukhi"
+    TIRO_KANNADA = "Tiro Kannada"
+    TIRO_TAMIL = "Tiro Tamil"
+    TIRO_TELUGU = "Tiro Telugu"
+    TIRRA = "Tirra"
+    TITAN_ONE = "Titan One"
+    TITILLIUM_WEB = "Titillium Web"
+    TOMORROW = "Tomorrow"
+    TOURNEY = "Tourney"
+    TRADE_WINDS = "Trade Winds"
+    TRAIN_ONE = "Train One"
+    TRIODION = "Triodion"
+    TRIRONG = "Trirong"
+    TRISPACE = "Trispace"
+    TROCCHI = "Trocchi"
+    TROCHUT = "Trochut"
+    TRUCULENTA = "Truculenta"
+    TRYKKER = "Trykker"
+    TSUKIMI_ROUNDED = "Tsukimi Rounded"
+    TUFFY = "Tuffy"
+    TULPEN_ONE = "Tulpen One"
+    TURRET_ROAD = "Turret Road"
+    TWINKLE_STAR = "Twinkle Star"
+    UBUNTU = "Ubuntu"
+    UBUNTU_CONDENSED = "Ubuntu Condensed"
+    UBUNTU_MONO = "Ubuntu Mono"
+    UBUNTU_SANS = "Ubuntu Sans"
+    UBUNTU_SANS_MONO = "Ubuntu Sans Mono"
+    UCHEN = "Uchen"
+    ULTRA = "Ultra"
+    UNBOUNDED = "Unbounded"
+    UNCIAL_ANTIQUA = "Uncial Antiqua"
+    UNDERDOG = "Underdog"
+    UNICA_ONE = "Unica One"
+    UNIFRAKTURCOOK = "UnifrakturCook"
+    UNIFRAKTURMAGUNTIA = "UnifrakturMaguntia"
+    UNKEMPT = "Unkempt"
+    UNLOCK = "Unlock"
+    UNNA = "Unna"
+    UOQMUNTHENKHUNG = "UoqMunThenKhung"
+    UPDOCK = "Updock"
+    URBANIST = "Urbanist"
+    VT323 = "VT323"
+    VAMPIRO_ONE = "Vampiro One"
+    VARELA = "Varela"
+    VARELA_ROUND = "Varela Round"
+    VARTA = "Varta"
+    VAST_SHADOW = "Vast Shadow"
+    VAZIRMATN = "Vazirmatn"
+    VEND_SANS = "Vend Sans"
+    VESPER_LIBRE = "Vesper Libre"
+    VIAODA_LIBRE = "Viaoda Libre"
+    VIBES = "Vibes"
+    VIBUR = "Vibur"
+    VICTOR_MONO = "Victor Mono"
+    VIDALOKA = "Vidaloka"
+    VIGA = "Viga"
+    VINA_SANS = "Vina Sans"
+    VOCES = "Voces"
+    VOLKHOV = "Volkhov"
+    VOLLKORN = "Vollkorn"
+    VOLLKORN_SC = "Vollkorn SC"
+    VOLTAIRE = "Voltaire"
+    VUJAHDAY_SCRIPT = "Vujahday Script"
+    WDXL_LUBRIFONT_JP_N = "WDXL Lubrifont JP N"
+    WDXL_LUBRIFONT_SC = "WDXL Lubrifont SC"
+    WDXL_LUBRIFONT_TC = "WDXL Lubrifont TC"
+    WAITING_FOR_THE_SUNRISE = "Waiting for the Sunrise"
+    WALLPOET = "Wallpoet"
+    WALTER_TURNCOAT = "Walter Turncoat"
+    WARNES = "Warnes"
+    WATER_BRUSH = "Water Brush"
+    WATERFALL = "Waterfall"
+    WAVEFONT = "Wavefont"
+    WELLFLEET = "Wellfleet"
+    WENDY_ONE = "Wendy One"
+    WHISPER = "Whisper"
+    WINDSONG = "WindSong"
+    WINKY_ROUGH = "Winky Rough"
+    WINKY_SANS = "Winky Sans"
+    WIRE_ONE = "Wire One"
+    WITTGENSTEIN = "Wittgenstein"
+    WIX_MADEFOR_DISPLAY = "Wix Madefor Display"
+    WIX_MADEFOR_TEXT = "Wix Madefor Text"
+    WORK_SANS = "Work Sans"
+    WORKBENCH = "Workbench"
+    XANH_MONO = "Xanh Mono"
+    YALDEVI = "Yaldevi"
+    YANONE_KAFFEESATZ = "Yanone Kaffeesatz"
+    YANTRAMANAV = "Yantramanav"
+    YARNDINGS_12 = "Yarndings 12"
+    YARNDINGS_12_CHARTED = "Yarndings 12 Charted"
+    YARNDINGS_20 = "Yarndings 20"
+    YARNDINGS_20_CHARTED = "Yarndings 20 Charted"
+    YATRA_ONE = "Yatra One"
+    YELLOWTAIL = "Yellowtail"
+    YEON_SUNG = "Yeon Sung"
+    YESEVA_ONE = "Yeseva One"
+    YESTERYEAR = "Yesteryear"
+    YOMOGI = "Yomogi"
+    YOUNG_SERIF = "Young Serif"
+    YRSA = "Yrsa"
+    YSABEAU = "Ysabeau"
+    YSABEAU_INFANT = "Ysabeau Infant"
+    YSABEAU_OFFICE = "Ysabeau Office"
+    YSABEAU_SC = "Ysabeau SC"
+    YUJI_BOKU = "Yuji Boku"
+    YUJI_HENTAIGANA_AKARI = "Yuji Hentaigana Akari"
+    YUJI_HENTAIGANA_AKEBONO = "Yuji Hentaigana Akebono"
+    YUJI_MAI = "Yuji Mai"
+    YUJI_SYUKU = "Yuji Syuku"
+    YUSEI_MAGIC = "Yusei Magic"
+    YUYU = "Yuyu"
+    YUYU_SHORT = "Yuyu Short"
+    ZCOOL_KUAILE = "ZCOOL KuaiLe"
+    ZCOOL_QINGKE_HUANGYOU = "ZCOOL QingKe HuangYou"
+    ZCOOL_XIAOWEI = "ZCOOL XiaoWei"
+    ZAIN = "Zain"
+    ZALANDO_SANS = "Zalando Sans"
+    ZALANDO_SANS_EXPANDED = "Zalando Sans Expanded"
+    ZALANDO_SANS_SEMIEXPANDED = "Zalando Sans SemiExpanded"
+    ZEN_ANTIQUE = "Zen Antique"
+    ZEN_ANTIQUE_SOFT = "Zen Antique Soft"
+    ZEN_DOTS = "Zen Dots"
+    ZEN_KAKU_GOTHIC_ANTIQUE = "Zen Kaku Gothic Antique"
+    ZEN_KAKU_GOTHIC_NEW = "Zen Kaku Gothic New"
+    ZEN_KURENAIDO = "Zen Kurenaido"
+    ZEN_LOOP = "Zen Loop"
+    ZEN_MARU_GOTHIC = "Zen Maru Gothic"
+    ZEN_OLD_MINCHO = "Zen Old Mincho"
+    ZEN_TOKYO_ZOO = "Zen Tokyo Zoo"
+    ZEYADA = "Zeyada"
+    ZHI_MANG_XING = "Zhi Mang Xing"
+    ZILLA_SLAB = "Zilla Slab"
+    ZILLA_SLAB_HIGHLIGHT = "Zilla Slab Highlight"

@@ -25,9 +25,10 @@ import, and running the example app.
 - `just build` runs `sync` first, which executes `uv add flet-cli/desktop/web==1.1.2`
   at the repo root and mutates `pyproject.toml`/`uv.lock`.
 - `src/flet_fonts/font_data.py` is generated from `GoogleFonts.asMap()` of the
-  installed `google_fonts` Dart package. Do not hand-edit. Regenerate by
-  extracting keys between `asMap() => const {` and `_asMapOfTextThemes() => const {`
-  in `~/.pub-cache/hosted/pub.dev/google_fonts-<version>/lib/src/google_fonts_all_parts.dart`.
+  installed `google_fonts` Dart package as a `FontFamily` enum. Do not hand-edit.
+  Regenerate by extracting keys between `asMap() => const {` and
+  `_asMapOfTextThemes() => const {` in
+  `~/.pub-cache/hosted/pub.dev/google_fonts-<version>/lib/src/google_fonts_all_parts.dart`.
 - Flet 1.x moved Material out of the Flutter SDK. Import
   `package:material_ui/material_ui.dart`, never `package:flutter/material.dart`;
   its `ThemeData` is a different type and breaks `getTextStyle()`.

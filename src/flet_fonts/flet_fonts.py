@@ -22,7 +22,7 @@ class Text(ft.LayoutControl):
             page.add(
                 ff.Text(
                     value="Hello from flet-fonts!",
-                    google_fonts="Aboreto",
+                    google_fonts=ff.FontFamily.ABORETO,
                 ),
             )
 
@@ -39,11 +39,12 @@ class Text(ft.LayoutControl):
     value: str = ""
     """The text content to display."""
 
-    google_fonts: FontFamily | None = None
+    google_fonts: FontFamily | str | None = None
     """The Google Font family name.
 
-    You can use any font from `https://fonts.google.com/`. Falls back to
-    `"ADLaM Display"` when not specified.
+    Use a `FontFamily` member for autocomplete, e.g.
+    `ff.FontFamily.ABORETO`. Plain family names are accepted too. Falls
+    back to `"ADLaM Display"` when not specified.
     """
 
     spans: list[TextSpan] | None = None
@@ -55,9 +56,9 @@ class Text(ft.LayoutControl):
         ```python
         ff.Text(
             value="hello",
-            google_fonts="Ancizar Serif",
+            google_fonts=ff.FontFamily.ANCIZAR_SERIF,
             spans=[
-                ff.TextSpan(value="world", google_fonts="Aboreto"),
+                ff.TextSpan(text="world", google_fonts=ff.FontFamily.ABORETO),
             ],
         )
         ```

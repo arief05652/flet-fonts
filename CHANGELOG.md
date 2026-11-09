@@ -10,7 +10,8 @@
 ### ✨ Added
 
 * `ff.use_google_font(page, "Aboreto")` applies a Google Font to the whole app via `page.fonts` and `page.theme.font_family` (no wrapper widget).
-* Export `FontFamily` type from `flet_fonts`.
+* `FontFamily` is now an `Enum` (`ff.FontFamily.ABORETO`) with all 1926 families, so editors autocomplete the list.
+* Export `FontFamily` from `flet_fonts`.
 * Total font: 1926
 * `semanticsLabel` is now forwarded to `SelectableText` (accessibility parity).
 * MIT license.
@@ -55,7 +56,7 @@
 
 ### 🐛 Fixed
 
-* `google_fonts` and `TextSpan.google_fonts` are typed as `FontFamily | None` instead of `FontFamily | str | None`, so editors show the font list and flag unknown names.
+* `google_fonts` and `TextSpan.google_fonts` accept `FontFamily | str | None`; prefer the enum for autocomplete. Strings still work at runtime.
 * Spans now inherit the parent font as documented.
 * Removed invalid `Momomakh` font entry (correct name is `Monomakh`).
 * `readme` path in `pyproject.toml` now matches `README.MD` (fixes wheel build on case-sensitive filesystems).
